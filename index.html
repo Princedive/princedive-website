@@ -822,6 +822,10 @@ body::before {
 }
 
 @media (max-width: 900px) {
+  /* Hide decorative circles on mobile (they look like half-circles) */
+  .cta-section::before,
+  .cta-section::after { display: none !important; }
+  
   .testimonial-text { font-size: 1.3rem; }
   .testimonials { min-height: 320px; }
   .testimonial-dots { bottom: -3rem; }

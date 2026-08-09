@@ -154,15 +154,15 @@ body::before {
 
 /* ============ HERO (deep sea) ============ */
 .hero {
-  min-height: 85vh;
+  min-height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 3rem 5rem;
+  padding: 5rem 3rem 5rem;
   overflow: hidden;
   color: var(--paper);
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .hero-bg {
@@ -1367,60 +1367,76 @@ footer {
   .narrative-section { padding: 4rem 1.5rem; }
   .narrative-section p { font-size: 0.95rem; line-height: 1.9; }
   
-  /* ITINERARY - FIX FOR MOBILE: full-width day cards with image on top */
+  /* ITINERARY - MOBILE: single column, image on top full width, then day marker + content */
   .itinerary-section { padding: 4rem 1rem; }
-  .timeline { max-width: 100%; }
-  .timeline::before { display: none; } /* Hide vertical gold line on mobile */
+  .timeline { max-width: 100%; padding: 0; }
+  .timeline::before { display: none !important; } /* Hide vertical gold line on mobile */
   
   .day-block {
-    display: block !important; /* Reset grid */
-    margin-bottom: 2.5rem;
+    display: block !important;
+    grid-template-columns: none !important;
+    margin-bottom: 3rem;
     position: relative;
   }
   
-  .day-marker {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 45px;
-    height: 45px;
-    font-size: 1.1rem;
-    z-index: 3;
-    background: var(--paper-deep);
-    border: 1px solid var(--gold);
+  /* Reset ALL desktop layouts for odd/even/reverse */
+  .day-block:nth-child(odd) .day-content,
+  .day-block:nth-child(even) .day-content,
+  .day-block .day-content {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    text-align: left !important;
+    order: 2;
+    width: 100%;
+    padding: 1.5rem;
+    margin: 0;
   }
   
-  /* Visual on top, full width, smaller aspect ratio */
-  .day-visual {
+  .day-block:nth-child(odd) .day-visual,
+  .day-block:nth-child(even) .day-visual,
+  .day-block .day-visual {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    order: 1;
     display: block !important;
     width: 100%;
     aspect-ratio: 16/9 !important;
-    margin-bottom: 1rem;
-    grid-column: unset !important;
-    grid-row: unset !important;
+    margin: 0 0 1.5rem 0;
+    position: relative;
   }
   
-  /* Content full width */
-  .day-content {
-    display: block !important;
-    width: 100%;
-    padding: 1.5rem;
-    text-align: left !important;
+  /* Day marker becomes an overlay badge on top-left of the image */
+  .day-marker {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    z-index: 3;
+    background: rgba(248, 243, 230, 0.95);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--gold);
     grid-column: unset !important;
     grid-row: unset !important;
-    margin-left: 55px; /* Give room for the marker */
+    box-shadow: 0 2px 12px rgba(5, 19, 42, 0.2);
   }
   
-  .day-title { font-size: 1.3rem; }
-  .day-title-en { font-size: 0.9rem; }
+  /* Timeline entries */
+  .day-title { font-size: 1.4rem; }
+  .day-title-en { font-size: 0.95rem; padding-bottom: 1rem; }
+  .day-eyebrow { font-size: 0.6rem; letter-spacing: 0.3em; }
   
   .day-timeline li {
     grid-template-columns: 55px 1fr;
     gap: 0.6rem;
     font-size: 0.85rem;
+    padding: 0.35rem 0;
   }
   .day-timeline .time { font-size: 0.65rem; }
   .day-timeline li.highlight .event { font-size: 0.95rem; }
+  
+  .day-note { font-size: 0.75rem; margin-top: 0.8rem; padding-top: 0.8rem; }
   
   /* Itinerary total */
   .itinerary-total .count { font-size: 1.5rem; }
@@ -1439,8 +1455,18 @@ footer {
   /* Addons */
   .addons-section { padding: 4rem 1rem; }
   .addons-table { font-size: 0.85rem; min-width: unset; }
-  .addons-table th, .addons-table td { padding: 1rem 0.8rem; }
-  .addon-price { font-size: 1rem !important; }
+  .addons-table th, .addons-table td { padding: 1rem 0.7rem; vertical-align: top; }
+  .addon-name { font-size: 0.9rem !important; letter-spacing: 0.1em !important; }
+  .addon-desc { font-size: 0.75rem !important; line-height: 1.5; }
+  .addon-price { 
+    font-size: 0.95rem !important; 
+    white-space: normal !important;
+    text-align: right;
+    line-height: 1.3;
+  }
+  /* Make table columns better proportioned on mobile: 65% info, 35% price */
+  .addons-table td:first-child { width: 62%; }
+  .addons-table td:last-child { width: 38%; padding-left: 0.4rem; }
   
   /* Accordion */
   .accordion-section { padding: 4rem 1.5rem; }
@@ -1456,7 +1482,15 @@ footer {
   .testimonial-text { font-size: 1.5rem; }
   
   /* CTA */
-  .cta-section { padding: 5rem 1.5rem; }
+  /* CTA - hide overflow circles on mobile (they look like half-circles) */
+  .cta-section::before,
+  .cta-section::after { display: none !important; }
+  .cta-section { padding: 4rem 1.5rem; }
+  .cta-logo { width: 55px; height: 55px; margin-bottom: 1.5rem; }
+  .cta-section h2 { font-size: 1.8rem; }
+  .cta-section p { font-size: 0.95rem; }
+  .cta-button { padding: 0.9rem 2rem; font-size: 0.7rem; letter-spacing: 0.3em; }
+
   
   /* Footer */
   .footer-inner { 
@@ -1507,14 +1541,7 @@ footer {
   </div>
 </nav>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <a href="index.html">Home</a>
-  <span class="sep">/</span>
-  <a href="ceremonies.html">Ceremonies</a>
-  <span class="sep">/</span>
-  <span>V. 群島之謁 · The Archipelago Audience</span>
-</div>
+<!-- BREADCRUMB (hidden per design decision) -->
 
 <!-- HERO -->
 <section class="hero">

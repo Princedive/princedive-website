@@ -825,7 +825,15 @@ footer {
   .comparison-table th, .comparison-table td { padding: 0.9rem 0.5rem; }
   
   /* CTA */
-  .cta-section { padding: 5rem 1.5rem; }
+  /* CTA - hide overflow circles on mobile (they look like half-circles) */
+  .cta-section::before,
+  .cta-section::after { display: none !important; }
+  .cta-section { padding: 4rem 1.5rem; }
+  .cta-logo { width: 55px; height: 55px; margin-bottom: 1.5rem; }
+  .cta-section h2 { font-size: 1.8rem; }
+  .cta-section p { font-size: 0.95rem; }
+  .cta-button { padding: 0.9rem 2rem; font-size: 0.7rem; letter-spacing: 0.3em; }
+
   
   /* Footer */
   .footer-inner { 
@@ -878,7 +886,7 @@ footer {
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <div class="mono">▸ CHAPTER TWO · CEREMONIES</div>
+  <div class="mono">▸ 我 們 的 典 禮 · THE CEREMONIES</div>
   <h1>Six <em>Ceremonies</em> of the Sea</h1>
   <div class="cn">六 · 場 · 典 · 禮</div>
   <div class="page-header-divider"></div>
