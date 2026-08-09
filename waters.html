@@ -974,7 +974,7 @@ footer {
   font-size: 0.95rem;
 }
 .w-map-scroll { max-width: 1000px; margin: 0 auto; }
-.w-map-svg { width: 100%; height: auto; display: block; }
+.w-map-img { width: 100%; height: auto; display: block; border: 1px solid rgba(184,154,94,0.28); }
 .w-map-hint {
   display: none;
   text-align: center;
@@ -1245,7 +1245,7 @@ footer {
 
   .w-map-section { padding: 3.5rem 1rem 3rem; }
   .w-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .w-map-svg { min-width: 660px; }
+  .w-map-img { min-width: 700px; }
   .w-map-hint { display: block; }
 
   .w-point, .w-point.tinted { padding: 3rem 1.5rem; }
@@ -1387,134 +1387,9 @@ footer {
     <div class="cn">六 · 海 · 之 · 圖</div>
   </div>
   <div class="w-map-scroll">
-    <svg class="w-map-svg" viewBox="0 0 900 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mapdesc">
-      <title id="mapdesc">王子潛水六大潛點在沖繩本島與慶良間群島的分布海圖</title>
-      <defs>
-        <filter id="rough">
-          <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" result="n" seed="7"/>
-          <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/>
-        </filter>
-        <radialGradient id="vig" cx="50%" cy="45%" r="72%">
-          <stop offset="0%" stop-color="#F8F3E6" stop-opacity="0"/>
-          <stop offset="100%" stop-color="#B89A5E" stop-opacity="0.22"/>
-        </radialGradient>
-      </defs>
-
-      <rect x="0" y="0" width="900" height="660" fill="#F5EEDC"/>
-      <rect x="0" y="0" width="900" height="660" fill="url(#vig)"/>
-      <rect x="14" y="14" width="872" height="632" fill="none" stroke="#B89A5E" stroke-opacity="0.5" stroke-width="1.5" filter="url(#rough)"/>
-      <rect x="24" y="24" width="852" height="612" fill="none" stroke="#B89A5E" stroke-opacity="0.25" stroke-width="0.8"/>
-
-      <!-- sea texture -->
-      <g stroke="#5B8DA8" stroke-opacity="0.16" fill="none" stroke-width="1.1" stroke-linecap="round">
-        <path d="M80 120 q22 -9 44 0 t44 0 t44 0"/>
-        <path d="M120 175 q22 -9 44 0 t44 0"/>
-        <path d="M640 470 q22 -9 44 0 t44 0 t44 0"/>
-        <path d="M690 530 q22 -9 44 0 t44 0"/>
-        <path d="M560 590 q22 -9 44 0 t44 0 t44 0"/>
-        <path d="M60 330 q22 -9 44 0 t44 0"/>
-      </g>
-
-      <!-- island -->
-      <g filter="url(#rough)">
-        <path d="M300 600 L285 545 L315 505 L330 470 L352 430 L368 400 L398 352 L424 322 L450 300
-                 L445 268 L410 250 L396 230 L414 208 L450 205 L472 226 L490 256
-                 L516 240 L560 205 L610 170 L660 130 L700 100 L722 116 L700 160 L664 200
-                 L620 246 L576 290 L540 330 L505 366 L470 406 L440 450 L410 490 L378 526 L350 570 L326 608 Z"
-              fill="#EFE6D2" stroke="#8A6F3D" stroke-width="2" stroke-linejoin="round"/>
-        <!-- Kerama islands -->
-        <path d="M138 560 l26 -8 l18 16 l-12 20 l-26 2 z" fill="#EFE6D2" stroke="#8A6F3D" stroke-width="1.8"/>
-        <path d="M176 596 l22 -6 l10 16 l-18 12 l-16 -8 z" fill="#EFE6D2" stroke="#8A6F3D" stroke-width="1.8"/>
-        <path d="M116 610 l20 -4 l6 16 l-18 8 l-10 -10 z" fill="#EFE6D2" stroke="#8A6F3D" stroke-width="1.8"/>
-        <!-- Sesoko island -->
-        <path d="M352 226 l20 -6 l10 14 l-12 14 l-18 -6 z" fill="#EFE6D2" stroke="#8A6F3D" stroke-width="1.8"/>
-      </g>
-
-      <!-- boat route to Kerama -->
-      <path d="M296 588 Q235 570 200 578" fill="none" stroke="#B89A5E" stroke-width="1.6"
-            stroke-dasharray="7 7" stroke-linecap="round" opacity="0.75"/>
-
-      <!-- leader lines -->
-      <g stroke="#8A6F3D" stroke-width="0.9" stroke-opacity="0.55" fill="none">
-        <path d="M330 470 L246 478"/>
-        <path d="M368 400 L262 408"/>
-        <path d="M398 352 L268 344"/>
-        <path d="M362 236 L272 258"/>
-        <path d="M404 236 L470 216"/>
-        <path d="M156 578 L156 626"/>
-      </g>
-
-      <!-- markers: circle = shore, diamond = boat -->
-      <g fill="#F5EEDC" stroke="#8A6F3D" stroke-width="2">
-        <circle cx="330" cy="470" r="11"/>
-        <circle cx="368" cy="400" r="11"/>
-        <circle cx="404" cy="236" r="11"/>
-        <rect x="145" y="567" width="22" height="22" transform="rotate(45 156 578)"/>
-        <rect x="387" y="341" width="22" height="22" transform="rotate(45 398 352)"/>
-        <rect x="351" y="225" width="22" height="22" transform="rotate(45 362 236)"/>
-      </g>
-      <g font-family="'Cormorant Garamond', serif" font-style="italic" font-size="12" fill="#8A6F3D" text-anchor="middle">
-        <text x="330" y="475">II</text>
-        <text x="368" y="405">I</text>
-        <text x="404" y="241">III</text>
-        <text x="156" y="583">IV</text>
-        <text x="398" y="357">V</text>
-        <text x="362" y="241">VI</text>
-      </g>
-
-      <!-- labels -->
-      <g font-family="'Noto Serif TC', serif" font-size="17" fill="#2A3640" letter-spacing="2">
-        <text x="238" y="482" text-anchor="end">砂邊</text>
-        <text x="254" y="412" text-anchor="end">青之洞</text>
-        <text x="260" y="348" text-anchor="end">萬座</text>
-        <text x="264" y="262" text-anchor="end">瀨底島</text>
-        <text x="478" y="220">大猩猩</text>
-        <text x="156" y="645" text-anchor="middle">慶良間</text>
-      </g>
-      <g font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#8A6F3D" letter-spacing="1.6">
-        <text x="238" y="496" text-anchor="end">SUNABE · SHORE</text>
-        <text x="254" y="426" text-anchor="end">BLUE CAVE · SHORE</text>
-        <text x="260" y="362" text-anchor="end">MANZA · BOAT · AOW</text>
-        <text x="264" y="276" text-anchor="end">SESOKO · BOAT</text>
-        <text x="478" y="234">GORILLA CHOP · SHORE</text>
-        <text x="156" y="658" text-anchor="middle">KERAMA · BOAT</text>
-      </g>
-
-      <!-- place references -->
-      <g font-family="'Shippori Mincho', serif" font-size="10.5" fill="#6B7580" letter-spacing="1.2">
-        <text x="316" y="616">那覇 NAHA</text>
-        <text x="512" y="196">本部半島</text>
-        <text x="470" y="330">恩納村</text>
-        <text x="700" y="92" text-anchor="middle">辺戸岬</text>
-      </g>
-      <circle cx="303" cy="597" r="3" fill="#C8553D"/>
-
-      <!-- compass -->
-      <g transform="translate(792,120)">
-        <circle r="42" fill="none" stroke="#B89A5E" stroke-opacity="0.5" stroke-width="1"/>
-        <circle r="30" fill="none" stroke="#B89A5E" stroke-opacity="0.3" stroke-width="0.7"/>
-        <path d="M0 -40 L9 0 L0 40 L-9 0 Z" fill="#8A6F3D" fill-opacity="0.85"/>
-        <path d="M-40 0 L0 -9 L40 0 L0 9 Z" fill="#B89A5E" fill-opacity="0.45"/>
-        <text x="0" y="-50" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="16" fill="#8A6F3D">N</text>
-      </g>
-
-      <!-- scale + legend -->
-      <g transform="translate(640,600)" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#8A6F3D" letter-spacing="1.6">
-        <line x1="0" y1="0" x2="120" y2="0" stroke="#8A6F3D" stroke-width="1.2"/>
-        <line x1="0" y1="-5" x2="0" y2="5" stroke="#8A6F3D" stroke-width="1.2"/>
-        <line x1="60" y1="-4" x2="60" y2="4" stroke="#8A6F3D" stroke-width="1"/>
-        <line x1="120" y1="-5" x2="120" y2="5" stroke="#8A6F3D" stroke-width="1.2"/>
-        <text x="0" y="18">0</text>
-        <text x="120" y="18" text-anchor="end">20 KM</text>
-      </g>
-      <g transform="translate(58,66)" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8A6F3D" letter-spacing="1.8">
-        <circle cx="8" cy="-4" r="7" fill="none" stroke="#8A6F3D" stroke-width="1.6"/>
-        <text x="24" y="-1">SHORE · 岸潛</text>
-        <rect x="1" y="15" width="14" height="14" transform="rotate(45 8 22)" fill="none" stroke="#8A6F3D" stroke-width="1.6"/>
-        <text x="24" y="25">BOAT · 船潛</text>
-      </g>
-      <text x="852" y="640" text-anchor="end" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="13" fill="#8A6F3D" opacity="0.75">Prince Dive · Okinawa</text>
-    </svg>
+    <img class="w-map-img" src="assets/map.jpg" width="1492" height="1054"
+         alt="王子潛水沖繩潛點海圖：青之洞、砂邊、大猩猩、慶良間、萬座、瀨底島六大潛點分布"
+         loading="lazy" decoding="async">
   </div>
   <div class="w-map-hint">← 左 右 滑 動 →</div>
 </section>
