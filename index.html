@@ -1040,7 +1040,11 @@ body::before {
   font-size: clamp(2.5rem, 4.5vw, 3.5rem);
   color: var(--ink);
   margin-bottom: 0.5rem;
+  text-wrap: balance;
 }
+
+/* Manual break used only on narrow screens so the title splits evenly */
+.h2-break { display: none; }
 
 .section-header h2 em { color: var(--gold); }
 
@@ -1531,6 +1535,16 @@ footer {
   .journey-header { padding: 5rem 1.5rem 2rem; }
   .image-divider { padding: 4rem 1.5rem; min-height: 50vh; }
   .pillars-grid, .ceremonies-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .section-header h2 { font-size: clamp(2rem, 8vw, 2.9rem); line-height: 1.25; }
+  .h2-break { display: inline; }
+  /* Ceremony cards - keep the gold English line + divider at the same height on every card */
+  .ceremony-card { padding: 2.4rem 1.8rem; }
+  .ceremony-card .en {
+    min-height: 3rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+  }
   .imagery-band { grid-template-columns: 1fr; }
   .imagery-band.waters-band { grid-template-columns: 1fr; }
   .imagery-tile { min-height: 30vh; }
@@ -1799,7 +1813,7 @@ footer {
 <section class="ceremonies-section" id="ceremonies">
   <div class="section-header">
     <div class="mono">▸ 典 禮 · CEREMONIES</div>
-    <h2>Six Ceremonies of the <em>Sea</em></h2>
+    <h2>Six Ceremonies<br class="h2-break">of the <em>Sea</em></h2>
     <div class="cn">六 · 場 · 典 · 禮</div>
     <div class="section-divider"></div>
   </div>
