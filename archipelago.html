@@ -1339,7 +1339,23 @@ footer {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
-  .nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+  .nav { padding: 0.8rem 1rem; flex-wrap: nowrap; gap: 0.5rem; }
+  .nav-brand { flex-shrink: 0; }
+  .nav-brand-text { font-size: 1.1rem; }
+  .nav-brand-cn { font-size: 0.6rem; letter-spacing: 0.35em; }
+  .nav-logo { width: 36px; height: 36px; }
+  .nav-links { gap: 0.8rem; flex-wrap: nowrap; justify-content: flex-end; align-items: center; }
+  .nav-link { font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.3rem 0; }
+  .nav-link .nav-link-en { display: none; }
+  .nav-cta { padding: 0.5rem 0.8rem !important; font-size: 0.65rem !important; }
+}
+@media (max-width: 600px) {
+  .nav-link { font-size: 0.65rem; letter-spacing: 0.1em; }
+  .nav-links { gap: 0.6rem; }
+  .nav-brand-text { display: none; }
+  .nav-brand-cn { display: none; }
+}
+@media (max-width: 900px) {
   .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
   .nav-link { font-size: 0.7rem; letter-spacing: 0.2em; }
   .breadcrumb { padding: 6rem 1.5rem 0; font-size: 0.6rem; letter-spacing: 0.25em; }
@@ -1710,7 +1726,7 @@ footer {
   <div class="accordion-wrap">
     <!-- 注意事項 -->
     <div class="accordion-item">
-      <button class="accordion-toggle">
+      <button type="button" class="accordion-toggle">
         <div class="label-group">
           <span class="cn-label">注 意 事 項</span>
           <span class="en-label">Important Notes</span>
@@ -1734,7 +1750,7 @@ footer {
     
     <!-- 天氣與海況 -->
     <div class="accordion-item">
-      <button class="accordion-toggle">
+      <button type="button" class="accordion-toggle">
         <div class="label-group">
           <span class="cn-label">天 氣 與 海 況</span>
           <span class="en-label">Weather & Conditions</span>
@@ -1756,7 +1772,7 @@ footer {
     
     <!-- 取消政策 -->
     <div class="accordion-item">
-      <button class="accordion-toggle">
+      <button type="button" class="accordion-toggle">
         <div class="label-group">
           <span class="cn-label">取 消 政 策</span>
           <span class="en-label">Cancellation Policy</span>
@@ -1875,11 +1891,18 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Accordion behavior
-document.querySelectorAll('.accordion-toggle').forEach(toggle => {
-  toggle.addEventListener('click', () => {
-    const item = toggle.parentElement;
-    item.classList.toggle('open');
+// Accordion behavior - robust version
+document.addEventListener('DOMContentLoaded', function() {
+  const toggles = document.querySelectorAll('.accordion-toggle');
+  toggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = toggle.closest('.accordion-item');
+      if (item) {
+        item.classList.toggle('open');
+      }
+    });
   });
 });
 </script>

@@ -1063,6 +1063,12 @@ body::before {
   gap: 2.5rem;
 }
 
+.ceremony-card,
+a.ceremony-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 .ceremony-card {
   padding: 3rem 2.5rem;
   background: var(--white);
@@ -1494,7 +1500,23 @@ footer {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
-  .nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+  .nav { padding: 0.8rem 1rem; flex-wrap: nowrap; gap: 0.5rem; }
+  .nav-brand { flex-shrink: 0; }
+  .nav-brand-text { font-size: 1.1rem; }
+  .nav-brand-cn { font-size: 0.6rem; letter-spacing: 0.35em; }
+  .nav-logo { width: 36px; height: 36px; }
+  .nav-links { gap: 0.8rem; flex-wrap: nowrap; justify-content: flex-end; align-items: center; }
+  .nav-link { font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.3rem 0; }
+  .nav-link .nav-link-en { display: none; }
+  .nav-cta { padding: 0.5rem 0.8rem !important; font-size: 0.65rem !important; }
+}
+@media (max-width: 600px) {
+  .nav-link { font-size: 0.65rem; letter-spacing: 0.1em; }
+  .nav-links { gap: 0.6rem; }
+  .nav-brand-text { display: none; }
+  .nav-brand-cn { display: none; }
+}
+@media (max-width: 900px) {
   .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
   .nav-link { font-size: 0.7rem; letter-spacing: 0.2em; }
   .hero { padding: 8rem 1.5rem 3rem; }
@@ -1533,7 +1555,7 @@ footer {
   </div>
   <div class="nav-links">
     <a href="#philosophy" class="nav-link">哲學<span class="nav-link-en">Philosophy</span></a>
-    <a href="#ceremonies" class="nav-link">典禮<span class="nav-link-en">Ceremonies</span></a>
+    <a href="ceremonies.html" class="nav-link">典禮<span class="nav-link-en">Ceremonies</span></a>
     <a href="#journey" class="nav-link">海域<span class="nav-link-en">Our Waters</span></a>
     <a href="#moments" class="nav-link">映像<span class="nav-link-en">Moments</span></a>
     <a href="#inquire" class="nav-link nav-cta">預約<span class="nav-link-en">Inquire</span></a>
@@ -1768,7 +1790,7 @@ footer {
   </div>
   
   <div class="ceremonies-grid">
-    <div class="ceremony-card">
+    <a class="ceremony-card" href="ceremonies.html#ceremony-i" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">I.</div>
       <h3>青 之 典 禮</h3>
       <div class="en">The Azure Ceremony</div>
@@ -1780,9 +1802,9 @@ footer {
         </div>
         <div class="ceremony-arrow">→</div>
       </div>
-    </div>
+    </a>
     
-    <div class="ceremony-card">
+    <a class="ceremony-card" href="ceremonies.html#ceremony-ii" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">II.</div>
       <h3>加 冕 之 途</h3>
       <div class="en">The Coronation</div>
@@ -1794,9 +1816,9 @@ footer {
         </div>
         <div class="ceremony-arrow">→</div>
       </div>
-    </div>
+    </a>
     
-    <div class="ceremony-card">
+    <a class="ceremony-card" href="ceremonies.html#ceremony-iii" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">III.</div>
       <h3>王 座 之 深</h3>
       <div class="en">The Throne Below</div>
@@ -1808,9 +1830,9 @@ footer {
         </div>
         <div class="ceremony-arrow">→</div>
       </div>
-    </div>
+    </a>
     
-    <div class="ceremony-card">
+    <a class="ceremony-card" href="ceremonies.html#ceremony-iv" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">IV.</div>
       <h3>擇 海 之 典</h3>
       <div class="en">The Chosen Sea</div>
@@ -1822,9 +1844,9 @@ footer {
         </div>
         <div class="ceremony-arrow">→</div>
       </div>
-    </div>
+    </a>
     
-    <div class="ceremony-card">
+    <a class="ceremony-card" href="archipelago.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">V.</div>
       <h3>群 島 之 謁</h3>
       <div class="en">The Archipelago Audience</div>
@@ -1836,9 +1858,9 @@ footer {
         </div>
         <div class="ceremony-arrow">→</div>
       </div>
-    </div>
+    </a>
     
-    <div class="ceremony-card">
+    <a class="ceremony-card" href="ceremonies.html#ceremony-vi" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">VI.</div>
       <h3>雙 人 之 海</h3>
       <div class="en">The Royal Pair</div>
@@ -1850,7 +1872,7 @@ footer {
         </div>
         <div class="ceremony-arrow">→</div>
       </div>
-    </div>
+    </a>
     
 </div>
 </section>

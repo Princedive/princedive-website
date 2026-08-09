@@ -776,7 +776,23 @@ footer {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
-  .nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+  .nav { padding: 0.8rem 1rem; flex-wrap: nowrap; gap: 0.5rem; }
+  .nav-brand { flex-shrink: 0; }
+  .nav-brand-text { font-size: 1.1rem; }
+  .nav-brand-cn { font-size: 0.6rem; letter-spacing: 0.35em; }
+  .nav-logo { width: 36px; height: 36px; }
+  .nav-links { gap: 0.8rem; flex-wrap: nowrap; justify-content: flex-end; align-items: center; }
+  .nav-link { font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.3rem 0; }
+  .nav-link .nav-link-en { display: none; }
+  .nav-cta { padding: 0.5rem 0.8rem !important; font-size: 0.65rem !important; }
+}
+@media (max-width: 600px) {
+  .nav-link { font-size: 0.65rem; letter-spacing: 0.1em; }
+  .nav-links { gap: 0.6rem; }
+  .nav-brand-text { display: none; }
+  .nav-brand-cn { display: none; }
+}
+@media (max-width: 900px) {
   .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
   .nav-link { font-size: 0.7rem; letter-spacing: 0.2em; }
   .page-header { padding: 8rem 1.5rem 3rem; }
