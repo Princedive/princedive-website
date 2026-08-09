@@ -1339,6 +1339,7 @@ footer {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
+  /* Nav */
   .nav { padding: 0.8rem 1rem; flex-wrap: nowrap; gap: 0.5rem; }
   .nav-brand { flex-shrink: 0; }
   .nav-brand-text { font-size: 1.1rem; }
@@ -1348,39 +1349,142 @@ footer {
   .nav-link { font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.3rem 0; }
   .nav-link .nav-link-en { display: none; }
   .nav-cta { padding: 0.5rem 0.8rem !important; font-size: 0.65rem !important; }
+  
+  /* Breadcrumb */
+  .breadcrumb { padding: 5rem 1.5rem 0; font-size: 0.55rem; letter-spacing: 0.2em; }
+  
+  /* Hero */
+  .hero { padding: 2rem 1.5rem 4rem; min-height: 75vh; }
+  .hero-title-cn { font-size: 2.5rem; letter-spacing: 0.25em; }
+  .hero-title-en { font-size: 1.2rem; }
+  .hero-tagline { font-size: 1.1rem; }
+  .hero-info-bar { grid-template-columns: 1fr 1fr; gap: 1.5rem 0.5rem; padding: 1.5rem 1rem; }
+  .info-item:nth-child(2)::after { display: none; }
+  .info-value { font-size: 1.5rem; }
+  .info-label { font-size: 0.55rem; letter-spacing: 0.2em; }
+  
+  /* Narrative */
+  .narrative-section { padding: 4rem 1.5rem; }
+  .narrative-section p { font-size: 0.95rem; line-height: 1.9; }
+  
+  /* ITINERARY - FIX FOR MOBILE: full-width day cards with image on top */
+  .itinerary-section { padding: 4rem 1rem; }
+  .timeline { max-width: 100%; }
+  .timeline::before { display: none; } /* Hide vertical gold line on mobile */
+  
+  .day-block {
+    display: block !important; /* Reset grid */
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  
+  .day-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    z-index: 3;
+    background: var(--paper-deep);
+    border: 1px solid var(--gold);
+  }
+  
+  /* Visual on top, full width, smaller aspect ratio */
+  .day-visual {
+    display: block !important;
+    width: 100%;
+    aspect-ratio: 16/9 !important;
+    margin-bottom: 1rem;
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+  
+  /* Content full width */
+  .day-content {
+    display: block !important;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: left !important;
+    grid-column: unset !important;
+    grid-row: unset !important;
+    margin-left: 55px; /* Give room for the marker */
+  }
+  
+  .day-title { font-size: 1.3rem; }
+  .day-title-en { font-size: 0.9rem; }
+  
+  .day-timeline li {
+    grid-template-columns: 55px 1fr;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+  }
+  .day-timeline .time { font-size: 0.65rem; }
+  .day-timeline li.highlight .event { font-size: 0.95rem; }
+  
+  /* Itinerary total */
+  .itinerary-total .count { font-size: 1.5rem; }
+  
+  /* Highlights grid */
+  .highlights-section { padding: 4rem 1.5rem; }
+  .highlights-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .highlight { padding: 2rem 1.5rem; }
+  
+  /* Contrast section */
+  .contrast-section { padding: 4rem 1rem; }
+  .contrast-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .contrast-divider { display: none; }
+  .contrast-column { padding: 2rem 1.5rem; }
+  
+  /* Addons */
+  .addons-section { padding: 4rem 1rem; }
+  .addons-table { font-size: 0.85rem; min-width: unset; }
+  .addons-table th, .addons-table td { padding: 1rem 0.8rem; }
+  .addon-price { font-size: 1rem !important; }
+  
+  /* Accordion */
+  .accordion-section { padding: 4rem 1.5rem; }
+  .accordion-toggle { padding: 1.2rem 1.5rem; }
+  .accordion-toggle .cn-label { font-size: 1rem; letter-spacing: 0.15em; }
+  .accordion-toggle .en-label { font-size: 0.75rem; }
+  .accordion-inner { padding: 0 1.5rem 1.5rem; padding-top: 1.2rem; }
+  .accordion-inner .policy-row { grid-template-columns: 1fr; gap: 0.3rem; }
+  .accordion-inner .policy-label { font-size: 0.6rem; }
+  
+  /* Testimonial */
+  .testimonial-section { padding: 5rem 1.5rem; }
+  .testimonial-text { font-size: 1.5rem; }
+  
+  /* CTA */
+  .cta-section { padding: 5rem 1.5rem; }
+  
+  /* Footer */
+  .footer-inner { 
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+  .footer-brand { text-align: center; }
+  .footer-brand-inner { justify-content: center; }
+  .footer-brand p { margin-left: auto; margin-right: auto; text-align: center; }
+  .footer-col h4 { text-align: center; }
+  .footer-col ul { text-align: center; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; padding-top: 1.5rem; font-size: 0.55rem; }
 }
+
 @media (max-width: 600px) {
   .nav-link { font-size: 0.65rem; letter-spacing: 0.1em; }
   .nav-links { gap: 0.6rem; }
   .nav-brand-text { display: none; }
   .nav-brand-cn { display: none; }
+  .hero-title-cn { font-size: 2rem; letter-spacing: 0.2em; }
+  .hero-info-bar { padding: 1rem 0.8rem; }
+  .info-value { font-size: 1.3rem; }
+  .day-marker { width: 40px; height: 40px; font-size: 1rem; }
+  .day-content { margin-left: 50px; padding: 1.2rem; }
 }
-@media (max-width: 900px) {
-  .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
-  .nav-link { font-size: 0.7rem; letter-spacing: 0.2em; }
-  .breadcrumb { padding: 6rem 1.5rem 0; font-size: 0.6rem; letter-spacing: 0.25em; }
-  .hero { padding: 2rem 1.5rem 4rem; }
-  .hero-info-bar { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
-  .info-item:nth-child(2)::after { display: none; }
-  .narrative-section, .itinerary-section, .highlights-section, .contrast-section, .addons-section, .accordion-section, .cta-section { padding: 5rem 1.5rem; }
-  .testimonial-section { padding: 5rem 1.5rem; }
-  .timeline::before { left: 30px; }
-  .day-block { grid-template-columns: 60px 1fr; gap: 1rem; margin-bottom: 3rem; }
-  .day-marker { grid-column: 1; grid-row: 1; }
-  .day-block:nth-child(odd) .day-content,
-  .day-block:nth-child(even) .day-content { grid-column: 2; grid-row: 1; text-align: left; }
-  .day-block .day-visual { grid-column: 2; grid-row: 2; }
-  .highlights-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .contrast-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .contrast-divider { display: none; }
-  .addons-table { font-size: 0.85rem; }
-  .addons-table th, .addons-table td { padding: 1rem; }
-  .accordion-toggle { padding: 1.2rem 1.5rem; }
-  .accordion-inner { padding: 0 1.5rem 1.5rem; padding-top: 1.2rem; }
-  .accordion-inner .policy-row { grid-template-columns: 1fr; gap: 0.3rem; }
-  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
-}
+
 </style>
 </head>
 <body>

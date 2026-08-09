@@ -776,6 +776,7 @@ footer {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
+  /* Nav */
   .nav { padding: 0.8rem 1rem; flex-wrap: nowrap; gap: 0.5rem; }
   .nav-brand { flex-shrink: 0; }
   .nav-brand-text { font-size: 1.1rem; }
@@ -785,31 +786,73 @@ footer {
   .nav-link { font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.3rem 0; }
   .nav-link .nav-link-en { display: none; }
   .nav-cta { padding: 0.5rem 0.8rem !important; font-size: 0.65rem !important; }
+  
+  /* Page header */
+  .page-header { padding: 7rem 1.5rem 2rem; }
+  
+  /* Ceremonies index */
+  .ceremonies-index { padding: 1rem 1.5rem; }
+  .ceremonies-index-inner { grid-template-columns: repeat(3, 1fr); gap: 0.3rem; }
+  .index-item { padding: 0.6rem 0.3rem; }
+  .index-item:nth-child(3) { border-right: none; }
+  .index-num { font-size: 0.9rem; }
+  .index-name { font-size: 0.7rem; letter-spacing: 0.1em; }
+  
+  /* CEREMONY BLOCKS - mobile stack: content FIRST, then visual */
+  .ceremony-block { padding: 3rem 1.5rem; }
+  .ceremony-block.alt-bg { padding: 3rem 1.5rem; }
+  .ceremony-inner { 
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  /* Force content ABOVE image on all cards (regardless of reverse class) */
+  .ceremony-content { order: 1 !important; }
+  .ceremony-visual { order: 2 !important; aspect-ratio: 16/9; width: 100%; }
+  .ceremony-num-big { font-size: 3rem; }
+  .ceremony-content h2 { font-size: 1.8rem; }
+  .ceremony-content .en-name { font-size: 1.1rem; }
+  .ceremony-meta { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+  .meta-value { font-size: 0.9rem; }
+  .meta-value .cn { font-size: 0.7rem; }
+  
+  /* Comparison table */
+  .comparison-section { padding: 4rem 1rem; }
+  .comparison-table-wrap { overflow-x: auto; }
+  .comparison-table { min-width: 700px; font-size: 0.75rem; }
+  .comparison-table thead th { padding: 1rem 0.5rem; }
+  .comparison-table thead th .name { font-size: 0.75rem; }
+  .comparison-table th, .comparison-table td { padding: 0.9rem 0.5rem; }
+  
+  /* CTA */
+  .cta-section { padding: 5rem 1.5rem; }
+  
+  /* Footer */
+  .footer-inner { 
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+  .footer-brand { text-align: center; }
+  .footer-brand-inner { justify-content: center; }
+  .footer-brand p { margin-left: auto; margin-right: auto; text-align: center; }
+  .footer-col h4 { text-align: center; }
+  .footer-col ul { text-align: center; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; padding-top: 1.5rem; font-size: 0.55rem; }
 }
+
 @media (max-width: 600px) {
   .nav-link { font-size: 0.65rem; letter-spacing: 0.1em; }
   .nav-links { gap: 0.6rem; }
   .nav-brand-text { display: none; }
   .nav-brand-cn { display: none; }
-}
-@media (max-width: 900px) {
-  .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
-  .nav-link { font-size: 0.7rem; letter-spacing: 0.2em; }
-  .page-header { padding: 8rem 1.5rem 3rem; }
-  .ceremonies-index { padding: 1.5rem; }
-  .ceremonies-index-inner { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-  .index-item:nth-child(3) { border-right: none; }
-  .ceremony-block { padding: 4rem 1.5rem; }
-  .ceremony-block.alt-bg { padding: 4rem 1.5rem; }
-  .ceremony-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .ceremony-block.reverse .ceremony-visual { order: 0; }
-  .ceremony-block.reverse .ceremony-content { order: 1; }
-  .ceremony-num-big { font-size: 3rem; }
-  .ceremony-meta { grid-template-columns: 1fr; gap: 0.8rem; }
-  .comparison-section { padding: 5rem 1rem; }
-  .cta-section { padding: 5rem 1.5rem; }
-  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+  .ceremony-meta { grid-template-columns: 1fr; gap: 0.5rem; padding: 1rem 0; }
+  .meta-value { font-size: 1rem; }
+  .comparison-table { font-size: 0.7rem; }
+  .ceremonies-index-inner { grid-template-columns: repeat(2, 1fr); }
+  .index-item:nth-child(2n) { border-right: none; }
+  .index-item:nth-child(3) { border-right: 1px solid rgba(184, 154, 94, 0.15); }
 }
 </style>
 </head>

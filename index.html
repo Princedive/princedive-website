@@ -1537,7 +1537,18 @@ footer {
   .moment { aspect-ratio: 1; }
   .contrast-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .contrast-divider { display: none; }
-  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-inner { 
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+  .footer-brand { text-align: center; }
+  .footer-brand-inner { justify-content: center; }
+  .footer-brand p { margin-left: auto; margin-right: auto; text-align: center; }
+  .footer-col h4 { text-align: center; }
+  .footer-col ul { text-align: center; }
+  .footer-col li { padding: 0.5rem 0; }
   .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
 }
 </style>
