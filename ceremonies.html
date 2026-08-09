@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>典禮 · Six Ceremonies · Prince Dive · 王子潛水</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F8F3E6;
+  --paper-deep: #EFE6D2;
+  --bone: #E8DDC2;
+  --shisa-red: #C8553D;
+  --ryukyu-blue: #5B8DA8;
+  --ryukyu-blue-deep: #3A6B86;
+  --gold: #B89A5E;
+  --gold-deep: #8A6F3D;
+  --gold-light: #D4BC88;
+  --ink: #2A3640;
+  --ink-light: #4A5560;
+  --ink-soft: #6B7580;
+  --white: #FFFFFF;
+  --navy: #0A1F3D;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Noto Serif TC', 'Georgia', serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ============ NAV ============ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(248, 243, 230, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184, 154, 94, 0.15);
+  padding: 1.2rem 3rem;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-brand { display: flex; align-items: center; gap: 0.85rem; cursor: pointer; text-decoration: none; }
+.nav-logo { width: 42px; height: 42px; }
+
+.nav-brand-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+.nav-brand-cn {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.45em;
+  margin-top: 0.15rem;
+}
+
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+
+.nav-link {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: var(--ink-light);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+  background: none;
+  border-top: none; border-left: none; border-right: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link .nav-link-en {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-top: 0.15rem;
+  text-transform: uppercase;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-deep);
+  border-bottom-color: var(--gold);
+}
+
+.nav-cta {
+  padding: 0.7rem 1.5rem !important;
+  border: 1px solid var(--gold) !important;
+  color: var(--gold-deep) !important;
+  background: transparent;
+}
+.nav-cta:hover {
+  background: var(--gold);
+  color: var(--paper) !important;
+  border-bottom-color: var(--gold) !important;
+}
+.nav-cta .nav-link-en { color: rgba(255, 255, 255, 0.7); }
+
+/* ============ PAGE HEADER ============ */
+.page-header {
+  padding: 9rem 3rem 4rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header .mono {
+  color: var(--gold);
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.page-header h1 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.page-header .cn {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--ink);
+  letter-spacing: 0.5em;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  margin-bottom: 2rem;
+}
+
+.page-header-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 2.5rem;
+}
+
+.page-header p {
+  color: var(--ink-light);
+  font-size: 1.05rem;
+  line-height: 2.0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============ CEREMONIES INDEX (章節目錄) ============ */
+.ceremonies-index {
+  max-width: 1000px;
+  margin: 3rem auto 2rem;
+  padding: 2rem 3rem;
+  border-top: 1px solid rgba(184, 154, 94, 0.2);
+  border-bottom: 1px solid rgba(184, 154, 94, 0.2);
+}
+
+.ceremonies-index-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.index-item {
+  text-align: center;
+  padding: 0.8rem 0.5rem;
+  text-decoration: none;
+  border-right: 1px solid rgba(184, 154, 94, 0.15);
+  transition: all 0.3s ease;
+}
+
+.index-item:last-child { border-right: none; }
+
+.index-item:hover {
+  background: rgba(184, 154, 94, 0.05);
+}
+
+.index-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.index-name {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--ink);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.index-item:hover .index-name {
+  color: var(--gold-deep);
+}
+
+/* ============ CEREMONY BLOCK ============ */
+.ceremony-block {
+  padding: 6rem 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  scroll-margin-top: 100px;
+}
+
+.ceremony-block.alt-bg {
+  background: var(--paper-deep);
+  max-width: none;
+  padding: 6rem calc((100vw - 1300px) / 2 + 3rem);
+}
+
+.ceremony-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.ceremony-block:nth-child(even) .ceremony-inner {
+  /* Alternate layout */
+}
+
+.ceremony-block.reverse .ceremony-inner {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ceremony-block.reverse .ceremony-visual {
+  order: 2;
+}
+
+.ceremony-block.reverse .ceremony-content {
+  order: 1;
+}
+
+/* Content side */
+.ceremony-content { padding: 1rem 0; }
+
+.ceremony-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.ceremony-num-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold);
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.ceremony-content h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--ink);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.ceremony-content .en-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.3);
+}
+
+.ceremony-content .narrative {
+  color: var(--ink-light);
+  font-size: 1rem;
+  line-height: 2.0;
+  margin-bottom: 2rem;
+  font-family: 'Noto Serif TC', serif;
+}
+
+.ceremony-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(184, 154, 94, 0.2);
+  border-bottom: 1px solid rgba(184, 154, 94, 0.2);
+  margin-bottom: 2rem;
+}
+
+.meta-item {
+  text-align: left;
+}
+
+.meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.meta-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ryukyu-blue-deep);
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.meta-value .cn {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-style: normal;
+  color: var(--ink-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  margin-top: 0.2rem;
+}
+
+.ceremony-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--gold-deep);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--gold);
+  transition: all 0.4s ease;
+}
+
+.ceremony-cta:hover {
+  background: var(--gold);
+  color: var(--paper);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(184, 154, 94, 0.25);
+}
+
+.ceremony-cta span { transition: transform 0.3s ease; }
+.ceremony-cta:hover span { transform: translateX(5px); }
+
+/* Visual side */
+.ceremony-visual {
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+}
+
+.ceremony-visual::after {
+  content: attr(data-placeholder);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  color: rgba(244, 228, 181, 0.6);
+  letter-spacing: 0.3em;
+  z-index: 3;
+}
+
+/* Distinct visual per ceremony */
+.visual-i {
+  background: 
+    radial-gradient(ellipse at 60% 30%, rgba(244, 228, 181, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #7BA8C4 0%, #5B8DA8 50%, #3A6B86 100%);
+}
+.visual-ii {
+  background: 
+    radial-gradient(ellipse at 40% 40%, rgba(212, 188, 136, 0.25) 0%, transparent 55%),
+    linear-gradient(180deg, #5B8DA8 0%, #3A6B86 60%, #142848 100%);
+}
+.visual-iii {
+  background: 
+    radial-gradient(ellipse at 30% 70%, rgba(184, 154, 94, 0.2) 0%, transparent 50%),
+    linear-gradient(180deg, #3A6B86 0%, #142848 60%, #05132A 100%);
+}
+.visual-iv {
+  background: 
+    radial-gradient(ellipse at 70% 20%, rgba(244, 228, 181, 0.3) 0%, transparent 55%),
+    linear-gradient(135deg, #5B8DA8 0%, #3A6B86 50%, #142848 100%);
+}
+.visual-v {
+  background: 
+    radial-gradient(ellipse at 50% 30%, rgba(212, 188, 136, 0.25) 0%, transparent 55%),
+    linear-gradient(180deg, #3A6B86 0%, #142848 50%, #0A1F3D 100%);
+}
+.visual-vi {
+  background: 
+    radial-gradient(ellipse at 40% 40%, rgba(200, 85, 61, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(212, 188, 136, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #3A6B86 0%, #142848 50%, #05132A 100%);
+}
+
+.ceremony-visual::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: 
+    radial-gradient(ellipse at 30% 20%, rgba(244, 228, 181, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 70% 60%, rgba(184, 154, 94, 0.1) 0%, transparent 40%);
+}
+
+.visual-overlay {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 2;
+  color: var(--paper);
+}
+
+.visual-overlay .mono {
+  color: var(--gold-light);
+  font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.visual-overlay h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2rem;
+  text-shadow: 0 2px 15px rgba(5, 19, 42, 0.5);
+}
+
+/* ============ COMPARISON TABLE ============ */
+.comparison-section {
+  padding: 8rem 3rem;
+  background: var(--paper-deep);
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.comparison-header .mono {
+  color: var(--gold);
+  font-size: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.comparison-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.comparison-header h2 em { color: var(--gold); }
+
+.comparison-header .cn {
+  color: var(--ink-light);
+  letter-spacing: 0.4em;
+}
+
+.comparison-table-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: 0.9rem;
+  min-width: 900px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--bone);
+  border-right: 1px solid var(--bone);
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child { border-right: none; }
+
+.comparison-table thead th {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  border-right: 1px solid rgba(212, 188, 136, 0.3);
+  padding: 1.5rem 1rem;
+}
+
+.comparison-table thead th .roman {
+  color: var(--gold-light);
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 0.3rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+}
+
+.comparison-table thead th .name {
+  font-family: 'Noto Serif TC', serif;
+  font-style: normal;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  display: block;
+}
+
+.comparison-table thead th .en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-top: 0.3rem;
+  opacity: 0.85;
+}
+
+.comparison-table tbody th {
+  background: var(--paper);
+  text-align: left;
+  padding-left: 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 400;
+  min-width: 140px;
+}
+
+.comparison-table tbody td {
+  color: var(--ink);
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.comparison-table tbody td .highlight {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ryukyu-blue-deep);
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.comparison-table tbody tr:hover td {
+  background: rgba(184, 154, 94, 0.03);
+}
+
+/* ============ CTA SECTION ============ */
+.cta-section {
+  padding: 8rem 3rem;
+  text-align: center;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(184, 154, 94, 0.08) 0%, transparent 60%),
+    var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 800px; height: 800px;
+  border: 1px solid rgba(184, 154, 94, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 500px; height: 500px;
+  border: 1px solid rgba(184, 154, 94, 0.12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+}
+
+.cta-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.cta-section h2 em { color: var(--gold); }
+
+.cta-section .cn {
+  color: var(--ink-light);
+  letter-spacing: 0.4em;
+  margin-bottom: 2.5rem;
+}
+
+.cta-section p {
+  color: var(--ink-light);
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 3rem;
+  background: var(--gold);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--gold-deep);
+  transform: translateY(-2px);
+}
+
+.cta-button span { transition: transform 0.3s ease; }
+.cta-button:hover span { transform: translateX(5px); }
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 5rem 3rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.25);
+}
+
+.footer-brand-inner { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.footer-logo { width: 50px; height: 50px; filter: brightness(1.1); }
+
+.footer-brand h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: var(--gold-light);
+  margin-bottom: 0.2rem;
+}
+.footer-brand .cn {
+  color: var(--paper);
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+}
+.footer-brand p {
+  color: rgba(248, 243, 230, 0.65);
+  font-size: 0.85rem;
+  line-height: 1.9;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.3em;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col li { padding: 0.4rem 0; }
+.footer-col a {
+  color: rgba(248, 243, 230, 0.65);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: rgba(248, 243, 230, 0.4);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+  .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+  .nav-link { font-size: 0.7rem; letter-spacing: 0.2em; }
+  .page-header { padding: 8rem 1.5rem 3rem; }
+  .ceremonies-index { padding: 1.5rem; }
+  .ceremonies-index-inner { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .index-item:nth-child(3) { border-right: none; }
+  .ceremony-block { padding: 4rem 1.5rem; }
+  .ceremony-block.alt-bg { padding: 4rem 1.5rem; }
+  .ceremony-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .ceremony-block.reverse .ceremony-visual { order: 0; }
+  .ceremony-block.reverse .ceremony-content { order: 1; }
+  .ceremony-num-big { font-size: 3rem; }
+  .ceremony-meta { grid-template-columns: 1fr; gap: 0.8rem; }
+  .comparison-section { padding: 5rem 1rem; }
+  .cta-section { padding: 5rem 1.5rem; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="assets/logo.png" alt="Prince Dive">
+    <div>
+      <div class="nav-brand-text">Prince Dive</div>
+      <div class="nav-brand-cn">王 子 潛 水</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#philosophy" class="nav-link">哲學<span class="nav-link-en">Philosophy</span></a>
+    <a href="ceremonies.html" class="nav-link active">典禮<span class="nav-link-en">Ceremonies</span></a>
+    <a href="index.html#journey" class="nav-link">海域<span class="nav-link-en">Our Waters</span></a>
+    <a href="index.html#moments" class="nav-link">映像<span class="nav-link-en">Moments</span></a>
+    <a href="index.html#inquire" class="nav-link nav-cta">預約<span class="nav-link-en">Inquire</span></a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="mono">▸ CHAPTER TWO · CEREMONIES</div>
+  <h1>Six <em>Ceremonies</em> of the Sea</h1>
+  <div class="cn">六 · 場 · 典 · 禮</div>
+  <div class="page-header-divider"></div>
+  <p>我們設計了六種不同深度、不同節奏的海洋典禮。從初次見海的青之典禮,到極致私人的四日群島之旅——每一場都由專屬教練親自策展,只屬於你。</p>
+</div>
+
+<!-- CEREMONIES INDEX (章節目錄) -->
+<div class="ceremonies-index">
+  <div class="ceremonies-index-inner">
+    <a href="#ceremony-i" class="index-item">
+      <span class="index-num">I.</span>
+      <span class="index-name">青之典禮</span>
+    </a>
+    <a href="#ceremony-ii" class="index-item">
+      <span class="index-num">II.</span>
+      <span class="index-name">加冕之途</span>
+    </a>
+    <a href="#ceremony-iii" class="index-item">
+      <span class="index-num">III.</span>
+      <span class="index-name">王座之深</span>
+    </a>
+    <a href="#ceremony-iv" class="index-item">
+      <span class="index-num">IV.</span>
+      <span class="index-name">擇海之典</span>
+    </a>
+    <a href="#ceremony-v" class="index-item">
+      <span class="index-num">V.</span>
+      <span class="index-name">群島之謁</span>
+    </a>
+    <a href="#ceremony-vi" class="index-item">
+      <span class="index-num">VI.</span>
+      <span class="index-name">雙人之海</span>
+    </a>
+  </div>
+</div>
+
+<!-- CEREMONY I - 青之典禮 -->
+<section class="ceremony-block" id="ceremony-i">
+  <div class="ceremony-inner">
+    <div class="ceremony-content">
+      <div class="ceremony-eyebrow">▸ CEREMONY ONE</div>
+      <div class="ceremony-num-big">I.</div>
+      <h2>青 之 典 禮</h2>
+      <div class="en-name">The Azure Ceremony</div>
+      <p class="narrative">為初次見海的你設計。無需潛水經驗、無需任何準備——只需帶上好奇心。由專屬教練陪伴,在慶良間的淺珊瑚區完成人生第一次呼吸。半日、一潛、一場加冕。這是最溫柔的典禮:給那些還未踏入海的人,一個被鄭重接待的初見。</p>
+      
+      <div class="ceremony-meta">
+        <div class="meta-item">
+          <div class="meta-label">FOR</div>
+          <div class="meta-value">First timers<span class="cn">初次潛水</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">DURATION</div>
+          <div class="meta-value">Half day<span class="cn">半日</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">FROM</div>
+          <div class="meta-value">¥28,000<span class="cn">每人</span></div>
+        </div>
+      </div>
+      
+      <a href="#" class="ceremony-cta">深入了解 <span>→</span></a>
+    </div>
+    <div class="ceremony-visual visual-i" data-placeholder="◆ IMAGE · 慶良間淺灘 The Azure">
+      <div class="visual-overlay">
+        <div class="mono">◆ KERAMA · 慶良間</div>
+        <h3>The Azure</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CEREMONY II - 加冕之途 -->
+<section class="ceremony-block alt-bg reverse" id="ceremony-ii">
+  <div class="ceremony-inner">
+    <div class="ceremony-visual visual-ii" data-placeholder="◆ IMAGE · PADI OW 課程 The Coronation">
+      <div class="visual-overlay">
+        <div class="mono">◆ PADI · OPEN WATER</div>
+        <h3>The Coronation</h3>
+      </div>
+    </div>
+    <div class="ceremony-content">
+      <div class="ceremony-eyebrow">▸ CEREMONY TWO</div>
+      <div class="ceremony-num-big">II.</div>
+      <h2>加 冕 之 途</h2>
+      <div class="en-name">The Coronation</div>
+      <p class="narrative">PADI Open Water 開放水域認證,取得國際潛水執照。這不是速成班——三日課程,包含泳池訓練、開放水域下潛、理論知識與考核。1:2 教練配比,中文教材,結業後你獲得的不只是一張證照,而是進入海洋世界的正式資格。這是被莊嚴對待的加冕過程。</p>
+      
+      <div class="ceremony-meta">
+        <div class="meta-item">
+          <div class="meta-label">FOR</div>
+          <div class="meta-value">Beginners<span class="cn">未取證者</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">DURATION</div>
+          <div class="meta-value">3 days<span class="cn">三日課程</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">FROM</div>
+          <div class="meta-value">¥98,000<span class="cn">每人</span></div>
+        </div>
+      </div>
+      
+      <a href="#" class="ceremony-cta">深入了解 <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CEREMONY III - 王座之深 -->
+<section class="ceremony-block" id="ceremony-iii">
+  <div class="ceremony-inner">
+    <div class="ceremony-content">
+      <div class="ceremony-eyebrow">▸ CEREMONY THREE</div>
+      <div class="ceremony-num-big">III.</div>
+      <h2>王 座 之 深</h2>
+      <div class="en-name">The Throne Below</div>
+      <p class="narrative">為已具備 OW 執照、想更深入的潛水員設計。PADI Advanced Open Water 進階認證,二日課程,包含五個 Adventure Dive:深潛、水下導航、以及三個選修專項(夜潛、放流潛、水中攝影等)。深潛至 30 米,王座在深處,只等你去坐。</p>
+      
+      <div class="ceremony-meta">
+        <div class="meta-item">
+          <div class="meta-label">FOR</div>
+          <div class="meta-value">OW holders<span class="cn">已具 OW</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">DURATION</div>
+          <div class="meta-value">2 days<span class="cn">二日課程</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">FROM</div>
+          <div class="meta-value">¥98,000<span class="cn">每人</span></div>
+        </div>
+      </div>
+      
+      <a href="#" class="ceremony-cta">深入了解 <span>→</span></a>
+    </div>
+    <div class="ceremony-visual visual-iii" data-placeholder="◆ IMAGE · PADI AOW 深潛 The Throne">
+      <div class="visual-overlay">
+        <div class="mono">◆ PADI · ADVANCED OW</div>
+        <h3>The Throne</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CEREMONY IV - 擇海之典 -->
+<section class="ceremony-block alt-bg reverse" id="ceremony-iv">
+  <div class="ceremony-inner">
+    <div class="ceremony-visual visual-iv" data-placeholder="◆ IMAGE · 慶良間/萬座毛/瀨底島擇一">
+      <div class="visual-overlay">
+        <div class="mono">◆ CHOOSE YOUR SEA</div>
+        <h3>The Chosen Sea</h3>
+      </div>
+    </div>
+    <div class="ceremony-content">
+      <div class="ceremony-eyebrow">▸ CEREMONY FOUR</div>
+      <div class="ceremony-num-big">IV.</div>
+      <h2>擇 海 之 典</h2>
+      <div class="en-name">The Chosen Sea</div>
+      <p class="narrative">為已具備 OW 或 AOW 執照的潛水員設計。單日、單點,由你選擇要面對哪一片海——慶良間、萬座毛、或瀨底島。不是套裝、不是流水線——你選你的海,我們陪你潛入。適合旅程中只有一天想潛的老手,也適合想反覆潛同一片海的深度愛好者。</p>
+      
+      <div class="ceremony-meta">
+        <div class="meta-item">
+          <div class="meta-label">FOR</div>
+          <div class="meta-value">OW / AOW<span class="cn">已具執照</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">DURATION</div>
+          <div class="meta-value">1 day<span class="cn">單日</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">FROM</div>
+          <div class="meta-value">¥39,000<span class="cn">每人</span></div>
+        </div>
+      </div>
+      
+      <a href="#" class="ceremony-cta">深入了解 <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CEREMONY V - 群島之謁 -->
+<section class="ceremony-block" id="ceremony-v">
+  <div class="ceremony-inner">
+    <div class="ceremony-content">
+      <div class="ceremony-eyebrow">▸ CEREMONY FIVE · SIGNATURE</div>
+      <div class="ceremony-num-big">V.</div>
+      <h2>群 島 之 謁</h2>
+      <div class="en-name">The Archipelago Audience</div>
+      <p class="narrative">四日、三海——第一日砂邊町 Check Dive、第二日慶良間、第三日萬座毛、第四日瀨底島。11 潛、全程接送、實體攝影相冊、Prince Dive 手工陶瓷海洋生物紀念物件。這是我們最深入的典禮:向沖繩群島的正式謁見,適合有 AOW 執照、想在有限假期中系統性體驗沖繩多樣海域的旅人。</p>
+      
+      <div class="ceremony-meta">
+        <div class="meta-item">
+          <div class="meta-label">FOR</div>
+          <div class="meta-value">AOW+<span class="cn">已具進階</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">DURATION</div>
+          <div class="meta-value">4 days<span class="cn">四日行程</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">FROM</div>
+          <div class="meta-value">¥128,000<span class="cn">每人</span></div>
+        </div>
+      </div>
+      
+      <a href="archipelago.html" class="ceremony-cta">深入了解 <span>→</span></a>
+    </div>
+    <div class="ceremony-visual visual-v" data-placeholder="◆ IMAGE · 四日群島之旅 The Archipelago">
+      <div class="visual-overlay">
+        <div class="mono">◆ FOUR DAYS · THREE SEAS</div>
+        <h3>The Archipelago</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CEREMONY VI - 雙人之海 -->
+<section class="ceremony-block alt-bg reverse" id="ceremony-vi">
+  <div class="ceremony-inner">
+    <div class="ceremony-visual visual-vi" data-placeholder="◆ IMAGE · 情侶/蜜月 The Royal Pair">
+      <div class="visual-overlay">
+        <div class="mono">◆ BESPOKE · BY REQUEST</div>
+        <h3>The Royal Pair</h3>
+      </div>
+    </div>
+    <div class="ceremony-content">
+      <div class="ceremony-eyebrow">▸ CEREMONY SIX · BESPOKE</div>
+      <div class="ceremony-num-big">VI.</div>
+      <h2>雙 人 之 海</h2>
+      <div class="en-name">The Royal Pair</div>
+      <p class="narrative">為情侶、蜜月、週年紀念設計的完全客製典禮。每一個細節都圍繞你們兩人的故事——從潛點的選擇、水下攝影的鏡頭語言、到儀式性的驚喜安排。可以是水下求婚、可以是週年紀念潛、可以是任何屬於你們的儀式。定價依需求而定,請與我們對話。</p>
+      
+      <div class="ceremony-meta">
+        <div class="meta-item">
+          <div class="meta-label">FOR</div>
+          <div class="meta-value">Couples<span class="cn">情侶客製</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">DURATION</div>
+          <div class="meta-value">Bespoke<span class="cn">客製時長</span></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">FROM</div>
+          <div class="meta-value">By Request<span class="cn">依需求議價</span></div>
+        </div>
+      </div>
+      
+      <a href="#" class="ceremony-cta">深入了解 <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="comparison-section">
+  <div class="comparison-header">
+    <div class="mono">▸ 一 覽 比 較 · AT A GLANCE</div>
+    <h2>Compare the <em>Six</em></h2>
+    <div class="cn">六 · 典 · 一 · 覽</div>
+  </div>
+  
+  <div class="comparison-table-wrap">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            <span class="roman">I.</span>
+            <span class="name">青 之 典 禮</span>
+            <span class="en">Azure</span>
+          </th>
+          <th>
+            <span class="roman">II.</span>
+            <span class="name">加 冕 之 途</span>
+            <span class="en">Coronation</span>
+          </th>
+          <th>
+            <span class="roman">III.</span>
+            <span class="name">王 座 之 深</span>
+            <span class="en">Throne</span>
+          </th>
+          <th>
+            <span class="roman">IV.</span>
+            <span class="name">擇 海 之 典</span>
+            <span class="en">Chosen Sea</span>
+          </th>
+          <th>
+            <span class="roman">V.</span>
+            <span class="name">群 島 之 謁</span>
+            <span class="en">Archipelago</span>
+          </th>
+          <th>
+            <span class="roman">VI.</span>
+            <span class="name">雙 人 之 海</span>
+            <span class="en">Royal Pair</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>適合對象</th>
+          <td>初次見海</td>
+          <td>未取證</td>
+          <td>已具 OW</td>
+          <td>OW / AOW</td>
+          <td>AOW 以上</td>
+          <td>情侶蜜月</td>
+        </tr>
+        <tr>
+          <th>時長</th>
+          <td>半日</td>
+          <td>三日</td>
+          <td>二日</td>
+          <td>單日</td>
+          <td>四日三夜</td>
+          <td>客製</td>
+        </tr>
+        <tr>
+          <th>潛數</th>
+          <td>1 潛</td>
+          <td>4-5 潛</td>
+          <td>5 潛</td>
+          <td>2 潛</td>
+          <td>11 潛</td>
+          <td>客製</td>
+        </tr>
+        <tr>
+          <th>場地</th>
+          <td>慶良間</td>
+          <td>OW 訓練場地</td>
+          <td>AOW 進階場地</td>
+          <td>慶良間 / 萬座毛 / 瀨底島</td>
+          <td>砂邊町 + 三潛點</td>
+          <td>客製選點</td>
+        </tr>
+        <tr>
+          <th>認證取得</th>
+          <td>—</td>
+          <td>PADI OW</td>
+          <td>PADI AOW</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <th>價格</th>
+          <td><span class="highlight">¥28,000</span></td>
+          <td><span class="highlight">¥98,000</span></td>
+          <td><span class="highlight">¥98,000</span></td>
+          <td><span class="highlight">¥39,000</span></td>
+          <td><span class="highlight">¥128,000</span></td>
+          <td><span class="highlight">By Request</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <img class="cta-logo" src="assets/logo.png" alt="Prince Dive">
+    <div class="mono" style="color:var(--gold);font-size:0.7rem;margin-bottom:1.5rem;">▸ 不 確 定 選 哪 個 ?</div>
+    <h2>Let's <em>Talk</em></h2>
+    <div class="cn">跟 · 我 · 們 · 對 · 話</div>
+    <p>選擇一場典禮,有時比想像中困難。告訴我們你的旅程長度、你的期望、你的同行者——我們會為你推薦最適合的那一場。</p>
+    <a href="index.html#inquire" class="cta-button">Send Inquiry <span>→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-inner">
+        <img class="footer-logo" src="assets/logo.png" alt="Prince Dive">
+        <div>
+          <h3>Prince Dive</h3>
+          <div class="cn">王 子 潛 水</div>
+        </div>
+      </div>
+      <p>沖繩私人策展式潛水體驗。不賣潛水,策展典禮。</p>
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--gold);letter-spacing:0.15em;">◆ V.I GROUP · OKINAWA</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html#philosophy">哲學 · Philosophy</a></li>
+        <li><a href="ceremonies.html">典禮 · Ceremonies</a></li>
+        <li><a href="index.html#journey">海域 · Our Waters</a></li>
+        <li><a href="index.html#moments">映像 · Moments</a></li>
+        <li><a href="index.html#inquire">預約 · Inquire</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ceremonies</h4>
+      <ul>
+        <li><a href="#ceremony-i">I. Azure · 青之典禮</a></li>
+        <li><a href="#ceremony-ii">II. Coronation · 加冕之途</a></li>
+        <li><a href="#ceremony-iii">III. Throne · 王座之深</a></li>
+        <li><a href="#ceremony-iv">IV. Chosen Sea · 擇海之典</a></li>
+        <li><a href="archipelago.html">V. Archipelago · 群島之謁</a></li>
+        <li><a href="#ceremony-vi">VI. Royal Pair · 雙人之海</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#">LINE @princedive</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">小紅書</a></li>
+        <li><a href="#">inquiry@princedive.jp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 · PRINCE DIVE OKINAWA · ALL RIGHTS RESERVED</div>
+    <div>◆ CURATING CEREMONIES OF THE SEA</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 50) {
+    nav.style.padding = '0.9rem 3rem';
+    nav.style.background = 'rgba(248, 243, 230, 0.95)';
+    nav.style.boxShadow = '0 2px 20px rgba(42, 54, 64, 0.05)';
+  } else {
+    nav.style.padding = '1.2rem 3rem';
+    nav.style.background = 'rgba(248, 243, 230, 0.9)';
+    nav.style.boxShadow = 'none';
+  }
+});
+</script>
+
+</body>
+</html>
