@@ -792,9 +792,13 @@ footer {
   .nav-cta { padding: 0.5rem 0.8rem !important; font-size: 0.65rem !important; }
   
   /* Page header */
-  .page-header { padding: 7rem 1.5rem 2rem; }
-  .page-header h1 { font-size: clamp(2.1rem, 8.5vw, 3.2rem); line-height: 1.25; }
-  .h1-break { display: inline; }
+  .page-header { padding: 7rem 1.2rem 2rem; }
+  /* Sized in vw so the full title always fits on ONE line, any phone width */
+  .page-header h1 {
+    font-size: min(7.4vw, 3.2rem);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
   
   /* Ceremonies index */
   .ceremonies-index { padding: 1rem 1.5rem; }
@@ -915,7 +919,7 @@ footer {
 <!-- PAGE HEADER -->
 <div class="page-header">
   <div class="mono">▸ 我 們 的 典 禮 · THE CEREMONIES</div>
-  <h1>Six <em>Ceremonies</em><br class="h1-break">of the Sea</h1>
+  <h1>Six <em>Ceremonies</em> of the Sea</h1>
   <div class="cn">六 · 場 · 典 · 禮</div>
   <div class="page-header-divider"></div>
   <p>我們設計了六種不同深度、不同節奏的海洋典禮。從初次見海的青之典禮,到極致私人的四日群島之旅——每一場都由專屬教練親自策展,只屬於你。</p>
