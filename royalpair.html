@@ -1472,6 +1472,27 @@ footer {
   .c-flow-num { font-size: 1.5rem; }
   .c-req-item { padding: 1.5rem 1.3rem; }
 }
+
+/* ============ 中文排版：避免段落末行落單 ============ */
+p { text-wrap: pretty; }
+.page-header p,
+.a-ocean-lead,
+.a-turn-inner p,
+.c-narr p,
+.c-choose-note p,
+.m-lead p,
+.m-status p,
+.m-photog-inner p,
+.w-creed-inner p,
+.w-map-head p,
+.philosophy-header p,
+.contrast-header p,
+.section-header p,
+.journey-header p,
+.itinerary-header p,
+.cta-inner p,
+.hero-inner > p,
+.c-hero-inner > p { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {
@@ -1501,7 +1522,7 @@ footer {
       "url": "https://princedive.jp/",
       "foundingDate": "2020",
       "areaServed": "Okinawa, Japan",
-      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en", "ja"]
+      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en"]
     },
     {
       "@type": "BreadcrumbList",

@@ -1403,6 +1403,27 @@ footer {
 @media (max-width: 900px) {
   .c-row.single { grid-template-columns: 4.2rem 1fr; }
 }
+
+/* ============ 中文排版：避免段落末行落單 ============ */
+p { text-wrap: pretty; }
+.page-header p,
+.a-ocean-lead,
+.a-turn-inner p,
+.c-narr p,
+.c-choose-note p,
+.m-lead p,
+.m-status p,
+.m-photog-inner p,
+.w-creed-inner p,
+.w-map-head p,
+.philosophy-header p,
+.contrast-header p,
+.section-header p,
+.journey-header p,
+.itinerary-header p,
+.cta-inner p,
+.hero-inner > p,
+.c-hero-inner > p { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {
@@ -1414,7 +1435,7 @@ footer {
       "name": "王座之深 The Throne Below｜PADI Advanced Open Water 進階開放水域潛水員課程",
       "description": "沖繩 PADI Advanced Open Water 二日五潛進階考照課程。深潛（18–30 米）與水下導航為必修，另配置頂尖中性浮力、水下攝影、魚類辨識三項選修，可加購夜潛替換其一。第一日岸潛三潛、第二日船潛兩潛，1:2 中文教練帶領。",
       "url": "https://princedive.jp/throne.html",
-      "inLanguage": ["zh-Hant", "yue", "en", "ja"],
+      "inLanguage": ["zh-Hant", "yue", "en"],
       "educationalCredentialAwarded": "PADI Advanced Open Water Diver",
       "provider": { "@id": "https://princedive.jp/#business" },
       "offers": {
@@ -1446,7 +1467,7 @@ footer {
       "url": "https://princedive.jp/",
       "foundingDate": "2020",
       "areaServed": "Okinawa, Japan",
-      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en", "ja"]
+      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en"]
     },
     {
       "@type": "BreadcrumbList",

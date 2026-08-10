@@ -1598,6 +1598,27 @@ footer {
   .footer-col li { padding: 0.5rem 0; }
   .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
 }
+
+/* ============ 中文排版：避免段落末行落單 ============ */
+p { text-wrap: pretty; }
+.page-header p,
+.a-ocean-lead,
+.a-turn-inner p,
+.c-narr p,
+.c-choose-note p,
+.m-lead p,
+.m-status p,
+.m-photog-inner p,
+.w-creed-inner p,
+.w-map-head p,
+.philosophy-header p,
+.contrast-header p,
+.section-header p,
+.journey-header p,
+.itinerary-header p,
+.cta-inner p,
+.hero-inner > p,
+.c-hero-inner > p { text-wrap: balance; }
 </style>
 
 <script type="application/ld+json">
@@ -1625,8 +1646,8 @@ footer {
       "foundingDate": "2020",
       "priceRange": "¥¥¥",
       "currenciesAccepted": "JPY",
-      "description": "沖繩私人策展式中文潛水。青之洞窟、慶良間、萬座等六大海域，PADI OW／AOW 考照與體驗潛水，1:2 師生比、私人包團不併團，全程國語、粵語、英語、日語接待。",
-      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en", "ja"],
+      "description": "沖繩私人策展式中文潛水。青之洞窟、慶良間、萬座等六大海域，PADI OW／AOW 考照與體驗潛水，1:2 師生比、私人包團不併團，全程國語、粵語、英語接待。",
+      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en"],
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "沖縄県",
@@ -1786,7 +1807,7 @@ footer {
         <div class="trust-label-en">Instructor Ratio</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num">4</div>
+        <div class="trust-num">3</div>
         <div class="trust-label">語言接待</div>
         <div class="trust-label-en">Languages Served</div>
       </div>
@@ -1928,7 +1949,7 @@ footer {
       <ul>
         <li>一對一策展式接待<span class="sub-en">Curated 1:1 hospitality</span></li>
         <li>PADI MSDT 最高階教練親帶<span class="sub-en">PADI Master Instructors only</span></li>
-        <li>繁中・簡中・日文・英文接待<span class="sub-en">4 languages served</span></li>
+        <li>國語・粵語・英語全程教學<span class="sub-en">3 languages, no translator</span></li>
         <li>免費水下攝影 + 實體相冊<span class="sub-en">Complimentary photography</span></li>
         <li>24 小時內個別回信<span class="sub-en">Personal reply within 24h</span></li>
         <li>1:2 教練配比上限<span class="sub-en">Maximum 1:2 instructor ratio</span></li>

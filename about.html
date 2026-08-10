@@ -1315,6 +1315,27 @@ footer {
   .a-card { padding: 2rem 1.5rem; }
   .w-faq { padding: 3rem 1.5rem 4.5rem; }
 }
+
+/* ============ 中文排版：避免段落末行落單 ============ */
+p { text-wrap: pretty; }
+.page-header p,
+.a-ocean-lead,
+.a-turn-inner p,
+.c-narr p,
+.c-choose-note p,
+.m-lead p,
+.m-status p,
+.m-photog-inner p,
+.w-creed-inner p,
+.w-map-head p,
+.philosophy-header p,
+.contrast-header p,
+.section-header p,
+.journey-header p,
+.itinerary-header p,
+.cta-inner p,
+.hero-inner > p,
+.c-hero-inner > p { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {
@@ -1343,7 +1364,7 @@ footer {
       "description": "沖繩私人策展式中文潛水店，2020 年成立。核心教練全員 PADI MSDT，師生比固定 1:2，全程私人包團。",
       "foundingDate": "2020",
       "areaServed": "Okinawa, Japan",
-      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en", "ja"],
+      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en"],
       "url": "https://princedive.jp/",
       "slogan": "海是一場儀式"
     },
@@ -1359,7 +1380,7 @@ footer {
       "mainEntity": [
         { "@type": "Question", "name": "王子潛水的教練配比是多少？", "acceptedAnswer": { "@type": "Answer", "text": "固定 1:2，一位教練最多帶兩位客人，絕不超過。同組客人超過兩位時加派一位潛水長隨行。" } },
         { "@type": "Question", "name": "會和其他客人併團嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。所有行程一律私人包團，有幾位教練一天就只接幾組客人，不併團、不壓縮時間。" } },
-        { "@type": "Question", "name": "教練會說中文嗎？", "acceptedAnswer": { "@type": "Answer", "text": "會。團隊有來自香港、台灣等地的中文教練，能以國語、粵語、英語、日語直接教學。核心教練五位全員持有 PADI MSDT 資格，每位累積潛數超過三千支。" } },
+        { "@type": "Question", "name": "教練會說中文嗎？", "acceptedAnswer": { "@type": "Answer", "text": "會。團隊有來自香港、台灣等地的中文教練，能以國語、粵語、英語直接教學。核心教練五位全員持有 PADI MSDT 資格，每位累積潛數超過三千支。" } },
         { "@type": "Question", "name": "在沖繩潛水該用什麼防曬？", "acceptedAnswer": { "@type": "Answer", "text": "避開含 oxybenzone 與 octinoxate 的化學防曬，這兩種成分微量即會傷害珊瑚。建議使用氧化鋅或二氧化鈦的礦物性防曬，或直接穿著防曬衣物。" } }
       ]
     }
@@ -1571,7 +1592,6 @@ footer {
         <span class="a-lang">國 語</span>
         <span class="a-lang">粵 語</span>
         <span class="a-lang">English</span>
-        <span class="a-lang">日 本 語</span>
       </div>
     </article>
 
@@ -1604,7 +1624,7 @@ footer {
 
   <div class="w-faq-item">
     <button class="w-faq-q" type="button">教練會說中文嗎？</button>
-    <div class="w-faq-a"><p>會。團隊裡有來自香港、台灣等地的中文教練，能以國語、粵語、英語、日語直接教學，不需要透過翻譯。核心教練團隊共五位，全員持有 PADI MSDT 名仕潛水教練資格，每位累積潛數超過三千支。</p></div>
+    <div class="w-faq-a"><p>會。團隊裡有來自香港、台灣等地的中文教練，能以國語、粵語、英語直接教學，不需要透過翻譯。核心教練團隊共五位，全員持有 PADI MSDT 名仕潛水教練資格，每位累積潛數超過三千支。</p></div>
   </div>
 
   <div class="w-faq-item">

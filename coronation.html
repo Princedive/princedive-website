@@ -1395,6 +1395,27 @@ footer {
 @media (max-width: 900px) {
   .c-row.single { grid-template-columns: 4.2rem 1fr; }
 }
+
+/* ============ 中文排版：避免段落末行落單 ============ */
+p { text-wrap: pretty; }
+.page-header p,
+.a-ocean-lead,
+.a-turn-inner p,
+.c-narr p,
+.c-choose-note p,
+.m-lead p,
+.m-status p,
+.m-photog-inner p,
+.w-creed-inner p,
+.w-map-head p,
+.philosophy-header p,
+.contrast-header p,
+.section-header p,
+.journey-header p,
+.itinerary-header p,
+.cta-inner p,
+.hero-inner > p,
+.c-hero-inner > p { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {
@@ -1406,7 +1427,7 @@ footer {
       "name": "加冕之途 The Coronation｜PADI Open Water 開放水域潛水員課程",
       "description": "沖繩 PADI Open Water 開放水域潛水員三日考照課程。學科透過 PADI eLearning 於出發前在家完成，第一日上午於宜野灣泳池進行平靜水域訓練，第二、三日於砂邊、青之洞或大猩猩完成四支開放水域潛水。1:2 中文教練帶領，教材費與認證費全包，並免費提供近視度數面鏡。",
       "url": "https://princedive.jp/coronation.html",
-      "inLanguage": ["zh-Hant", "yue", "en", "ja"],
+      "inLanguage": ["zh-Hant", "yue", "en"],
       "educationalCredentialAwarded": "PADI Open Water Diver",
       "provider": { "@id": "https://princedive.jp/#business" },
       "offers": {
@@ -1431,7 +1452,7 @@ footer {
       "url": "https://princedive.jp/",
       "foundingDate": "2020",
       "areaServed": "Okinawa, Japan",
-      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en", "ja"]
+      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en"]
     },
     {
       "@type": "BreadcrumbList",

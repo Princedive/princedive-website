@@ -914,6 +914,27 @@ footer {
   .index-item:nth-child(2n) { border-right: none; }
   .index-item:nth-child(3) { border-right: 1px solid rgba(184, 154, 94, 0.15); }
 }
+
+/* ============ 中文排版：避免段落末行落單 ============ */
+p { text-wrap: pretty; }
+.page-header p,
+.a-ocean-lead,
+.a-turn-inner p,
+.c-narr p,
+.c-choose-note p,
+.m-lead p,
+.m-status p,
+.m-photog-inner p,
+.w-creed-inner p,
+.w-map-head p,
+.philosophy-header p,
+.contrast-header p,
+.section-header p,
+.journey-header p,
+.itinerary-header p,
+.cta-inner p,
+.hero-inner > p,
+.c-hero-inner > p { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {
@@ -950,8 +971,7 @@ footer {
         "zh-Hant",
         "zh-Hans",
         "yue",
-        "en",
-        "ja"
+        "en"
       ]
     },
     {
@@ -1068,7 +1088,7 @@ footer {
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <div class="mono">▸ 我 們 的 典 禮 · THE CEREMONIES</div>
+  <div class="mono">▸ 典 禮 · CEREMONIES</div>
   <h1>Six <em>Ceremonies</em> of the Sea</h1>
   <div class="cn">六 · 場 · 典 · 禮</div>
   <div class="page-header-divider"></div>
