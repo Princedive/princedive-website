@@ -933,6 +933,13 @@ footer {
 }
 .q-field { margin-bottom: 1.7rem; }
 .q-field:last-child { margin-bottom: 0; }
+.q-label-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.q-label-row .q-label { margin-bottom: 0; }
 .q-label {
   display: block;
   font-family: 'Noto Serif TC', serif;
@@ -941,14 +948,14 @@ footer {
   letter-spacing: 0.14em;
   margin-bottom: 0.6rem;
 }
-.q-label .req {
+.q-label-row .req, .q-label .req {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.55rem;
   letter-spacing: 0.16em;
   color: var(--shisa-red);
   margin-left: 0.6rem;
 }
-.q-label .opt {
+.q-label-row .opt, .q-label .opt {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.55rem;
   letter-spacing: 0.16em;
@@ -1186,19 +1193,19 @@ footer {
       <div class="q-section-title">▸ 01 · 你 是 誰 · WHO YOU ARE</div>
 
       <div class="q-field">
-        <label class="q-label" for="name">姓名 <span class="req">REQUIRED</span></label>
+        <div class="q-label-row"><label class="q-label" for="name">姓名</label><span class="req">REQUIRED</span></div>
         <input class="q-input" type="text" id="name" name="姓名" required>
       </div>
 
       <div class="q-field">
-        <label class="q-label" for="email">Email <span class="req">REQUIRED</span></label>
+        <div class="q-label-row"><label class="q-label" for="email">Email</label><span class="req">REQUIRED</span></div>
         <input class="q-input" type="email" id="email" name="Email" required>
         <span class="q-hint">我們會用這個信箱回覆你，請確認沒有打錯。</span>
       </div>
 
       <div class="q-row">
         <div class="q-field">
-          <label class="q-label" for="im">通訊軟體 <span class="opt">OPTIONAL</span></label>
+          <div class="q-label-row"><label class="q-label" for="im">通訊軟體</label><span class="opt">OPTIONAL</span></div>
           <select class="q-select" id="im" name="通訊軟體">
             <option value="">不需要，用 Email 就好</option>
             <option value="LINE">LINE</option>
@@ -1207,7 +1214,7 @@ footer {
           </select>
         </div>
         <div class="q-field">
-          <label class="q-label" for="imid">帳號 ID <span class="opt">OPTIONAL</span></label>
+          <div class="q-label-row"><label class="q-label" for="imid">帳號 ID</label><span class="opt">OPTIONAL</span></div>
           <input class="q-input" type="text" id="imid" name="通訊軟體 ID">
           <span class="q-hint">溝通細節時比 Email 快。</span>
         </div>
@@ -1219,7 +1226,7 @@ footer {
       <div class="q-section-title">▸ 02 · 想 赴 哪 一 場 · WHICH CEREMONY</div>
 
       <div class="q-field">
-        <label class="q-label" for="ceremony">典禮 <span class="req">REQUIRED</span></label>
+        <div class="q-label-row"><label class="q-label" for="ceremony">典禮</label><span class="req">REQUIRED</span></div>
         <select class="q-select" id="ceremony" name="典禮" required>
           <option value="">請選擇</option>
           <option value="I. 青之典禮 The Azure Ceremony">I. 青之典禮 · 半日兩潛 · 青之洞 · ¥28,000</option>
@@ -1233,7 +1240,7 @@ footer {
       </div>
 
       <div class="q-field">
-        <label class="q-label" for="level">潛水經驗 <span class="req">REQUIRED</span></label>
+        <div class="q-label-row"><label class="q-label" for="level">潛水經驗</label><span class="req">REQUIRED</span></div>
         <select class="q-select" id="level" name="潛水經驗" required>
           <option value="">請選擇</option>
           <option value="完全沒有經驗">完全沒有經驗</option>
@@ -1246,7 +1253,7 @@ footer {
       </div>
 
       <div class="q-field">
-        <label class="q-label" for="people">人數 <span class="req">REQUIRED</span></label>
+        <div class="q-label-row"><label class="q-label" for="people">人數</label><span class="req">REQUIRED</span></div>
         <input class="q-input" type="number" id="people" name="人數" min="1" max="20" required>
         <span class="q-hint">我們的配比是一位教練最多帶兩位客人，超過會加派潛水長。</span>
       </div>
@@ -1258,18 +1265,18 @@ footer {
 
       <div class="q-row">
         <div class="q-field">
-          <label class="q-label" for="from">最早可以的日期 <span class="req">REQUIRED</span></label>
+          <div class="q-label-row"><label class="q-label" for="from">最早可以的日期</label><span class="req">REQUIRED</span></div>
           <input class="q-input" type="date" id="from" name="最早日期" required>
         </div>
         <div class="q-field">
-          <label class="q-label" for="to">最晚可以的日期 <span class="req">REQUIRED</span></label>
+          <div class="q-label-row"><label class="q-label" for="to">最晚可以的日期</label><span class="req">REQUIRED</span></div>
           <input class="q-input" type="date" id="to" name="最晚日期" required>
         </div>
       </div>
       <span class="q-hint">給我們一個區間，我們比較容易避開海況不好的日子。記得預留潛水後 18–24 小時再搭機。</span>
 
       <div class="q-field" style="margin-top:1.7rem;">
-        <label class="q-label" for="hotel">住宿地區 <span class="opt">OPTIONAL</span></label>
+        <div class="q-label-row"><label class="q-label" for="hotel">住宿地區</label><span class="opt">OPTIONAL</span></div>
         <input class="q-input" type="text" id="hotel" name="住宿地區" placeholder="例：恩納村、北谷、那霸市區">
         <span class="q-hint">用來判斷接送安排。潛點周邊 15 分鐘車程內多數方案含免費接送。</span>
       </div>
@@ -1304,7 +1311,7 @@ footer {
       <div class="q-section-title">▸ 05 · 還 想 告 訴 我 們 什 麼 · ANYTHING ELSE</div>
 
       <div class="q-field">
-        <label class="q-label" for="note">留言 <span class="opt">OPTIONAL</span></label>
+        <div class="q-label-row"><label class="q-label" for="note">留言</label><span class="opt">OPTIONAL</span></div>
         <textarea class="q-textarea" id="note" name="留言" placeholder="想看的東西、健康狀況、慶祝的日子、水下求婚的想法、或任何你不確定的問題——都可以在這裡說。"></textarea>
       </div>
     </section>
