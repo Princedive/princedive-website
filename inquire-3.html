@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>預約詢問｜沖繩中文潛水預約 · 私人包團 | 王子潛水 Prince Dive</title>
+<meta name="description" content="王子潛水沖繩中文潛水預約詢問。告訴我們你的執照等級、旅程日期與人數，我們會為你配對最適合的海域與典禮，並提供完整報價。全程私人包團，1:2 教練配比。">
+<link rel="canonical" href="https://princedive.jp/inquire.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="王子潛水 Prince Dive Okinawa">
+<meta property="og:title" content="預約詢問｜王子潛水 Prince Dive Okinawa">
+<meta property="og:description" content="告訴我們你的執照等級與旅程日期，我們親自回覆你可行的安排與完整報價。">
+<meta property="og:url" content="https://princedive.jp/inquire.html">
+<meta property="og:image" content="https://princedive.jp/assets/logo.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F8F3E6;
+  --paper-deep: #EFE6D2;
+  --bone: #E8DDC2;
+  --shisa-red: #C8553D;
+  --ryukyu-blue: #5B8DA8;
+  --ryukyu-blue-deep: #3A6B86;
+  --gold: #B89A5E;
+  --gold-deep: #8A6F3D;
+  --gold-light: #D4BC88;
+  --ink: #2A3640;
+  --ink-light: #4A5560;
+  --ink-soft: #6B7580;
+  --white: #FFFFFF;
+  --navy: #0A1F3D;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Noto Serif TC', 'Georgia', serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ============ NAV ============ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(248, 243, 230, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184, 154, 94, 0.15);
+  padding: 1.2rem 3rem;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-brand { display: flex; align-items: center; gap: 0.85rem; cursor: pointer; text-decoration: none; }
+.nav-logo { width: 42px; height: 42px; }
+
+.nav-brand-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+.nav-brand-cn {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.45em;
+  margin-top: 0.15rem;
+}
+
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+
+.nav-link {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: var(--ink-light);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+  background: none;
+  border-top: none; border-left: none; border-right: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link .nav-link-en {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-top: 0.15rem;
+  text-transform: uppercase;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-deep);
+  border-bottom-color: var(--gold);
+}
+
+.nav-cta {
+  padding: 0.7rem 1.5rem !important;
+  border: 1px solid var(--gold) !important;
+  color: var(--gold-deep) !important;
+  background: transparent;
+}
+.nav-cta:hover {
+  background: var(--gold);
+  color: var(--paper) !important;
+  border-bottom-color: var(--gold) !important;
+}
+.nav-cta .nav-link-en { color: rgba(255, 255, 255, 0.7); }
+
+/* ============ PAGE HEADER ============ */
+.page-header {
+  padding: 9rem 3rem 4rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header .mono {
+  color: var(--gold);
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* Manual break used only on narrow screens so the title splits evenly */
+.h1-break { display: none; }
+
+.page-header h1 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.page-header .cn {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--ink);
+  letter-spacing: 0.5em;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  margin-bottom: 2rem;
+}
+
+.page-header-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 2.5rem;
+}
+
+.page-header p {
+  color: var(--ink-light);
+  font-size: 1.05rem;
+  line-height: 2.0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============ CEREMONIES INDEX (章節目錄) ============ */
+.ceremonies-index {
+  max-width: 1000px;
+  margin: 3rem auto 2rem;
+  padding: 2rem 3rem;
+  border-top: 1px solid rgba(184, 154, 94, 0.2);
+  border-bottom: 1px solid rgba(184, 154, 94, 0.2);
+}
+
+.ceremonies-index-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.index-item {
+  text-align: center;
+  padding: 0.8rem 0.5rem;
+  text-decoration: none;
+  border-right: 1px solid rgba(184, 154, 94, 0.15);
+  transition: all 0.3s ease;
+}
+
+.index-item:last-child { border-right: none; }
+
+.index-item:hover {
+  background: rgba(184, 154, 94, 0.05);
+}
+
+.index-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.index-name {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--ink);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.index-item:hover .index-name {
+  color: var(--gold-deep);
+}
+
+/* ============ CEREMONY BLOCK ============ */
+.ceremony-block {
+  padding: 6rem 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  scroll-margin-top: 100px;
+}
+
+.ceremony-block.alt-bg {
+  background: var(--paper-deep);
+  max-width: none;
+  padding: 6rem calc((100vw - 1300px) / 2 + 3rem);
+}
+
+.ceremony-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.ceremony-block:nth-child(even) .ceremony-inner {
+  /* Alternate layout */
+}
+
+.ceremony-block.reverse .ceremony-inner {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ceremony-block.reverse .ceremony-visual {
+  order: 2;
+}
+
+.ceremony-block.reverse .ceremony-content {
+  order: 1;
+}
+
+/* Content side */
+.ceremony-content { padding: 1rem 0; }
+
+.ceremony-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.ceremony-num-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold);
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.ceremony-content h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--ink);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.ceremony-content .en-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.3);
+}
+
+.ceremony-content .narrative {
+  color: var(--ink-light);
+  font-size: 1rem;
+  line-height: 2.0;
+  margin-bottom: 2rem;
+  font-family: 'Noto Serif TC', serif;
+}
+
+.ceremony-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(184, 154, 94, 0.2);
+  border-bottom: 1px solid rgba(184, 154, 94, 0.2);
+  margin-bottom: 2rem;
+}
+
+.meta-item {
+  text-align: left;
+}
+
+.meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.meta-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ryukyu-blue-deep);
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.meta-value .cn {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-style: normal;
+  color: var(--ink-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  margin-top: 0.2rem;
+}
+
+.ceremony-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--gold-deep);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--gold);
+  transition: all 0.4s ease;
+}
+
+.ceremony-cta:hover {
+  background: var(--gold);
+  color: var(--paper);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(184, 154, 94, 0.25);
+}
+
+.ceremony-cta span { transition: transform 0.3s ease; }
+.ceremony-cta:hover span { transform: translateX(5px); }
+
+/* Visual side */
+.ceremony-visual {
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+}
+
+.ceremony-visual::after {
+  content: attr(data-placeholder);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  color: rgba(244, 228, 181, 0.6);
+  letter-spacing: 0.3em;
+  z-index: 3;
+}
+
+/* Distinct visual per ceremony */
+.visual-i {
+  background: 
+    radial-gradient(ellipse at 60% 30%, rgba(244, 228, 181, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #7BA8C4 0%, #5B8DA8 50%, #3A6B86 100%);
+}
+.visual-ii {
+  background: 
+    radial-gradient(ellipse at 40% 40%, rgba(212, 188, 136, 0.25) 0%, transparent 55%),
+    linear-gradient(180deg, #5B8DA8 0%, #3A6B86 60%, #142848 100%);
+}
+.visual-iii {
+  background: 
+    radial-gradient(ellipse at 30% 70%, rgba(184, 154, 94, 0.2) 0%, transparent 50%),
+    linear-gradient(180deg, #3A6B86 0%, #142848 60%, #05132A 100%);
+}
+.visual-iv {
+  background: 
+    radial-gradient(ellipse at 70% 20%, rgba(244, 228, 181, 0.3) 0%, transparent 55%),
+    linear-gradient(135deg, #5B8DA8 0%, #3A6B86 50%, #142848 100%);
+}
+.visual-v {
+  background: 
+    radial-gradient(ellipse at 50% 30%, rgba(212, 188, 136, 0.25) 0%, transparent 55%),
+    linear-gradient(180deg, #3A6B86 0%, #142848 50%, #0A1F3D 100%);
+}
+.visual-vi {
+  background: 
+    radial-gradient(ellipse at 40% 40%, rgba(200, 85, 61, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(212, 188, 136, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #3A6B86 0%, #142848 50%, #05132A 100%);
+}
+
+.ceremony-visual::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: 
+    radial-gradient(ellipse at 30% 20%, rgba(244, 228, 181, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 70% 60%, rgba(184, 154, 94, 0.1) 0%, transparent 40%);
+}
+
+.visual-overlay {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 2;
+  color: var(--paper);
+}
+
+.visual-overlay .mono {
+  color: var(--gold-light);
+  font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.visual-overlay h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2rem;
+  text-shadow: 0 2px 15px rgba(5, 19, 42, 0.5);
+}
+
+/* ============ COMPARISON TABLE ============ */
+.comparison-section {
+  padding: 8rem 3rem;
+  background: var(--paper-deep);
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.comparison-header .mono {
+  color: var(--gold);
+  font-size: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.comparison-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.comparison-header h2 em { color: var(--gold); }
+
+.comparison-header .cn {
+  color: var(--ink-light);
+  letter-spacing: 0.4em;
+}
+
+.comparison-table-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: 0.9rem;
+  min-width: 900px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--bone);
+  border-right: 1px solid var(--bone);
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child { border-right: none; }
+
+.comparison-table thead th {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  border-right: 1px solid rgba(212, 188, 136, 0.3);
+  padding: 1.5rem 1rem;
+}
+
+.comparison-table thead th .roman {
+  color: var(--gold-light);
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 0.3rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+}
+
+.comparison-table thead th .name {
+  font-family: 'Noto Serif TC', serif;
+  font-style: normal;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  display: block;
+}
+
+.comparison-table thead th .en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-top: 0.3rem;
+  opacity: 0.85;
+}
+
+.comparison-table tbody th {
+  background: var(--paper);
+  text-align: left;
+  padding-left: 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 400;
+  min-width: 140px;
+}
+
+.comparison-table tbody td {
+  color: var(--ink);
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.comparison-table tbody td .highlight {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ryukyu-blue-deep);
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.comparison-table tbody tr:hover td {
+  background: rgba(184, 154, 94, 0.03);
+}
+
+/* ============ CTA SECTION ============ */
+.cta-section {
+  padding: 8rem 3rem;
+  text-align: center;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(184, 154, 94, 0.08) 0%, transparent 60%),
+    var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 800px; height: 800px;
+  border: 1px solid rgba(184, 154, 94, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 500px; height: 500px;
+  border: 1px solid rgba(184, 154, 94, 0.12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+}
+
+.cta-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.cta-section h2 em { color: var(--gold); }
+
+.cta-section .cn {
+  color: var(--ink-light);
+  letter-spacing: 0.4em;
+  margin-bottom: 2.5rem;
+}
+
+.cta-section p {
+  color: var(--ink-light);
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 3rem;
+  background: var(--gold);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--gold-deep);
+  transform: translateY(-2px);
+}
+
+.cta-button span { transition: transform 0.3s ease; }
+.cta-button:hover span { transform: translateX(5px); }
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 5rem 3rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.25);
+}
+
+.footer-brand-inner { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.footer-logo { width: 50px; height: 50px; filter: brightness(1.1); }
+
+.footer-brand h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: var(--gold-light);
+  margin-bottom: 0.2rem;
+}
+.footer-brand .cn {
+  color: var(--paper);
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+}
+.footer-brand p {
+  color: rgba(248, 243, 230, 0.65);
+  font-size: 0.85rem;
+  line-height: 1.9;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.3em;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col li { padding: 0.4rem 0; }
+.footer-col a {
+  color: rgba(248, 243, 230, 0.65);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: rgba(248, 243, 230, 0.4);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  /* Nav */
+  .nav { padding: 0.8rem 1rem; flex-wrap: nowrap; gap: 0.5rem; }
+  .nav-brand { flex-shrink: 0; }
+  .nav-brand-text { font-size: 1.1rem; }
+  .nav-brand-cn { font-size: 0.6rem; letter-spacing: 0.35em; }
+  .nav-logo { width: 36px; height: 36px; }
+  .nav-links { gap: 0.8rem; flex-wrap: nowrap; justify-content: flex-end; align-items: center; }
+  .nav-link { font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.3rem 0; }
+  .nav-link .nav-link-en { display: none; }
+  .nav-cta { padding: 0.5rem 0.8rem !important; font-size: 0.65rem !important; }
+  
+  /* Page header */
+  .page-header { padding: 7rem 1.2rem 2rem; }
+  /* Sized in vw so the full title always fits on ONE line, any phone width */
+  .page-header h1 {
+    font-size: min(7.4vw, 3.2rem);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  
+  /* Ceremonies index */
+  .ceremonies-index { padding: 1rem 1.5rem; }
+  .ceremonies-index-inner { grid-template-columns: repeat(3, 1fr); gap: 0.3rem; }
+  .index-item { padding: 0.6rem 0.3rem; }
+  .index-item:nth-child(3) { border-right: none; }
+  .index-num { font-size: 0.9rem; }
+  .index-name { font-size: 0.7rem; letter-spacing: 0.1em; }
+  
+  /* CEREMONY BLOCKS - mobile stack: content FIRST, then visual */
+  .ceremony-block { padding: 3rem 1.5rem; }
+  .ceremony-block.alt-bg { padding: 3rem 1.5rem; }
+  .ceremony-inner { 
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  /* Force content ABOVE image on all cards (regardless of reverse class) */
+  .ceremony-content { order: 1 !important; }
+  .ceremony-visual { order: 2 !important; aspect-ratio: 16/9; width: 100%; }
+  .ceremony-num-big { font-size: 3rem; }
+  .ceremony-content h2 { font-size: 1.8rem; }
+  .ceremony-content .en-name { font-size: 1.1rem; }
+  /* META - mobile: label left / value right, aligned rows (was 3 uneven columns) */
+  .ceremony-meta {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+  .meta-item {
+    display: grid;
+    grid-template-columns: 5.2rem 1fr;
+    align-items: baseline;
+    gap: 0.8rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px dashed rgba(184, 154, 94, 0.18);
+  }
+  .meta-item:last-child { border-bottom: none; }
+  .meta-label { margin-bottom: 0; font-size: 0.55rem; letter-spacing: 0.22em; }
+  .meta-value {
+    font-size: 1rem;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .meta-value .cn { display: inline; margin-top: 0; font-size: 0.75rem; }
+  .ceremony-content .en-name { font-size: 1.1rem; line-height: 1.4; }
+  
+  /* Comparison table */
+  .comparison-section { padding: 4rem 1rem; }
+  .comparison-table-wrap { overflow-x: auto; }
+  .comparison-table { min-width: 700px; font-size: 0.75rem; }
+  .comparison-table thead th { padding: 1rem 0.5rem; }
+  .comparison-table thead th .name { font-size: 0.75rem; }
+  .comparison-table th, .comparison-table td { padding: 0.9rem 0.5rem; }
+  
+  /* CTA */
+  /* CTA - hide overflow circles on mobile (they look like half-circles) */
+  .cta-section::before,
+  .cta-section::after { display: none !important; }
+  .cta-section { padding: 4rem 1.5rem; }
+  .cta-logo { width: 55px; height: 55px; margin-bottom: 1.5rem; }
+  .cta-section h2 { font-size: 1.8rem; }
+  .cta-section p { font-size: 0.95rem; }
+  .cta-button { padding: 0.9rem 2rem; font-size: 0.7rem; letter-spacing: 0.3em; }
+
+  
+  /* Footer */
+  .footer-inner { 
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+  .footer-brand { text-align: center; }
+  .footer-brand-inner { justify-content: center; }
+  .footer-brand p { margin-left: auto; margin-right: auto; text-align: center; }
+  .footer-col h4 { text-align: center; }
+  .footer-col ul { text-align: center; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; padding-top: 1.5rem; font-size: 0.55rem; }
+}
+
+@media (max-width: 600px) {
+  .nav-link { font-size: 0.65rem; letter-spacing: 0.1em; }
+  .nav-links { gap: 0.6rem; }
+  .nav-brand-text { display: none; }
+  .nav-brand-cn { display: none; }
+  .meta-item { grid-template-columns: 4.6rem 1fr; }
+  .comparison-table { font-size: 0.7rem; }
+  .ceremonies-index-inner { grid-template-columns: repeat(2, 1fr); }
+  .index-item:nth-child(2n) { border-right: none; }
+  .index-item:nth-child(3) { border-right: 1px solid rgba(184, 154, 94, 0.15); }
+}
+
+
+/* ============ INQUIRE ============ */
+.q-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 3rem 6rem; }
+
+.q-note {
+  background: var(--paper-deep);
+  border: 1px solid rgba(184, 154, 94, 0.28);
+  padding: 1.8rem 2rem;
+  margin-bottom: 3rem;
+}
+.q-note p { color: var(--ink-light); font-size: 0.94rem; line-height: 2.0; }
+.q-note p + p { margin-top: 0.9rem; }
+.q-note strong { color: var(--ink); }
+
+.q-section { margin-bottom: 3rem; }
+.q-section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--gold);
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+.q-field { margin-bottom: 1.7rem; }
+.q-field:last-child { margin-bottom: 0; }
+.q-label-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.q-label-row .q-label { margin-bottom: 0; }
+.q-label {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.94rem;
+  color: var(--ink);
+  letter-spacing: 0.14em;
+  margin-bottom: 0.6rem;
+}
+.q-label-row .req, .q-label .req {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  color: var(--shisa-red);
+  margin-left: 0.6rem;
+}
+.q-label-row .opt, .q-label .opt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  margin-left: 0.6rem;
+}
+.q-hint {
+  display: block;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin-top: 0.35rem;
+  letter-spacing: 0.03em;
+}
+.q-input, .q-select, .q-textarea {
+  width: 100%;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid rgba(184, 154, 94, 0.4);
+  padding: 0.85rem 1rem;
+  border-radius: 0;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.q-input:focus, .q-select:focus, .q-textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: var(--paper-deep);
+}
+.q-textarea { min-height: 8rem; resize: vertical; line-height: 1.9; }
+.q-select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position: calc(100% - 18px) center, calc(100% - 12px) center;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.6rem;
+}
+.q-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+
+.q-checks { display: grid; gap: 0.7rem; }
+.q-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(184, 154, 94, 0.3);
+  background: var(--paper);
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.q-check:hover { border-color: var(--gold); background: var(--paper-deep); }
+.q-check input { margin-top: 0.28rem; accent-color: var(--gold-deep); flex-shrink: 0; }
+.q-check span {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+}
+.q-check span small {
+  display: block;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+
+.q-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--navy);
+  color: var(--paper);
+  border: 1px solid var(--navy);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  padding: 1.1rem 2.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.q-submit:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+.q-submit-row { text-align: center; margin-top: 3rem; }
+.q-privacy {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.9;
+  margin-top: 1.4rem;
+}
+.q-hp { position: absolute; left: -9999px; }
+
+/* ============ THANKS ============ */
+.t-wrap {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9rem 3rem 6rem;
+  text-align: center;
+}
+.t-inner { max-width: 620px; }
+.t-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 1.4rem;
+}
+.t-inner h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.t-inner h1 em { color: var(--gold); }
+.t-inner .cn {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--ink-light);
+  letter-spacing: 0.45em;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+.t-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 2rem; }
+.t-inner p { color: var(--ink-light); font-size: 1rem; line-height: 2.1; margin-bottom: 1.3rem; }
+.t-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2.6rem; }
+.t-link {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink);
+  border: 1px solid rgba(184, 154, 94, 0.5);
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.t-link:hover { background: var(--paper-deep); border-color: var(--gold); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+@media (max-width: 900px) {
+  .q-wrap { padding: 2rem 1.5rem 4.5rem; }
+  .q-note { padding: 1.4rem 1.3rem; margin-bottom: 2.2rem; }
+  .q-section { margin-bottom: 2.4rem; }
+  .q-row { grid-template-columns: 1fr; gap: 0; }
+  .q-row .q-field { margin-bottom: 1.7rem; }
+  .q-input, .q-select, .q-textarea { font-size: 16px; }
+  .q-submit { width: 100%; justify-content: center; padding: 1.1rem 1.5rem; }
+  .t-wrap { padding: 7rem 1.5rem 4rem; min-height: 60vh; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://princedive.jp/inquire.html",
+      "url": "https://princedive.jp/inquire.html",
+      "name": "預約詢問｜王子潛水 Prince Dive Okinawa",
+      "inLanguage": "zh-Hant"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://princedive.jp/#business",
+      "name": "王子潛水 Prince Dive Okinawa",
+      "url": "https://princedive.jp/",
+      "foundingDate": "2020",
+      "areaServed": "Okinawa, Japan",
+      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en", "ja"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://princedive.jp/" },
+        { "@type": "ListItem", "position": 2, "name": "預約 Inquire", "item": "https://princedive.jp/inquire.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="assets/logo.png" alt="Prince Dive">
+    <div>
+      <div class="nav-brand-text">Prince Dive</div>
+      <div class="nav-brand-cn">王 子 潛 水</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html" class="nav-link">哲學<span class="nav-link-en">Philosophy</span></a>
+    <a href="ceremonies.html" class="nav-link">典禮<span class="nav-link-en">Ceremonies</span></a>
+    <a href="waters.html" class="nav-link">海域<span class="nav-link-en">Our Waters</span></a>
+    <a href="index.html#moments" class="nav-link">映像<span class="nav-link-en">Moments</span></a>
+    <a href="inquire.html" class="nav-link nav-cta active">預約<span class="nav-link-en">Inquire</span></a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="mono">▸ 預 約 · INQUIRE</div>
+  <h1>Begin a <em>Conversation</em></h1>
+  <div class="cn">從 · 一 · 次 · 對 · 話 · 開 · 始</div>
+  <div class="page-header-divider"></div>
+  <p>我們不接受即時線上訂位。每一場典禮都需要先確認你的執照等級、旅程日期與想看的東西，才能為你配對最適合的海域與教練——這是私人包團的必要程序。</p>
+</header>
+
+<div class="q-wrap">
+
+  <div class="q-note">
+    <p><strong>填完之後會發生什麼</strong></p>
+    <p>我們收到後會親自回覆你，說明可行的日期、適合的典禮與完整報價。這不是自動回覆——回信的人就是之後為你安排行程的人。</p>
+    <p>若你想加入專業水下攝影，請<strong>至少提前一週</strong>告訴我們，攝影師的檔期需要保留。</p>
+  </div>
+
+  <form name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+    <input type="hidden" name="form-name" value="inquiry">
+    <p class="q-hp"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+    <!-- 聯絡方式 -->
+    <section class="q-section">
+      <div class="q-section-title">▸ 01 · 你 是 誰 · WHO YOU ARE</div>
+
+      <div class="q-field">
+        <div class="q-label-row"><label class="q-label" for="f-name">姓名</label><span class="req">REQUIRED</span></div>
+        <input class="q-input" type="text" id="f-name" name="guest_name" required>
+      </div>
+
+      <div class="q-field">
+        <div class="q-label-row"><label class="q-label" for="f-email">Email</label><span class="req">REQUIRED</span></div>
+        <input class="q-input" type="email" id="f-email" name="guest_email" required>
+        <span class="q-hint">我們會用這個信箱回覆你，請確認沒有打錯。</span>
+      </div>
+
+      <div class="q-row">
+        <div class="q-field">
+          <div class="q-label-row"><label class="q-label" for="im">通訊軟體</label><span class="opt">OPTIONAL</span></div>
+          <select class="q-select" id="im" name="im">
+            <option value="">不需要，用 Email 就好</option>
+            <option value="LINE">LINE</option>
+            <option value="微信 WeChat">微信 WeChat</option>
+            <option value="WhatsApp">WhatsApp</option>
+          </select>
+        </div>
+        <div class="q-field">
+          <div class="q-label-row"><label class="q-label" for="imid">帳號 ID</label><span class="opt">OPTIONAL</span></div>
+          <input class="q-input" type="text" id="imid" name="im_id">
+          <span class="q-hint">溝通細節時比 Email 快。</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 典禮 -->
+    <section class="q-section">
+      <div class="q-section-title">▸ 02 · 想 赴 哪 一 場 · WHICH CEREMONY</div>
+
+      <div class="q-field">
+        <div class="q-label-row"><label class="q-label" for="ceremony">典禮</label><span class="req">REQUIRED</span></div>
+        <select class="q-select" id="ceremony" name="ceremony" required>
+          <option value="">請選擇</option>
+          <option value="I. 青之典禮 The Azure Ceremony">I. 青之典禮 · 半日兩潛 · 青之洞 · ¥28,000</option>
+          <option value="II. 加冕之途 The Coronation">II. 加冕之途 · PADI OW 三日考照 · ¥98,000</option>
+          <option value="III. 王座之深 The Throne Below">III. 王座之深 · PADI AOW 二日五潛 · ¥98,000</option>
+          <option value="IV. 擇海之典 The Chosen Sea">IV. 擇海之典 · 單日三潛船潛 · ¥39,000</option>
+          <option value="V. 群島之謁 The Archipelago Audience">V. 群島之謁 · 四天三夜 11 潛 · ¥128,000</option>
+          <option value="VI. 雙人之海 The Royal Pair">VI. 雙人之海 · 客製水下寫真 · 依方案報價</option>
+          <option value="尚未決定，希望你們建議">尚未決定，希望你們建議</option>
+        </select>
+      </div>
+
+      <div class="q-field">
+        <div class="q-label-row"><label class="q-label" for="level">潛水經驗</label><span class="req">REQUIRED</span></div>
+        <select class="q-select" id="level" name="level" required>
+          <option value="">請選擇</option>
+          <option value="完全沒有經驗">完全沒有經驗</option>
+          <option value="只體驗過，沒有執照">只體驗過潛水，沒有執照</option>
+          <option value="PADI OW 或同等級">持有 OW 或同等級執照</option>
+          <option value="PADI AOW 或以上">持有 AOW 或以上</option>
+          <option value="自由潛水證照">持有自由潛水證照</option>
+        </select>
+        <span class="q-hint">很久沒下水也沒關係，告訴我們，教練會安排複習。</span>
+      </div>
+
+      <div class="q-field">
+        <div class="q-label-row"><label class="q-label" for="people">人數</label><span class="req">REQUIRED</span></div>
+        <input class="q-input" type="number" id="people" name="people" min="1" max="20" required>
+        <span class="q-hint">我們的配比是一位教練最多帶兩位客人，超過會加派潛水長。</span>
+      </div>
+    </section>
+
+    <!-- 日期 -->
+    <section class="q-section">
+      <div class="q-section-title">▸ 03 · 什 麼 時 候 · WHEN</div>
+
+      <div class="q-row">
+        <div class="q-field">
+          <div class="q-label-row"><label class="q-label" for="from">最早可以的日期</label><span class="req">REQUIRED</span></div>
+          <input class="q-input" type="date" id="from" name="date_from" required>
+        </div>
+        <div class="q-field">
+          <div class="q-label-row"><label class="q-label" for="to">最晚可以的日期</label><span class="req">REQUIRED</span></div>
+          <input class="q-input" type="date" id="to" name="date_to" required>
+        </div>
+      </div>
+      <span class="q-hint">給我們一個區間，我們比較容易避開海況不好的日子。記得預留潛水後 18–24 小時再搭機。</span>
+
+      <div class="q-field" style="margin-top:1.7rem;">
+        <div class="q-label-row"><label class="q-label" for="hotel">住宿地區</label><span class="opt">OPTIONAL</span></div>
+        <input class="q-input" type="text" id="hotel" name="hotel" placeholder="例：恩納村、北谷、那霸市區">
+        <span class="q-hint">用來判斷接送安排。潛點周邊 15 分鐘車程內多數方案含免費接送。</span>
+      </div>
+    </section>
+
+    <!-- 加購 -->
+    <section class="q-section">
+      <div class="q-section-title">▸ 04 · 需 要 加 購 嗎 · ADD-ONS</div>
+
+      <div class="q-checks">
+        <label class="q-check">
+          <input type="checkbox" name="addons" value="專業水下攝影">
+          <span>專業水下攝影<small>駐店獲獎水下人像攝影師隨行，需最少提前一週預約</small></span>
+        </label>
+        <label class="q-check">
+          <input type="checkbox" name="addons" value="夜潛替換（僅 AOW）">
+          <span>夜潛替換<small>僅王座之深適用，+¥10,000，第一日須改下午時段</small></span>
+        </label>
+        <label class="q-check">
+          <input type="checkbox" name="addons" value="專車接送">
+          <span>專車接送<small>住宿超出免費範圍、或選擇擇海之典時需要</small></span>
+        </label>
+        <label class="q-check">
+          <input type="checkbox" name="addons" value="近視度數面鏡">
+          <span>近視度數面鏡<small>免費提供，勾選後我們會在回信時詢問你的度數</small></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- 備註 -->
+    <section class="q-section">
+      <div class="q-section-title">▸ 05 · 還 想 告 訴 我 們 什 麼 · ANYTHING ELSE</div>
+
+      <div class="q-field">
+        <div class="q-label-row"><label class="q-label" for="note">留言</label><span class="opt">OPTIONAL</span></div>
+        <textarea class="q-textarea" id="note" name="note" placeholder="想看的東西、健康狀況、慶祝的日子、水下求婚的想法、或任何你不確定的問題——都可以在這裡說。"></textarea>
+      </div>
+    </section>
+
+    <div class="q-submit-row">
+      <button class="q-submit" type="submit">送 出 詢 問 <span>→</span></button>
+      <p class="q-privacy">送出即表示你同意我們使用上述資訊與你聯繫並安排行程。<br>我們不會將你的資料提供給第三方，也不會寄送行銷郵件。</p>
+    </div>
+  </form>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-inner">
+        <img class="footer-logo" src="assets/logo.png" alt="Prince Dive">
+        <div>
+          <h3>Prince Dive</h3>
+          <div class="cn">王 子 潛 水</div>
+        </div>
+      </div>
+      <p>沖繩私人策展式潛水體驗。不賣潛水,策展典禮。</p>
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--gold);letter-spacing:0.15em;">◆ V.I GROUP · OKINAWA</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="about.html">哲學 · Philosophy</a></li>
+        <li><a href="ceremonies.html">典禮 · Ceremonies</a></li>
+        <li><a href="waters.html">海域 · Our Waters</a></li>
+        <li><a href="index.html#moments">映像 · Moments</a></li>
+        <li><a href="inquire.html">預約 · Inquire</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Waters</h4>
+      <ul>
+        <li><a href="#bluecave">青之洞 · Blue Cave</a></li>
+        <li><a href="#sunabe">砂邊 · Sunabe</a></li>
+        <li><a href="#gorilla">大猩猩 · Gorilla Chop</a></li>
+        <li><a href="#kerama">慶良間 · Kerama</a></li>
+        <li><a href="#manza">萬座 · Manza</a></li>
+        <li><a href="#sesoko">瀨底島 · Sesoko</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#">LINE @princedive</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">小紅書</a></li>
+        <li><a href="#">inquiry@princedive.jp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 · PRINCE DIVE OKINAWA · ALL RIGHTS RESERVED</div>
+    <div>◆ CURATING CEREMONIES OF THE SEA</div>
+  </div>
+</footer>
+
+
+
+
+<script>
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 50) {
+    nav.style.padding = '0.9rem 3rem';
+    nav.style.background = 'rgba(248, 243, 230, 0.95)';
+    nav.style.boxShadow = '0 2px 20px rgba(42, 54, 64, 0.05)';
+  } else {
+    nav.style.padding = '1.2rem 3rem';
+    nav.style.background = 'rgba(248, 243, 230, 0.9)';
+    nav.style.boxShadow = 'none';
+  }
+});
+</script>
+</body>
+</html>
