@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>青之典禮｜沖繩青之洞窟體驗潛水 半日兩潛・中文教練・免執照 | 王子潛水</title>
-<meta name="description" content="沖繩青之洞窟體驗潛水，半日兩潛 ¥28,000 起。無需執照、不會游泳也能參加，1:2 中文教練帶領，第一潛適應呼吸、第二潛走進光之洞窟。含全套裝備、運動相機拍攝與周邊飯店接送。">
-<link rel="canonical" href="https://princedive.jp/azure.html">
+<title>加冕之途｜沖繩 PADI OW 開放水域潛水員考照 三日課程・中文教學 | 王子潛水</title>
+<meta name="description" content="沖繩 PADI Open Water 開放水域潛水員考照三日課程 ¥98,000，eLearning 教材費全包。第一日宜野灣泳池平靜水域、第二三日開放水域四潛，1:2 中文教練帶領，終身有效國際執照，實體卡約兩週寄達。">
+<link rel="canonical" href="https://princedive.jp/coronation.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="王子潛水 Prince Dive Okinawa">
-<meta property="og:title" content="青之典禮｜沖繩青之洞窟體驗潛水 · 王子潛水">
-<meta property="og:description" content="半日兩潛，第一潛換你的安心，第二潛換你的畫面。無需執照，中文教練 1:2 帶領。">
-<meta property="og:url" content="https://princedive.jp/azure.html">
+<meta property="og:title" content="加冕之途｜沖繩 PADI OW 考照三日課程 · 王子潛水">
+<meta property="og:description" content="三天沒有一天坐在教室。eLearning 教材費全包，1:2 中文教練，終身有效的國際潛水執照。">
+<meta property="og:url" content="https://princedive.jp/coronation.html">
 <meta property="og:image" content="https://princedive.jp/assets/logo.png">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
@@ -1374,36 +1374,46 @@ footer {
   .c-cancel div:nth-child(3), .c-cancel div:nth-child(4) { border-bottom: none; }
   .w-faq { padding: 3rem 1.5rem 4.5rem; }
 }
+
+/* Ceremony II variants */
+.c-hero-ii {
+  background:
+    radial-gradient(ellipse at 50% 28%, rgba(244,228,181,0.22) 0%, transparent 58%),
+    linear-gradient(165deg, #7BA8C4 0%, #3A6B86 55%, #0A1F3D 100%);
+}
+.c-row.single { grid-template-columns: 5.5rem 1fr; }
+.c-sched.alt { background: var(--paper); }
+@media (max-width: 900px) {
+  .c-row.single { grid-template-columns: 4.2rem 1fr; }
+}
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Product", "TouristTrip"],
-      "@id": "https://princedive.jp/azure.html#trip",
-      "name": "青之典禮 The Azure Ceremony｜沖繩青之洞窟體驗潛水",
-      "description": "半日兩潛的沖繩青之洞窟體驗潛水。第一潛於淺灘適應呼吸與浮力，第二潛進入青之洞。無需潛水執照，PADI MSDT 中文教練 1:2 帶領，含全套裝備、運動相機拍攝與周邊飯店接送。",
-      "url": "https://princedive.jp/azure.html",
-      "brand": { "@id": "https://princedive.jp/#business" },
+      "@type": ["Course", "Product"],
+      "@id": "https://princedive.jp/coronation.html#course",
+      "name": "加冕之途 The Coronation｜PADI Open Water 開放水域潛水員課程",
+      "description": "沖繩 PADI Open Water 開放水域潛水員三日考照課程。學科透過 PADI eLearning 於出發前在家完成，第一日上午於宜野灣泳池進行平靜水域訓練，第二、三日於砂邊、青之洞或大猩猩完成四支開放水域潛水。1:2 中文教練帶領，教材費與認證費全包，並免費提供近視度數面鏡。",
+      "url": "https://princedive.jp/coronation.html",
+      "inLanguage": ["zh-Hant", "yue", "en", "ja"],
+      "educationalCredentialAwarded": "PADI Open Water Diver",
       "provider": { "@id": "https://princedive.jp/#business" },
-      "touristType": "初學者・無潛水經驗者",
       "offers": {
         "@type": "Offer",
-        "price": "28000",
+        "price": "98000",
         "priceCurrency": "JPY",
         "availability": "https://schema.org/InStock",
-        "url": "https://princedive.jp/azure.html"
+        "category": "Certification Course"
       },
-      "itinerary": {
-        "@type": "ItemList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "岸上簡報：裝備說明、呼吸練習、水下手勢與海洋禮儀" },
-          { "@type": "ListItem", "position": 2, "name": "第一潛：淺灘適應，練習呼吸與浮力控制" },
-          { "@type": "ListItem", "position": 3, "name": "岸上休息 30 分鐘" },
-          { "@type": "ListItem", "position": 4, "name": "第二潛：進入青之洞窟，運動相機全程紀錄" }
-        ]
-      }
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": ["online", "onsite"],
+        "courseWorkload": "P3D",
+        "location": { "@type": "Place", "name": "沖繩・宜野灣泳池與砂邊、青之洞、大猩猩潛點", "address": { "@type": "PostalAddress", "addressRegion": "沖繩縣", "addressCountry": "JP" } }
+      },
+      "coursePrerequisites": "年齡 10 歲以上；需完成 200 公尺游泳或 300 公尺蛙鏡蛙鞋浮潛，以及 10 分鐘漂浮或踩水；需通過 PADI 健康聲明書。"
     },
     {
       "@type": "LocalBusiness",
@@ -1419,19 +1429,18 @@ footer {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://princedive.jp/" },
         { "@type": "ListItem", "position": 2, "name": "典禮 Ceremonies", "item": "https://princedive.jp/ceremonies.html" },
-        { "@type": "ListItem", "position": 3, "name": "青之典禮 The Azure Ceremony", "item": "https://princedive.jp/azure.html" }
+        { "@type": "ListItem", "position": 3, "name": "加冕之途 The Coronation", "item": "https://princedive.jp/coronation.html" }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "完全沒有潛水經驗可以參加青之洞窟體驗潛水嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。青之典禮專為第一次下水的人設計，不需要執照或經驗。第一潛用來適應呼吸與浮力，教練全程在伸手可及的距離陪同，穩定後才進行第二潛。" } },
-        { "@type": "Question", "name": "不會游泳可以參加嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。潛水靠裝備控制浮力，不靠泳技。會先在腳踩得到底的淺水區適應，若仍感不安可改為浮潛。" } },
-        { "@type": "Question", "name": "小孩幾歲可以參加？", "acceptedAnswer": { "@type": "Answer", "text": "體驗潛水年齡下限 10 歲；8 至 9 歲可參加 PADI Bubblemaker 淺水體驗。更小的孩子建議以浮潛方式一同下水。" } },
-        { "@type": "Question", "name": "潛水後多久可以搭飛機？", "acceptedAnswer": { "@type": "Answer", "text": "單次潛水後建議間隔至少 12 小時，多次潛水後建議 18 小時以上。若行程允許，建議預留 24 小時，身體恢復更完整、登機更舒適。" } },
-        { "@type": "Question", "name": "遇到壞天氣怎麼辦？", "acceptedAnswer": { "@type": "Answer", "text": "若當日海況不適合下水，會提前聯絡並優先協調改期；無法改期時全額退款，因天候取消不適用一般取消政策。" } },
-        { "@type": "Question", "name": "近視可以下水嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。王子潛水備有近視度數面鏡並免費提供，預約時告知度數即可。亦可配戴日拋隱形眼鏡下潛。" } },
-        { "@type": "Question", "name": "青之典禮的取消政策是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "出發前一個月以上取消免費；15 天內取消收取 50%；7 天內收取 80%；3 天內恕不退款。" } }
+        { "@type": "Question", "name": "PADI eLearning 要花多久？一定要出發前完成嗎？", "acceptedAnswer": { "@type": "Answer", "text": "多數人需要 8 到 15 小時，可分次進行，但必須在抵達沖繩前完成，因為三天行程全部排給水下訓練。教材費已含在課程費用內。" } },
+        { "@type": "Question", "name": "完全沒潛過水可以直接考 PADI OW 嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。PADI Open Water 是零經驗者的入門課程，不需要先參加體驗潛水。" } },
+        { "@type": "Question", "name": "不會游泳可以考 OW 嗎？", "acceptedAnswer": { "@type": "Answer", "text": "幾乎都可以。PADI 水性要求二選一：200 公尺游泳（不限泳姿不計時），或 300 公尺配戴蛙鏡蛙鞋的浮潛，另加 10 分鐘漂浮或踩水。多數人選浮潛，不限時間、可以慢慢來，不是體能測驗。" } },
+        { "@type": "Question", "name": "小孩幾歲可以考潛水執照？", "acceptedAnswer": { "@type": "Answer", "text": "年齡下限 10 歲。10 至 14 歲取得 Junior Open Water Diver，需成人陪同並有深度限制，滿 15 歲後可免費升級為正式 Open Water Diver。" } },
+        { "@type": "Question", "name": "潛水執照什麼時候拿到？", "acceptedAnswer": { "@type": "Answer", "text": "第三日課程結束後立即送出認證申請，實體證照卡約兩週後寄達。認證與卡片費用已包含在課程費用內。" } },
+        { "@type": "Question", "name": "考完 OW 多久可以搭飛機？", "acceptedAnswer": { "@type": "Answer", "text": "最後一天有兩支潛水屬多次潛水，建議間隔 18 小時以上再搭機；若行程允許建議預留 24 小時。" } }
       ]
     }
   ]
@@ -1459,19 +1468,19 @@ footer {
 </nav>
 
 <!-- HERO -->
-<header class="c-hero">
+<header class="c-hero c-hero-ii">
   <div class="c-hero-inner">
-    <div class="mono">▸ CEREMONY ONE · 典 禮 之 一</div>
-    <div class="num">I.</div>
-    <h1>青 之 典 禮</h1>
-    <div class="en">The Azure Ceremony</div>
+    <div class="mono">▸ CEREMONY TWO · 典 禮 之 二</div>
+    <div class="num">II.</div>
+    <h1>加 冕 之 途</h1>
+    <div class="en">The Coronation</div>
     <div class="c-hero-divider"></div>
-    <p>為初次見海的你設計。無需潛水經驗、無需任何準備——只需帶上好奇心。半日、兩潛、一場加冕。</p>
+    <p>PADI Open Water 開放水域潛水員認證。三日課程，取得終身有效的國際潛水執照——這不是速成班，是被莊嚴對待的加冕過程。</p>
     <div class="c-hero-meta">
-      <div><div class="l">FOR</div><div class="v">All Levels</div></div>
-      <div><div class="l">DURATION</div><div class="v">Half Day</div></div>
-      <div><div class="l">DIVES</div><div class="v">Two</div></div>
-      <div><div class="l">FROM</div><div class="v">¥28,000</div></div>
+      <div><div class="l">FOR</div><div class="v">No License</div></div>
+      <div><div class="l">DURATION</div><div class="v">Three Days</div></div>
+      <div><div class="l">DIVES</div><div class="v">Pool + 4</div></div>
+      <div><div class="l">FROM</div><div class="v">¥98,000</div></div>
     </div>
   </div>
 </header>
@@ -1479,82 +1488,119 @@ footer {
 <!-- NARRATIVE -->
 <section class="c-narr">
   <div class="mono">▸ 關 於 這 場 典 禮 · THE CEREMONY</div>
-  <h2>Your First <em>Breath</em></h2>
-  <div class="cn">第 · 一 · 次 · 呼 · 吸</div>
+  <h2>A Licence, <em>Not a Souvenir</em></h2>
+  <div class="cn">執 · 照 · 不 · 是 · 紀 · 念 · 品</div>
 
-  <p>多數人的第一次潛水，是被推著完成的。排隊、下水、拍照、上岸，四十分鐘結束，換下一組。你記得自己去過，但記不起海長什麼樣子。</p>
+  <p>市面上有兩種 OW 課程。一種把三天壓成兩天，技巧勾一勾就過；另一種是把時間花在你身上，直到你自己相信可以下水為止。</p>
 
-  <p>青之典禮把這件事拆成兩潛。</p>
+  <p>差別不在證書——兩者發的是同一張卡。差別在三年後：一種人拿著卡卻不敢單獨下水，另一種人走到世界任何一片海都知道自己在做什麼。</p>
 
-  <p><strong>第一潛不去洞窟。</strong>我們在真栄田岬的淺水區，讓你先學會呼吸——不是聽教練講一遍，而是真的在水裡待到你的身體相信它可以。學會用肺調整深淺、學會不去踢水也能停在原地。這一潛沒有拍照的壓力，只有一件事：讓你不再緊張。</p>
+  <p><strong>我們的三天沒有一天坐在教室裡。</strong>學科部分透過 PADI eLearning 在你出發前於家中完成，用你自己的節奏、自己的語言看完。到了沖繩，時間全部留給水。</p>
 
-  <p><strong>第二潛才進洞。</strong>當你已經能穩定停在水中，我們才帶你走進青之洞。陽光從洞口射入，被洞內白砂反射，整個空間泛成一片藍。從最深處回頭望向出口，那道藍會滿到看不見邊界。</p>
+  <p><strong>第一天在宜野灣的泳池。</strong>平靜水域的五個單元，在腳踩得到底、能見度完全清澈的環境裡，把面鏡排水、調節器尋回、中性浮力這些技巧練到變成反射動作。泳池不是次一等的場地——它是唯一能讓你在完全安全的狀態下反覆失敗的地方。</p>
 
-  <p>這個順序是刻意的。如果第一次下水就直接進洞，你的注意力會全部用在控制自己身上，看不見那道光。我們寧願花掉一整潛，換你在第二潛真的看見。</p>
+  <p><strong>第二、三天進海。</strong>四支開放水域潛水，把泳池裡學會的東西搬到真正的海裡。場地依當日海況安排，優先順序是砂邊、青之洞、大猩猩。</p>
+
+  <p>三天結束時，你會拿到一張終身有效、全球通用的執照。但更重要的是，你會知道自己配得上它。</p>
 </section>
 
-<!-- SCHEDULE -->
+<!-- DAY ONE -->
 <section class="c-sched">
   <div class="c-sched-inner">
     <div class="c-sched-head">
-      <div class="mono">▸ 當 日 流 程 · THE DAY</div>
-      <h2>Four <em>Hours</em></h2>
-      <div class="cn">四 · 個 · 小 · 時</div>
+      <div class="mono">▸ 第 一 日 · DAY ONE</div>
+      <h2>The <em>Pool</em></h2>
+      <div class="cn">平 · 靜 · 水 · 域 · 半 · 日</div>
     </div>
 
-    <div class="c-row head">
-      <span>上午場</span><span>下午場</span><span>內容</span>
+    <div class="c-row head single"><span>時間</span><span>內容</span></div>
+
+    <div class="c-row single">
+      <div class="c-time">08:30</div>
+      <div class="c-what">飯店接送出發<small>泳池位於宜野灣，此日接送需加購</small></div>
     </div>
+    <div class="c-row single">
+      <div class="c-time">09:00</div>
+      <div class="c-what">泳池現場集合<small>宜野灣・自行前往者於此時間會合</small></div>
+    </div>
+    <div class="c-row single">
+      <div class="c-time">09:15</div>
+      <div class="c-what">裝備組裝與學科確認<small>核對 eLearning 進度、回答你在家看不懂的地方</small></div>
+    </div>
+    <div class="c-row dive single">
+      <div class="c-time">09:45</div>
+      <div class="c-what">平靜水域訓練 · 前半<small>面鏡排水、調節器尋回、水中呼吸與水面技巧</small></div>
+    </div>
+    <div class="c-row single">
+      <div class="c-time">10:45</div>
+      <div class="c-what">短暫休息</div>
+    </div>
+    <div class="c-row dive single">
+      <div class="c-time">11:00</div>
+      <div class="c-what">平靜水域訓練 · 後半<small>中性浮力、緊急應變，練到成為反射動作</small></div>
+    </div>
+    <div class="c-row single">
+      <div class="c-time">12:00</div>
+      <div class="c-what">結束・送回飯店</div>
+    </div>
+
+    <p class="c-sched-note">※ 泳池日為半日，上午三小時完成五個平靜水域單元。技巧沒到位不會硬推進度，教練會視情況延長練習時間。</p>
+  </div>
+</section>
+
+<!-- DAY TWO & THREE -->
+<section class="c-sched alt">
+  <div class="c-sched-inner">
+    <div class="c-sched-head">
+      <div class="mono">▸ 第 二 、 三 日 · DAY TWO &amp; THREE</div>
+      <h2>Into the <em>Open Water</em></h2>
+      <div class="cn">開 · 放 · 水 · 域 · 四 · 潛</div>
+    </div>
+
+    <div class="c-row head"><span>上午場</span><span>下午場</span><span>內容</span></div>
 
     <div class="c-row">
       <div class="c-time">08:30</div>
       <div class="c-time">12:30</div>
-      <div class="c-what">飯店接送出發<small>免費接送限青之洞周邊 15 分鐘車程內</small></div>
+      <div class="c-what">飯店接送出發<small>免費接送限潛點周邊 15 分鐘車程內</small></div>
     </div>
-
     <div class="c-row">
       <div class="c-time">09:00</div>
       <div class="c-time">13:00</div>
-      <div class="c-what">青之洞現場集合<small>自行前往者於此時間會合</small></div>
+      <div class="c-what">潛點現場集合<small>預設砂邊，依海況可能改至青之洞或大猩猩</small></div>
     </div>
-
     <div class="c-row">
       <div class="c-time">09:30</div>
       <div class="c-time">13:30</div>
-      <div class="c-what">岸上簡報<small>裝備說明、呼吸練習、水下手勢約定、海洋禮儀</small></div>
+      <div class="c-what">岸上簡報<small>當日訓練項目、路線說明、手勢複習</small></div>
     </div>
-
     <div class="c-row dive">
       <div class="c-time">10:00</div>
       <div class="c-time">14:00</div>
-      <div class="c-what">第一潛 · 淺灘適應<small>呼吸與浮力，不趕行程，讓身體先相信自己</small></div>
+      <div class="c-what">開放水域潛水<small>將泳池學會的技巧在真實海況中完成</small></div>
     </div>
-
     <div class="c-row">
       <div class="c-time">10:45</div>
       <div class="c-time">14:45</div>
-      <div class="c-what">岸上休息<small>三十分鐘，讓身體排氮、讓心情落地</small></div>
+      <div class="c-what">岸上休息<small>三十分鐘，排氮與檢討</small></div>
     </div>
-
     <div class="c-row dive">
       <div class="c-time">11:15</div>
       <div class="c-time">15:15</div>
-      <div class="c-what">第二潛 · 走進青之洞<small>光之簾幕、洞內魚群，運動相機全程紀錄</small></div>
+      <div class="c-what">開放水域潛水<small>技巧確認完成後，剩下的時間就是好好看海</small></div>
     </div>
-
     <div class="c-row">
       <div class="c-time">12:00</div>
       <div class="c-time">16:00</div>
       <div class="c-what">沖洗更衣</div>
     </div>
-
     <div class="c-row">
       <div class="c-time">12:30</div>
       <div class="c-time">16:30</div>
-      <div class="c-what">送回飯店</div>
+      <div class="c-what">送回飯店<small>第三日結束後，完成認證申請</small></div>
     </div>
 
-    <p class="c-sched-note">※ 上午場與下午場流程完全相同，僅時間平移四小時。實際下水時間會依當日海況與潮汐微調，由教練現場判斷。</p>
+    <p class="c-sched-note">※ 第二、三日流程相同，各兩潛，合計四支開放水域潛水。潛點依當日風向與浪況由教練判斷，優先順序為砂邊、青之洞、大猩猩。</p>
   </div>
 </section>
 
@@ -1569,30 +1615,37 @@ footer {
   <div class="c-high-grid">
     <article class="c-high-item">
       <div class="n">◆</div>
-      <h3>兩 潛 的 結 構</h3>
-      <div class="en">TWO DIVES, ONE PURPOSE</div>
-      <p>同業的體驗潛水多半只有一潛，直接進洞。我們用第一潛換你的安心，第二潛才換你的畫面。多的那一潛不是加量，是為了讓你真的看見。</p>
+      <h3>教 材 費 全 包</h3>
+      <div class="en">ELEARNING INCLUDED</div>
+      <p>PADI eLearning 的教材費已含在 ¥98,000 內，不另外收取。這一項同業經常另計，報價看起來便宜，到了才發現要補差額——我們不玩這個。</p>
     </article>
 
     <article class="c-high-item">
       <div class="n">✦</div>
-      <h3>1 : 2 的 配 比</h3>
-      <div class="en">TWO GUESTS PER GUIDE</div>
-      <p>一位 PADI MSDT 教練最多帶兩位客人，絕不超過。超過兩人時加派潛水長隨行。第一次下水的緊張感，需要有人隨時就在你伸手可及的距離。</p>
+      <h3>三 天 都 在 水 裡</h3>
+      <div class="en">NO CLASSROOM DAYS</div>
+      <p>學科在家用 eLearning 完成，用你自己的節奏、自己的語言。到了沖繩，第一天泳池、第二三天海裡——沒有一天浪費在坐著聽課。</p>
     </article>
 
     <article class="c-high-item">
       <div class="n">✧</div>
-      <h3>用 你 的 母 語</h3>
-      <div class="en">IN YOUR OWN WORDS</div>
-      <p>國語、粵語、英語、日語直接教學，不透過翻譯轉述。下潛前的每一個手勢約定、每一句安全說明，都用你最熟悉的語言講清楚。</p>
+      <h3>1 : 2 的 配 比</h3>
+      <div class="en">TWO STUDENTS PER GUIDE</div>
+      <p>一位 PADI MSDT 教練最多帶兩位學員，絕不超過。學技巧的階段，教練的眼睛必須一直在你身上——這是課程品質的分水嶺。</p>
     </article>
 
     <article class="c-high-item">
       <div class="n">◇</div>
-      <h3>不 併 團</h3>
-      <div class="en">NO GROUP MIXING</div>
-      <p>私人包團形式，不會和陌生人湊成一隊。你不必配合別人的節奏，也不會在還想多看兩眼的時候被叫上岸。</p>
+      <h3>備 有 度 數 面 鏡</h3>
+      <div class="en">PRESCRIPTION MASKS</div>
+      <p>近視的學員免費提供度數面鏡。考照期間你必須看清楚教練的每一個手勢與示範——視線模糊會直接拖慢學習進度，這件事不該將就。</p>
+    </article>
+
+    <article class="c-high-item">
+      <div class="n">◈</div>
+      <h3>終 身 有 效 · 全 球 通 用</h3>
+      <div class="en">LIFETIME CERTIFICATION</div>
+      <p>PADI Open Water 是全球認可度最高的入門執照，終身有效、不需年檢。拿到之後，你可以在世界任何一片海預約 Fun Dive。</p>
     </article>
   </div>
 </section>
@@ -1607,23 +1660,25 @@ footer {
 
     <div class="c-incl-grid">
       <div class="c-incl-col yes">
-        <h3>¥28,000 已 包 含 · INCLUDED</h3>
+        <h3>¥98,000 已 包 含 · INCLUDED</h3>
         <ul>
+          <li>PADI eLearning 學科教材費<small>出發前於家中完成，不另收費</small></li>
           <li>專屬 PADI MSDT 教練全程帶領<small>1:2 配比，超過兩人加派潛水長</small></li>
-          <li>兩潛體驗潛水<small>淺灘適應 + 青之洞</small></li>
-          <li>全套潛水裝備<small>面鏡、防寒衣、氣瓶、配重、蛙鞋</small></li>
+          <li>第一日 泳池平靜水域訓練<small>宜野灣・含場地費</small></li>
+          <li>第二、三日 開放水域四潛<small>砂邊、青之洞或大猩猩，依海況安排</small></li>
+          <li>全套潛水裝備<small>面鏡、防寒衣、氣瓶、配重、蛙鞋、BCD、調節器</small></li>
           <li>近視度數面鏡<small>免費提供，預約時告知度數</small></li>
-          <li>運動相機拍攝<small>照片與影片檔案，當日提供</small></li>
-          <li>飯店往返接送<small>限青之洞周邊 15 分鐘車程內</small></li>
-          <li>沖洗更衣設施</li>
+          <li>PADI 認證申請與實體證照卡<small>通過後約兩週寄送</small></li>
+          <li>第二、三日飯店往返接送<small>限潛點周邊 15 分鐘車程內</small></li>
         </ul>
       </div>
 
       <div class="c-incl-col no">
         <h3>不 包 含 · NOT INCLUDED</h3>
         <ul>
-          <li>專業水下攝影師<small>需加購，最少提前一週預約</small></li>
+          <li>第一日 泳池的往返接送<small>宜野灣泳池，需加購專車</small></li>
           <li>超出免費範圍的接送<small>需加購專車，費用依地區報價</small></li>
+          <li>專業水下攝影師<small>需加購，最少提前一週預約</small></li>
           <li>餐食與個人消費</li>
           <li>往返沖繩的機票與住宿</li>
           <li>個人旅遊平安保險</li>
@@ -1642,18 +1697,26 @@ footer {
 
   <div class="c-add-item">
     <div>
+      <h3>專 車 接 送</h3>
+      <p>第一日的泳池在宜野灣，不在免費接送範圍內。第二、三日若你住在潛點周邊 15 分鐘車程之外，也需要專車。三日份可一併安排，費用依所在地區確定。</p>
+    </div>
+    <div class="c-add-price">By Request<small>依地區報價</small></div>
+  </div>
+
+  <div class="c-add-item">
+    <div>
       <h3>專 業 水 下 攝 影</h3>
-      <p>由駐店的獲獎水下人像攝影師隨行拍攝，不是教練兼拍。專職的人只做一件事——看光、等時機、讓你在水裡看起來像你自己最好的樣子。<strong>需最少提前一週預約</strong>，因為攝影師的檔期需要安排。</p>
+      <p>由駐店的獲獎水下人像攝影師隨行拍攝。考照過程本身很值得留下——第一次在海裡完成中性浮力的那個瞬間，你自己是看不到的。<strong>需最少提前一週預約。</strong></p>
     </div>
     <div class="c-add-price">By Request<small>依方案報價</small></div>
   </div>
 
   <div class="c-add-item">
     <div>
-      <h3>專 車 接 送</h3>
-      <p>免費接送涵蓋青之洞周邊 15 分鐘車程內的飯店。若你住在那霸、北谷或本島其他區域，我們可以安排專車往返，費用依所在地區確定。</p>
+      <h3>續 接 進 階 課 程</h3>
+      <p>完成 OW 後可直接續接 PADI Advanced Open Water（王座之深・典禮之三），連續安排能省下重新適應的時間，深度也會一路推進到 30 米。</p>
     </div>
-    <div class="c-add-price">By Request<small>依地區報價</small></div>
+    <div class="c-add-price"><a href="ceremonies.html#ceremony-iii" style="color:var(--ryukyu-blue-deep);text-decoration:none;border-bottom:1px solid var(--gold);">典禮之三 →</a><small>¥98,000 起</small></div>
   </div>
 </section>
 
@@ -1665,67 +1728,55 @@ footer {
   </div>
 
   <div class="c-cancel">
-    <div>
-      <div class="when">30+ DAYS</div>
-      <div class="rate">0%</div>
-      <div class="cn">一個月前 · 全額退款</div>
-    </div>
-    <div>
-      <div class="when">15 DAYS</div>
-      <div class="rate">50%</div>
-      <div class="cn">15 天內 · 收取半額</div>
-    </div>
-    <div>
-      <div class="when">7 DAYS</div>
-      <div class="rate">80%</div>
-      <div class="cn">7 天內 · 收取八成</div>
-    </div>
-    <div>
-      <div class="when">3 DAYS</div>
-      <div class="rate">100%</div>
-      <div class="cn">3 天內 · 恕不退款</div>
-    </div>
+    <div><div class="when">30+ DAYS</div><div class="rate">0%</div><div class="cn">一個月前 · 全額退款</div></div>
+    <div><div class="when">15 DAYS</div><div class="rate">50%</div><div class="cn">15 天內 · 收取半額</div></div>
+    <div><div class="when">7 DAYS</div><div class="rate">80%</div><div class="cn">7 天內 · 收取八成</div></div>
+    <div><div class="when">3 DAYS</div><div class="rate">100%</div><div class="cn">3 天內 · 恕不退款</div></div>
   </div>
 
-  <!-- FAQ -->
   <div class="w-faq-head" style="margin-bottom:2rem;">
     <div class="mono">▸ 出 發 前 · BEFORE YOU COME</div>
     <h2>Things to <em>Know</em></h2>
   </div>
 
   <div class="w-faq-item">
-    <button class="w-faq-q" type="button">完全沒有潛水經驗，可以參加嗎？</button>
-    <div class="w-faq-a"><p>可以。青之典禮就是為第一次下水的人設計的，不需要任何執照或經驗。第一潛完全用來適應呼吸與浮力，教練會在你伸手可及的距離全程陪同，等你穩定了才進行第二潛。</p></div>
+    <button class="w-faq-q" type="button">eLearning 要花多久？一定要出發前完成嗎？</button>
+    <div class="w-faq-a"><p>多數人需要 8 到 15 小時，可以分次進行，不必一口氣看完。<strong>必須在抵達沖繩前完成</strong>——三天的行程全部排給水下訓練，沒有預留看教材的時間。報名後我們會寄給你開通連結，教材費已含在課程費用內。</p></div>
   </div>
 
   <div class="w-faq-item">
-    <button class="w-faq-q" type="button">不會游泳可以參加嗎？</button>
-    <div class="w-faq-a"><p>可以。潛水靠裝備控制浮力，不靠泳技。下水前會先在腳踩得到底的淺水區適應，若你仍感不安，也可以改成浮潛，同樣看得到珊瑚與魚群。</p></div>
+    <button class="w-faq-q" type="button">完全沒潛過水，可以直接考 OW 嗎？</button>
+    <div class="w-faq-a"><p>可以。PADI Open Water 就是零經驗者的入門課程，不需要先體驗潛水。如果你想先確認自己喜不喜歡，也可以先參加青之典禮（半日兩潛體驗），再決定要不要考照。</p></div>
   </div>
 
   <div class="w-faq-item">
-    <button class="w-faq-q" type="button">小孩幾歲可以參加？</button>
-    <div class="w-faq-a"><p>體驗潛水的年齡下限是 10 歲；8 至 9 歲可參加 PADI Bubblemaker 的淺水體驗。年齡更小的孩子建議以浮潛的方式一同下水，全程穿著浮力裝備並由教練陪同。</p></div>
+    <button class="w-faq-q" type="button">不會游泳可以考 OW 嗎？</button>
+    <div class="w-faq-a"><p>幾乎都可以。PADI 的水性要求是二選一：200 公尺游泳（不限泳姿、不計時），或 <strong>300 公尺配戴蛙鏡與蛙鞋的浮潛</strong>，另加 10 分鐘漂浮或踩水。多數人選第二項——穿上蛙鞋之後，浮潛 300 公尺幾乎沒有人做不到，它不限時間、可以慢慢來，也不是體能測驗，只是確認你在水裡不會慌。如果你完全沒有下水經驗，預約時告訴我們，第一天泳池會先陪你把這一項完成。</p></div>
   </div>
 
   <div class="w-faq-item">
-    <button class="w-faq-q" type="button">潛水後多久可以搭飛機？</button>
-    <div class="w-faq-a"><p>單次潛水後建議間隔至少 12 小時，多次潛水後建議 18 小時以上。若行程允許，我們會建議你預留 24 小時——這不只是安全餘裕，身體的疲勞感與耳壓也會恢復得更完整，登機時舒服得多。安排行程時請把這段時間留出來，這是減壓安全的基本要求，不能通融。</p></div>
+    <button class="w-faq-q" type="button">小孩幾歲可以考照？</button>
+    <div class="w-faq-a"><p>年齡下限是 10 歲。10 至 14 歲取得的是 Junior Open Water Diver，效力與 OW 相同，但潛水時須由家長或教練陪同，且有深度限制；滿 15 歲後可免費升級為正式 Open Water Diver。</p></div>
   </div>
 
   <div class="w-faq-item">
-    <button class="w-faq-q" type="button">遇到壞天氣怎麼辦？</button>
-    <div class="w-faq-a"><p>青之洞的海況受風向影響。若當日判斷不適合下水，我們會提前聯絡你，優先協調改期；無法改期時全額退款，不收取任何費用。因天候取消不適用上述取消政策。</p></div>
+    <button class="w-faq-q" type="button">近視怎麼辦？</button>
+    <div class="w-faq-a"><p><strong>我們備有度數面鏡，免費提供</strong>，預約時告訴我們你的度數即可。這在沖繩不是每家潛店都有——戴著清楚的面鏡下水，你才看得見教練的手勢，也才看得見海。若你習慣隱形眼鏡，日拋也是可行的選擇。</p></div>
   </div>
 
   <div class="w-faq-item">
-    <button class="w-faq-q" type="button">近視可以下水嗎？</button>
-    <div class="w-faq-a"><p>可以。我們備有近視度數面鏡並免費提供，預約時告訴我們度數即可。看得清楚很重要——教練的手勢、洞裡的光，模糊了就都打折了。若你習慣隱形眼鏡，日拋也是可行的選擇。</p></div>
+    <button class="w-faq-q" type="button">證照什麼時候拿到？</button>
+    <div class="w-faq-a"><p>第三日課程結束後我們立即送出認證申請，實體證照卡約兩週後寄達。認證申請與卡片費用已包含在課程費用內，不另收取。</p></div>
   </div>
 
   <div class="w-faq-item">
-    <button class="w-faq-q" type="button">當天需要帶什麼？</button>
-    <div class="w-faq-a"><p>泳衣（可先穿在衣服裡）、毛巾、換洗衣物。裝備我們全套提供。防曬請避開含 oxybenzone 與 octinoxate 的化學配方，這兩種成分會傷害珊瑚，建議改用礦物性防曬或直接穿防曬衣。</p></div>
+    <button class="w-faq-q" type="button">課程結束後多久可以搭飛機？</button>
+    <div class="w-faq-a"><p>最後一天有兩支潛水，屬於多次潛水，建議間隔 18 小時以上再搭機。若行程允許，我們建議預留 24 小時——身體的疲勞與耳壓恢復得更完整，登機會舒服很多。安排回程班機時請把這段時間留出來。</p></div>
+  </div>
+
+  <div class="w-faq-item">
+    <button class="w-faq-q" type="button">有健康狀況需要申報嗎？</button>
+    <div class="w-faq-a"><p>需要。課前會填寫 PADI 健康聲明書。氣喘、心血管疾病、癲癇、糖尿病、近期手術或懷孕等狀況，可能需要醫師簽署許可才能參加。若你有任何顧慮，請在預約時先告訴我們，這比到現場才發現不能下水好得多。</p></div>
   </div>
 </section>
 
@@ -1733,10 +1784,10 @@ footer {
 <section class="cta-section">
   <div class="cta-inner">
     <img class="cta-logo" src="assets/logo.png" alt="Prince Dive 王子潛水">
-    <div class="mono" style="color:var(--gold);font-size:0.7rem;margin-bottom:1.5rem;">▸ 準 備 好 第 一 次 呼 吸 了 嗎 ?</div>
-    <h2>Begin the <em>Azure</em></h2>
-    <div class="cn">開 · 始 · 青 · 之 · 典 · 禮</div>
-    <p>告訴我們你的旅程日期與人數，我們會為你安排上午或下午的場次。</p>
+    <div class="mono" style="color:var(--gold);font-size:0.7rem;margin-bottom:1.5rem;">▸ 準 備 好 加 冕 了 嗎 ?</div>
+    <h2>Begin the <em>Coronation</em></h2>
+    <div class="cn">開 · 始 · 加 · 冕 · 之 · 途</div>
+    <p>告訴我們你的旅程日期與人數，我們會為你安排三日課程並開通 eLearning。</p>
     <a href="index.html#inquire" class="cta-button">Send Inquiry <span>→</span></a>
   </div>
 </section>
@@ -1792,6 +1843,7 @@ footer {
     <div>◆ CURATING CEREMONIES OF THE SEA</div>
   </div>
 </footer>
+
 
 
 
