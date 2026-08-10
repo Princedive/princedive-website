@@ -948,7 +948,9 @@ footer {
 /* --- Treasure map --- */
 .w-map-section {
   padding: 5rem 3rem 4rem;
-  background: var(--paper-deep);
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(248,243,230,0.9) 0%, rgba(240,232,212,0) 68%),
+    var(--paper-deep);
   border-top: 1px solid rgba(184, 154, 94, 0.18);
   border-bottom: 1px solid rgba(184, 154, 94, 0.18);
 }
@@ -973,8 +975,15 @@ footer {
   letter-spacing: 0.42em;
   font-size: 0.95rem;
 }
-.w-map-scroll { max-width: 1000px; margin: 0 auto; }
-.w-map-img { width: 100%; height: auto; display: block; border: 1px solid rgba(184,154,94,0.28); }
+.w-map-scroll {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid rgba(184, 154, 94, 0.32);
+  outline: 1px solid rgba(184, 154, 94, 0.16);
+  outline-offset: 6px;
+}
+.w-map-img { width: 100%; height: auto; display: block; }
 .w-map-hint {
   display: none;
   text-align: center;
@@ -1246,6 +1255,7 @@ footer {
   .w-map-section { padding: 3.5rem 1rem 3rem; }
   .w-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .w-map-img { min-width: 700px; }
+  .w-map-scroll { padding: 0.8rem; outline-offset: 4px; }
   .w-map-hint { display: block; }
 
   .w-point, .w-point.tinted { padding: 3rem 1.5rem; }
@@ -1350,7 +1360,7 @@ footer {
     </div>
   </a>
   <div class="nav-links">
-    <a href="index.html#philosophy" class="nav-link">哲學<span class="nav-link-en">Philosophy</span></a>
+    <a href="about.html" class="nav-link">哲學<span class="nav-link-en">Philosophy</span></a>
     <a href="ceremonies.html" class="nav-link">典禮<span class="nav-link-en">Ceremonies</span></a>
     <a href="waters.html" class="nav-link active">海域<span class="nav-link-en">Our Waters</span></a>
     <a href="index.html#moments" class="nav-link">映像<span class="nav-link-en">Moments</span></a>
@@ -1387,7 +1397,7 @@ footer {
     <div class="cn">六 · 海 · 之 · 圖</div>
   </div>
   <div class="w-map-scroll">
-    <img class="w-map-img" src="assets/map.jpg" width="1492" height="1054"
+    <img class="w-map-img" src="assets/map.png" width="1536" height="1024"
          alt="王子潛水沖繩潛點海圖：青之洞、砂邊、大猩猩、慶良間、萬座、瀨底島六大潛點分布"
          loading="lazy" decoding="async">
   </div>
@@ -1621,7 +1631,7 @@ footer {
     <div class="footer-col">
       <h4>Navigate</h4>
       <ul>
-        <li><a href="index.html#philosophy">哲學 · Philosophy</a></li>
+        <li><a href="about.html">哲學 · Philosophy</a></li>
         <li><a href="ceremonies.html">典禮 · Ceremonies</a></li>
         <li><a href="waters.html">海域 · Our Waters</a></li>
         <li><a href="index.html#moments">映像 · Moments</a></li>
