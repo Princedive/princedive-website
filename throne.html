@@ -1424,6 +1424,75 @@ p { text-wrap: pretty; }
 .cta-inner p,
 .hero-inner > p,
 .c-hero-inner > p { text-wrap: balance; }
+
+/* ---- 第一日時間表：標準 / 夜潛 雙區塊 ---- */
+.c-sched-block { padding: 1.8rem 2rem; margin-top: 1.6rem; }
+
+.c-sched-std   { background: var(--white); border: 1px solid var(--bone); color: var(--ink); }
+.c-sched-night { background: var(--navy); color: var(--paper); }
+
+.c-sched-block-head {
+  display: flex; flex-wrap: wrap; gap: 0.8rem;
+  align-items: baseline; justify-content: space-between;
+  padding-bottom: 0.9rem; margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.3);
+}
+.c-sched-night .c-sched-block-head { border-bottom-color: rgba(212, 188, 136, 0.25); }
+
+.c-sched-block-head .mono { font-size: 0.66rem; letter-spacing: 0.3em; }
+.c-sched-std   .c-sched-block-head .mono { color: var(--gold-deep); }
+.c-sched-night .c-sched-block-head .mono { color: var(--gold-light); }
+
+.c-sched-block-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+}
+.c-sched-std   .c-sched-block-time { color: var(--ryukyu-blue-deep); }
+.c-sched-night .c-sched-block-time { color: var(--gold-light); }
+
+.c-shift { display: block; }
+
+.c-shift > div {
+  display: grid; grid-template-columns: 4.4rem 1fr; gap: 1.2rem;
+  align-items: baseline;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.94rem; line-height: 1.75;
+  padding: 0.95rem 0 0.95rem 0.9rem;
+  border-left: 2px solid transparent;
+}
+.c-shift > div.is-dive { border-left-color: var(--gold); }
+.c-sched-std   .c-shift > div { border-bottom: 1px dashed rgba(184, 154, 94, 0.28); }
+.c-sched-night .c-shift > div { border-bottom: 1px dashed rgba(212, 188, 136, 0.18); }
+.c-shift > div:last-child { border-bottom: none; }
+.c-sched-std   .c-shift > div.is-dive { background: var(--paper); }
+.c-sched-night .c-shift > div.is-dive { background: rgba(255, 255, 255, 0.04); }
+.c-sched-std   .c-shift > div { color: var(--ink); }
+.c-sched-night .c-shift > div { color: rgba(248, 243, 230, 0.92); }
+
+.c-shift-t { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; letter-spacing: 0.04em; }
+.c-sched-std   .c-shift-t { color: var(--ryukyu-blue-deep); }
+.c-sched-night .c-shift-t { color: var(--gold-light); }
+
+.c-shift small {
+  display: block; font-family: 'Shippori Mincho', serif;
+  font-size: 0.76rem; line-height: 1.7; margin-top: 0.15rem; letter-spacing: 0.03em;
+}
+.c-sched-std   .c-shift small { color: var(--ink-soft); }
+.c-sched-night .c-shift small { color: rgba(248, 243, 230, 0.55); }
+
+.c-sched-block-why {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.8rem; line-height: 1.9; letter-spacing: 0.03em;
+  margin: 1.4rem 0 0;
+  padding-top: 1rem;
+}
+.c-sched-std   .c-sched-block-why { color: var(--ink-soft); border-top: 1px dashed rgba(184, 154, 94, 0.3); }
+.c-sched-night .c-sched-block-why { color: rgba(248, 243, 230, 0.6); border-top: 1px dashed rgba(212, 188, 136, 0.22); }
+
+@media (max-width: 760px) {
+  .c-sched-block { padding: 1.4rem 1.2rem; }
+  .c-shift > div { grid-template-columns: 3.4rem 1fr; gap: 0.8rem; font-size: 0.88rem; padding-left: 0.7rem; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1611,45 +1680,40 @@ p { text-wrap: pretty; }
       <div class="cn">岸 · 潛 · 三 · 潛</div>
     </div>
 
-    <div class="c-row head"><span>標準時段</span><span>含夜潛</span><span>內容</span></div>
-
-    <div class="c-row">
-      <div class="c-time">08:30</div>
-      <div class="c-time">14:30</div>
-      <div class="c-what">飯店接送出發<small>免費接送限潛點周邊 15 分鐘車程內</small></div>
-    </div>
-    <div class="c-row">
-      <div class="c-time">09:00</div>
-      <div class="c-time">15:00</div>
-      <div class="c-what">潛點現場集合<small>岸潛日，依海況安排場地</small></div>
-    </div>
-    <div class="c-row">
-      <div class="c-time">09:30</div>
-      <div class="c-time">15:30</div>
-      <div class="c-what">課程簡報<small>當日訓練項目說明、裝備確認</small></div>
-    </div>
-    <div class="c-row dive">
-      <div class="c-time">上午</div>
-      <div class="c-time">傍晚</div>
-      <div class="c-what">第一潛<small>久未下水者，此潛附贈水肺複習，先找回感覺</small></div>
-    </div>
-    <div class="c-row dive">
-      <div class="c-time">上午</div>
-      <div class="c-time">傍晚</div>
-      <div class="c-what">第二潛</div>
-    </div>
-    <div class="c-row dive">
-      <div class="c-time">下午</div>
-      <div class="c-time">19:00</div>
-      <div class="c-what">第三潛<small>含夜潛方案時，此潛為夜潛，19:00 入水</small></div>
-    </div>
-    <div class="c-row">
-      <div class="c-time">14:00</div>
-      <div class="c-time">20:00</div>
-      <div class="c-what">結束・送回飯店</div>
+    <div class="c-sched-block c-sched-std">
+      <div class="c-sched-block-head">
+        <span class="mono">☀ 標 準 時 段 · STANDARD</span>
+        <span class="c-sched-block-time">09:00 – 14:00</span>
+      </div>
+      <div class="c-shift">
+        <div><span class="c-shift-t">08:30</span><span>飯店接送出發<small>免費接送限潛點周邊 15 分鐘車程內</small></span></div>
+        <div><span class="c-shift-t">09:00</span><span>潛點現場集合<small>岸潛日，依海況安排場地</small></span></div>
+        <div><span class="c-shift-t">09:30</span><span>課程簡報<small>當日訓練項目說明、裝備確認</small></span></div>
+        <div class="is-dive"><span class="c-shift-t">上午</span><span>第一潛<small>久未下水者，此潛附贈水肺複習</small></span></div>
+        <div class="is-dive"><span class="c-shift-t">上午</span><span>第二潛</span></div>
+        <div class="is-dive"><span class="c-shift-t">下午</span><span>第三潛</span></div>
+        <div><span class="c-shift-t">14:00</span><span>結束・送回飯店</span></div>
+      </div>
+      <p class="c-sched-block-why">三支岸潛之間需要水面休息，入水時間依當日海況與各人狀況調整，因此不固定到分鐘。整日於 14:00 前結束。</p>
     </div>
 
-    <p class="c-sched-note">※ 選擇夜潛替換方案時，第一日必須改為下午時段開始，因為夜潛需等到 19:00 天色全暗後才能入水。標準時段則為 09:00 至 14:00。</p>
+    <div class="c-sched-block c-sched-night">
+      <div class="c-sched-block-head">
+        <span class="mono">☾ 夜 潛 方 案 · NIGHT DIVE</span>
+        <span class="c-sched-block-time">15:00 – 20:00</span>
+      </div>
+      <div class="c-shift">
+        <div><span class="c-shift-t">14:30</span><span>飯店接送出發<small>免費接送限潛點周邊 15 分鐘車程內</small></span></div>
+        <div><span class="c-shift-t">15:00</span><span>潛點現場集合<small>岸潛日，依海況安排場地</small></span></div>
+        <div><span class="c-shift-t">15:30</span><span>課程簡報<small>當日訓練項目說明、裝備確認</small></span></div>
+        <div class="is-dive"><span class="c-shift-t">傍晚</span><span>第一潛<small>久未下水者，此潛附贈水肺複習</small></span></div>
+        <div class="is-dive"><span class="c-shift-t">傍晚</span><span>第二潛</span></div>
+        <div class="is-dive"><span class="c-shift-t">19:00</span><span>第三潛 · 夜潛<small>天色全暗後入水</small></span></div>
+        <div><span class="c-shift-t">20:00</span><span>結束・送回飯店</span></div>
+      </div>
+      <p class="c-sched-block-why">以夜潛替換其中一項選修，+¥10,000 / 位。整日順延，不是在標準行程後加班——夜潛必須等天色全暗才能入水，19:00 是沖繩多數月份的可入水時間。</p>
+    </div>
+
   </div>
 </section>
 
