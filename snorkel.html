@@ -322,8 +322,8 @@ img{max-width:100%;display:block}
 }
 .btn-snorkel{background:var(--coral-deep);color:var(--paper)}
 .btn-snorkel .nav-en-sub{color:rgba(248,243,230,.72)}
-.btn-snorkel:hover{background:var(--tide);color:var(--paper)}
-.btn-snorkel:hover .nav-en-sub{color:var(--shallow)}
+.btn-snorkel:hover{background:var(--citrus);color:var(--ink)}
+.btn-snorkel:hover .nav-en-sub{color:rgba(34,48,58,.72)}
 .btn-dive{background:transparent;color:var(--gold-deep);border:1px solid var(--gold)}
 .btn-dive .nav-en-sub{color:rgba(138,111,61,.75)}
 .btn-dive:hover{background:var(--gold);color:var(--white);border-color:var(--gold)}
@@ -392,7 +392,7 @@ p:last-child{margin-bottom:0}
   font-family:'Noto Serif TC',serif;font-weight:500;
   font-size:1.05rem;letter-spacing:.24em;padding-left:2.84em;
 }
-.btn:hover{background:var(--tide)}
+.btn:hover{background:var(--citrus);color:var(--ink)}
 .btn-sub{
   font-family:'Noto Serif TC',serif;font-size:.92rem;letter-spacing:.1em;
   color:var(--ink-soft);margin-top:.9rem;
@@ -618,9 +618,15 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
   display:block;font-family:'JetBrains Mono',monospace;font-size:.76rem;
   letter-spacing:.1em;color:var(--coral-text);margin-top:.5rem;
 }
+
+/* ---- 捲動進度 ---- */
+.progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:70;background:transparent;pointer-events:none}
+.progress span{display:block;height:100%;width:0;background:var(--coral);transition:width .08s linear}
+@media (prefers-reduced-motion:reduce){.progress span{transition:none}}
 </style>
 </head>
 <body>
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
 <!-- ============ 海洋生物圖庫 ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -744,8 +750,8 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
     </span>
   </a>
   <div class="nav-links">
-    <a href="#blue" class="nav-link opt">青之洞<span class="nav-en-sub">Blue Cave</span></a>
-    <a href="#day" class="nav-link opt">一天<span class="nav-en-sub">The Day</span></a>
+    <a href="blue-cave.html" class="nav-link opt">青之洞<span class="nav-en-sub">Blue Cave</span></a>
+    <a href="#day" class="nav-link opt">時段<span class="nav-en-sub">Sessions</span></a>
     <a href="#price" class="nav-link opt">費用<span class="nav-en-sub">Price</span></a>
     <a href="index.html" class="nav-link nav-dive-link opt">王子潛水<span class="nav-en-sub">Prince Dive</span></a>
     <a href="#book" class="nav-link btn-snorkel">浮潛預約<span class="nav-en-sub">Snorkel</span></a>
@@ -802,6 +808,7 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
       <p>原因不是水本身。<strong>陽光從洞口斜射進來，穿過海水的時候，紅光和黃光先被吸收掉</strong>，只剩下藍光能走到底。海底是白色的砂，把這些藍光反射回來——</p>
       <p><strong>你看到的不是海的顏色，是光走過一段路之後，剩下的那個顏色。</strong></p>
       <p style="font-size:.98rem;color:var(--ink-soft)">這件事可以在下水前講給孩子聽。多數人回程的路上還記得。</p>
+      <p style="margin-top:1.4rem"><a href="blue-cave.html" style="color:var(--coral-text);font-weight:700;text-decoration:none;border-bottom:2px solid var(--coral);padding-bottom:.15rem">四季的青之洞窟長什麼樣 →</a></p>
     </div>
 
     <div class="note-citrus" style="max-width:760px;margin-left:auto;margin-right:auto">
@@ -1294,8 +1301,9 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
       <div>
         <h5>浮 潛</h5>
         <ul>
+          <li><a href="blue-cave.html">青之洞窟四季</a></li>
           <li><a href="#six">六個問題</a></li>
-          <li><a href="#day">這一天</a></li>
+          <li><a href="#day">時段與流程</a></li>
           <li><a href="#price">費用</a></li>
           <li><a href="#book">預約</a></li>
         </ul>
@@ -1314,5 +1322,23 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
   </div>
 </footer>
 
+<script>
+(function(){
+  var bar = document.getElementById('progress-bar');
+  if (!bar) return;
+  var ticking = false;
+  function update(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){ window.requestAnimationFrame(update); ticking = true; }
+  }, {passive:true});
+  window.addEventListener('resize', update, {passive:true});
+  update();
+})();
+</script>
 </body>
 </html>
