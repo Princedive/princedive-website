@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-C -->
+<!-- BUILD v2026.08.12-G -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小王子浮潛｜沖繩青之洞窟親子浮潛・5 歲可參加・不搭船不併團</title>
@@ -1361,6 +1361,40 @@ h1 .h1-cn{
   }, {passive:true});
   window.addEventListener('resize', update, {passive:true});
   update();
+})();
+</script>
+<script>
+/* ---- CTA 點擊追蹤（GA4）---- */
+(function(){
+  if (typeof gtag !== 'function') return;
+  var PRODUCT = /(azure|coronation|throne|chosen|archipelago|royalpair|blue-cave)\.html/;
+  var BOOKING = /(inquire\.html|#book)/;
+  var CROSS   = /(snorkel\.html|index\.html|^\/$)/;
+
+  function label(a){
+    var t = (a.innerText || a.textContent || '').trim().replace(/\s+/g, ' ');
+    return t.slice(0, 80) || a.getAttribute('aria-label') || '(no text)';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (!href) return;
+
+    var group = null;
+    if (BOOKING.test(href)) group = 'booking';
+    else if (PRODUCT.test(href)) group = 'product';
+    else if (CROSS.test(href)) group = 'cross_brand';
+    if (!group) return;
+
+    gtag('event', 'cta_click', {
+      cta_group:   group,
+      link_url:    href,
+      link_text:   label(a),
+      source_page: location.pathname.replace(/^\//,'') || 'index.html',
+      position:    a.closest('nav') ? 'nav' : (a.closest('footer') ? 'footer' : 'body')
+    });
+  }, true);
 })();
 </script>
 </body>
