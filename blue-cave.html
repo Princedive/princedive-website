@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-G -->
+<!-- BUILD v2026.08.12-H -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>沖繩青之洞窟浮潛完全指南｜四季比較・幾月去最好・交通停車 · 小王子浮潛</title>
@@ -1192,7 +1192,8 @@ h2 .h-cn{
   if (typeof gtag !== 'function') return;
   var PRODUCT = /(azure|coronation|throne|chosen|archipelago|royalpair|blue-cave)\.html/;
   var BOOKING = /(inquire\.html|#book)/;
-  var CROSS   = /(snorkel\.html|index\.html|^\/$)/;
+  var CROSS   = /(snorkel\.html|index\.html)/;
+  var HUB     = /(ceremonies|waters|about|moments)\.html/;
 
   function label(a){
     var t = (a.innerText || a.textContent || '').trim().replace(/\s+/g, ' ');
@@ -1204,17 +1205,20 @@ h2 .h-cn{
     var href = a.getAttribute('href') || '';
     if (!href) return;
 
-    var group = null;
-    if (BOOKING.test(href)) group = 'booking';
+    var group;
+    if (BOOKING.test(href))      group = 'booking';
     else if (PRODUCT.test(href)) group = 'product';
-    else if (CROSS.test(href)) group = 'cross_brand';
-    if (!group) return;
+    else if (CROSS.test(href))   group = 'cross_brand';
+    else if (HUB.test(href))     group = 'hub';
+    else if (/^https?:/.test(href)) group = 'external';
+    else if (/^#/.test(href))    group = 'anchor';
+    else return;
 
     gtag('event', 'cta_click', {
       cta_group:   group,
       link_url:    href,
       link_text:   label(a),
-      source_page: location.pathname.replace(/^\//,'') || 'index.html',
+      source_page: location.pathname.replace(/^\//,'').replace(/\.html$/,'') || 'index',
       position:    a.closest('nav') ? 'nav' : (a.closest('footer') ? 'footer' : 'body')
     });
   }, true);

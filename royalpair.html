@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-G -->
+<!-- BUILD v2026.08.12-H -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ38GYS93B"></script>
 <script>
@@ -1960,7 +1960,8 @@ document.querySelectorAll('.w-faq-q').forEach(btn => {
   if (typeof gtag !== 'function') return;
   var PRODUCT = /(azure|coronation|throne|chosen|archipelago|royalpair|blue-cave)\.html/;
   var BOOKING = /(inquire\.html|#book)/;
-  var CROSS   = /(snorkel\.html|index\.html|^\/$)/;
+  var CROSS   = /(snorkel\.html|index\.html)/;
+  var HUB     = /(ceremonies|waters|about|moments)\.html/;
 
   function label(a){
     var t = (a.innerText || a.textContent || '').trim().replace(/\s+/g, ' ');
@@ -1972,17 +1973,20 @@ document.querySelectorAll('.w-faq-q').forEach(btn => {
     var href = a.getAttribute('href') || '';
     if (!href) return;
 
-    var group = null;
-    if (BOOKING.test(href)) group = 'booking';
+    var group;
+    if (BOOKING.test(href))      group = 'booking';
     else if (PRODUCT.test(href)) group = 'product';
-    else if (CROSS.test(href)) group = 'cross_brand';
-    if (!group) return;
+    else if (CROSS.test(href))   group = 'cross_brand';
+    else if (HUB.test(href))     group = 'hub';
+    else if (/^https?:/.test(href)) group = 'external';
+    else if (/^#/.test(href))    group = 'anchor';
+    else return;
 
     gtag('event', 'cta_click', {
       cta_group:   group,
       link_url:    href,
       link_text:   label(a),
-      source_page: location.pathname.replace(/^\//,'') || 'index.html',
+      source_page: location.pathname.replace(/^\//,'').replace(/\.html$/,'') || 'index',
       position:    a.closest('nav') ? 'nav' : (a.closest('footer') ? 'footer' : 'body')
     });
   }, true);
