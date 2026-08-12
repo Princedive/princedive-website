@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+<!-- BUILD v2026.08.12-C -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ38GYS93B"></script>
 <script>
@@ -1744,6 +1745,19 @@ p { text-wrap: pretty; }
 @media (max-width:900px){
   .nav-cta,.nav-cta-snorkel{padding:.42rem .7rem !important}
 }
+
+.ceremony-product {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+  font-size: 0.86rem;
+  letter-spacing: 0.16em;
+  color: var(--gold-deep);
+  margin-top: 0.45rem;
+}
+.ceremony-card:hover .ceremony-product { color: var(--gold); }
+
+/* ---- SEO：中文併入 h1，視覺不變 ---- */
+h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
 </style>
 
 <script type="application/ld+json">
@@ -1809,7 +1823,7 @@ p { text-wrap: pretty; }
             "itemOffered": {
               "@type": "Service",
               "name": "加冕之途 The Coronation",
-              "description": "PADI Open Water 開放水域認證，三日課程（泳池半日＋開放水域四潛），含 PADI eLearning 教材費"
+              "description": "PADI Open Water 開放水域考照，三日課程（泳池半日＋開放水域四潛），含 PADI eLearning 教材費"
             }
           },
           {
@@ -1906,8 +1920,8 @@ p { text-wrap: pretty; }
     
     <div class="hero-eyebrow">— OKINAWA · SINCE 2020 —</div>
     
-    <h1 class="hero-title">Prince <em>Dive</em></h1>
-    <div class="hero-cn">王 子 潛 水</div>
+    <h1 class="hero-title">Prince <em>Dive</em>
+    <span class="hero-cn">王 子 潛 水</span></h1>
     
     <div class="hero-divider"></div>
     
@@ -2075,7 +2089,7 @@ p { text-wrap: pretty; }
       <ul>
         <li>一對一策展式接待<span class="sub-en">Curated 1:1 hospitality</span></li>
         <li>PADI MSDT 最高階教練親帶<span class="sub-en">PADI Master Instructors only</span></li>
-        <li>國語・粵語・英語全程教學<span class="sub-en">3 languages, no translator</span></li>
+        <li>國語・粵語・英語全程中文教學<span class="sub-en">3 languages, no translator</span></li>
         <li>運動相機紀錄免費附贈<span class="sub-en">Free action-cam records</span></li>
         <li>24 小時內個別回信<span class="sub-en">Personal reply within 24h</span></li>
         <li>1:2 教練配比上限<span class="sub-en">Maximum 1:2 instructor ratio</span></li>
@@ -2114,6 +2128,7 @@ p { text-wrap: pretty; }
     <a class="ceremony-card" href="azure.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">I.</div>
       <h3>青 之 典 禮</h3>
+      <div class="ceremony-product">（體驗潛水）</div>
       <div class="en">The Azure Ceremony</div>
       <p>為初次認識海洋的你設計。無需潛水經驗，由專屬教練陪伴，在恩納村青之洞窟完成人生第一次呼吸——半日兩潛，第二潛走進那道被陽光染藍的洞窟。</p>
       <div class="ceremony-card-footer">
@@ -2128,6 +2143,7 @@ p { text-wrap: pretty; }
     <a class="ceremony-card" href="coronation.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">II.</div>
       <h3>加 冕 之 途</h3>
+      <div class="ceremony-product">（OW 開放水域考照）</div>
       <div class="en">The Coronation</div>
       <p>PADI Open Water 開放水域認證。三日課程，取得國際潛水執照——這不是速成班，是被莊嚴對待的加冕過程。</p>
       <div class="ceremony-card-footer">
@@ -2142,6 +2158,7 @@ p { text-wrap: pretty; }
     <a class="ceremony-card" href="throne.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">III.</div>
       <h3>王 座 之 深</h3>
+      <div class="ceremony-product">（AOW 進階考照）</div>
       <div class="en">The Throne Below</div>
       <p>為已具備 OW 執照的潛者設計。PADI 進階開放水域二日五潛（岸潛三＋船潛二），第二日下探 30 米——王座在深處，只等你去坐。</p>
       <div class="ceremony-card-footer">
@@ -2156,6 +2173,7 @@ p { text-wrap: pretty; }
     <a class="ceremony-card" href="chosen.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">IV.</div>
       <h3>擇 海 之 典</h3>
+      <div class="ceremony-product">（Fun Dive）</div>
       <div class="en">The Chosen Sea</div>
       <p>為已具備 OW 或 AOW 執照的潛水員設計。單日三潛・全船潛，由你選擇要面對哪一片海——慶良間、萬座、或瀨底島，三海同價。</p>
       <div class="ceremony-card-footer">
@@ -2170,6 +2188,7 @@ p { text-wrap: pretty; }
     <a class="ceremony-card" href="archipelago.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">V.</div>
       <h3>群 島 之 謁</h3>
+      <div class="ceremony-product">（四日潛旅）</div>
       <div class="en">The Archipelago Audience</div>
       <p>四天三夜、11 潛的完整策展——慶良間、萬座、瀨底島，把沖繩最值得下潛的海一次走完。我們最極致的典禮。</p>
       <div class="ceremony-card-footer">
@@ -2184,6 +2203,7 @@ p { text-wrap: pretty; }
     <a class="ceremony-card" href="royalpair.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="ceremony-num">VI.</div>
       <h3>雙 人 之 海</h3>
+      <div class="ceremony-product">（水下攝影）</div>
       <div class="en">The Royal Pair</div>
       <p>為情侶、蜜月、週年紀念設計的完全客製典禮。每一個細節都圍繞你們兩人的故事。</p>
       <div class="ceremony-card-footer">

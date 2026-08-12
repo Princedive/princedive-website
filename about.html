@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+<!-- BUILD v2026.08.12-C -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ38GYS93B"></script>
 <script>
@@ -1354,6 +1355,9 @@ p { text-wrap: pretty; }
 @media (max-width:900px){
   .nav-cta,.nav-cta-snorkel{padding:.42rem .7rem !important}
 }
+
+/* ---- SEO：中文併入 h1，視覺不變 ---- */
+h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
 </style>
 <script type="application/ld+json">
 {
@@ -1430,8 +1434,8 @@ p { text-wrap: pretty; }
 <!-- PAGE HEADER -->
 <header class="page-header">
   <div class="mono">▸ 哲 學 · PHILOSOPHY</div>
-  <h1>Why We <em>Began</em></h1>
-  <div class="cn">為 · 何 · 而 · 始</div>
+  <h1>Why We <em>Began</em>
+    <span class="cn">為 · 何 · 而 · 始</span></h1>
   <div class="page-header-divider"></div>
   <p>王子潛水不是為了多做一趟行程而存在。我們開這家店，是因為看見了潛水產業裡正在流失的東西——教練的熱情，與客人不被催促的時間。</p>
 </header>

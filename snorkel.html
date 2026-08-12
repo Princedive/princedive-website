@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+<!-- BUILD v2026.08.12-C -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小王子浮潛｜沖繩青之洞窟親子浮潛・5 歲可參加・不搭船不併團</title>
@@ -454,10 +455,18 @@ p:last-child{margin-bottom:0}
 /* ============ 併團對照 ============ */
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:.6rem}
 .compare > div{padding:2.1rem 1.8rem;text-align:center}
-.them{background:rgba(255,255,255,.4)}
-.us{background:var(--white);border-top:3px solid var(--coral)}
-.cmp-icon{width:48px;height:40px;margin:0 auto 1rem;opacity:.5}
-.us .cmp-icon{opacity:1}
+.them{
+  background:transparent;border:1px dashed rgba(47,85,103,.42);
+  filter:grayscale(1);opacity:.72;
+}
+.them .cmp-big,.them p{color:var(--ink-soft) !important}
+.us{
+  background:var(--white);border-top:5px solid var(--coral);
+  box-shadow:0 10px 30px rgba(47,85,103,.14);
+}
+.us .cmp-big{color:var(--coral-text)}
+.cmp-icon{width:48px;height:40px;margin:0 auto 1rem}
+.them .cmp-icon{--c1:#7C8A93;--c2:#9AA6AD}
 .cmp-lab{font-family:'JetBrains Mono',monospace;font-size:.76rem;letter-spacing:.22em;margin-bottom:.9rem}
 .them .cmp-lab{color:var(--ink-soft)}
 .us .cmp-lab{color:var(--coral-text)}
@@ -513,7 +522,7 @@ p:last-child{margin-bottom:0}
 .policy > div{background:var(--white);padding:1.4rem .9rem;text-align:center}
 .policy .d{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.16em;color:var(--ink-soft)}
 .policy .v{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2rem;color:var(--coral);line-height:1.2;margin:.3rem 0}
-.policy .c{font-family:'Noto Serif TC',serif;font-size:.95rem;color:var(--ink-light)}
+.policy .c{font-family:'Noto Serif TC',serif;font-size:.92rem;line-height:1.7;color:var(--ink-light)}
 @media(max-width:640px){.policy{grid-template-columns:repeat(2,1fr)}}
 
 /* ============ 見證 ============ */
@@ -623,6 +632,19 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
 .progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:70;background:transparent;pointer-events:none}
 .progress span{display:block;height:100%;width:0;background:var(--coral);transition:width .08s linear}
 @media (prefers-reduced-motion:reduce){.progress span{transition:none}}
+
+.gold-link{
+  color:#D4BC88;font-family:'Noto Serif TC',serif;font-weight:700;
+  letter-spacing:.14em;text-decoration:none;
+  border-bottom:1px solid rgba(212,188,136,.55);padding-bottom:.2rem;
+}
+.gold-link:hover{color:#E0CB9E;border-bottom-color:#E0CB9E}
+
+h1 .h1-cn{
+  display:block;font-family:'Noto Serif TC',serif;font-weight:700;font-style:normal;
+  font-size:clamp(1rem,2.6vw,1.3rem);letter-spacing:.2em;padding-left:.2em;
+  color:var(--ink);margin-top:1rem;
+}
 </style>
 </head>
 <body>
@@ -763,7 +785,7 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
   <div class="wrap">
     <svg class="creature hero-mark" viewBox="0 0 120 100" aria-hidden="true"><use href="#c-crown"/></svg>
     <div class="mono">▸ 沖 繩 · 青 之 洞 窟 · OKINAWA</div>
-    <h1>Five Years Old,<br><em>and the Sea</em></h1>
+    <h1>Five Years Old,<br><em>and the Sea</em><span class="h1-cn">沖繩青之洞窟親子浮潛</span></h1>
     <div class="brandname">小 王 子 浮 潛</div>
     <p class="hero-lead"><strong>5 歲就可以下水。</strong>不會游泳也沒關係，救生衣從岸上就穿好。從岸邊走下去，<span class="mark">不搭船</span>，也不跟陌生人併團。</p>
     <div class="hero-cta">
@@ -980,7 +1002,7 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
       <p>這件事在沖繩需要說清楚。海邊的旺季人力，很大一部分是短期打工的旅居者——待一個夏天，明年換人。<strong>我們沒有一位。</strong></p>
       <p><strong>你孩子第一次下水的那個人，明年還會在這裡。</strong></p>
       <p>小王子浮潛是<strong>王子潛水</strong>的親子品牌，同一套安全標準、同一家公司——V.Iグループ株式会社，二〇二〇年立業於沖繩。全程投保潛店意外險，國語、粵語、英語直接溝通。</p>
-      <p style="margin-top:1.6rem"><a href="index.html" style="color:var(--shallow);font-weight:700">王子潛水 →</a></p>
+      <p style="margin-top:1.6rem"><a href="index.html" class="gold-link">王子潛水 →</a></p>
     </div>
   </div>
 </section>
@@ -1102,11 +1124,12 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
       <p class="txt" style="margin-top:.8rem">與王子潛水相同。因天候無法下水時不適用下表，可改期或全額退款。</p>
     </div>
     <div class="policy">
-      <div><div class="d">30 DAYS+</div><div class="v">0%</div><div class="c">全額退款</div></div>
-      <div><div class="d">15 DAYS</div><div class="v">50%</div><div class="c">收取半額</div></div>
-      <div><div class="d">7 DAYS</div><div class="v">80%</div><div class="c">收取八成</div></div>
-      <div><div class="d">3 DAYS</div><div class="v">100%</div><div class="c">恕不退款</div></div>
+      <div><div class="d">30 DAYS+</div><div class="v">0%</div><div class="c">30 天以上<br>全額退款</div></div>
+      <div><div class="d">15 DAYS+</div><div class="v">50%</div><div class="c">15–29 天<br>收取半額</div></div>
+      <div><div class="d">7 DAYS+</div><div class="v">80%</div><div class="c">7–14 天<br>收取八成</div></div>
+      <div><div class="d">3 DAYS+</div><div class="v">100%</div><div class="c">6 天以內<br>恕不退款</div></div>
     </div>
+    <p class="txt" style="margin-top:1.2rem;font-size:.96rem;color:var(--ink-soft)">※ 天數自活動日往前計算。因天候無法下水時不適用上表，可改期或全額退款。</p>
   </div>
 </section>
 
