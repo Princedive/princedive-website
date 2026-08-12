@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小王子浮潛｜沖繩青之洞窟親子浮潛・5 歲可參加・不搭船不併團</title>
-<meta name="description" content="沖繩青之洞窟親子浮潛，5 歲起可參加。岸邊入水全程不搭船，不與陌生人併團，只帶你們一家。救生衣全程穿著，不會游泳也可以。含運動相機紀錄，全程中文。">
+<meta name="description" content="沖繩青之洞窟親子浮潛 ¥7,500，大人小孩同價不加價。5 歲起可參加，岸邊入水不搭船，不與陌生人併團。專業潛水長帶隊，非短期打工人力。含全套裝備與運動相機紀錄，全程中文。">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://princedive.jp/snorkel.html">
 
@@ -14,8 +14,11 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:url" content="https://princedive.jp/snorkel.html">
 <meta property="og:title" content="小王子浮潛｜沖繩青之洞窟親子浮潛・5 歲可參加">
-<meta property="og:description" content="5 歲就可以下水。不會游泳也沒關係，救生衣全程穿著。從岸邊走下去，不搭船，也不跟陌生人併團。">
-<meta property="og:image" content="https://princedive.jp/assets/logo.png">
+<meta property="og:description" content="¥7,500 大人小孩同價。5 歲就可以下水，不會游泳也沒關係。從岸邊走下去，不搭船，也不跟陌生人併團。">
+<meta property="og:image" content="https://princedive.jp/assets/snorkel-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="孩子戴著面鏡浮在沖繩海面上大笑">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- GA4 -->
@@ -68,8 +71,9 @@ img{max-width:100%;display:block}
 }
 .nav-brand{display:flex;align-items:center;gap:.7rem}
 .nav-mark{width:34px;height:34px;flex:none}
-.nav-brand-cn{font-family:'Noto Serif TC',serif;font-weight:700;font-size:.95rem;letter-spacing:.26em;line-height:1.2;color:var(--ink)}
-.nav-brand-en{font-family:'JetBrains Mono',monospace;font-weight:300;font-size:.5rem;letter-spacing:.24em;color:var(--ink-soft);margin-top:.2rem}
+.nav-brand > div{text-align:center}
+.nav-brand-cn{font-family:'Noto Serif TC',serif;font-weight:700;font-size:.95rem;letter-spacing:.26em;line-height:1.2;color:var(--ink);padding-left:.26em}
+.nav-brand-en{font-family:'JetBrains Mono',monospace;font-weight:300;font-size:.5rem;letter-spacing:.24em;color:var(--ink-soft);margin-top:.25rem;padding-left:.24em}
 .nav-links{display:flex;align-items:center;gap:1.5rem}
 .nav-link{
   text-decoration:none;color:var(--ink);font-family:'Noto Serif TC',serif;
@@ -233,9 +237,68 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
 .foot ul{list-style:none}
 .legal{border-top:1px solid rgba(248,243,230,.15);margin-top:2rem;padding-top:1.2rem;font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.14em;color:rgba(248,243,230,.45)}
 @media(max-width:640px){section,.deep,.cta{padding:2.8rem 0}}
+
+/* ---- Hero 實照 ---- */
+.hero-photo { border:2px solid var(--ink); line-height:0; }
+.hero-photo img { width:100%; height:auto; display:block; }
+
+/* ---- 敘事段 ---- */
+.story { max-width:660px; margin:0 auto; }
+.story p { font-size:1rem; line-height:2.05; }
+.story .beat {
+  font-family:'Noto Serif TC',serif; font-weight:700;
+  font-size:clamp(1.15rem,2.6vw,1.5rem); line-height:1.75;
+  color:var(--ink); letter-spacing:.06em;
+  margin:2.4rem 0 1rem; padding-left:1.1rem;
+  border-left:3px solid var(--coral);
+  max-width:100%;
+}
+.story .beat.first { margin-top:0; }
+
+/* ---- 信任列 ---- */
+.trust { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(54,93,111,.25); border:1px solid rgba(54,93,111,.25); margin-top:1.8rem; }
+.trust > div { background:var(--paper); padding:1.4rem 1rem; text-align:center; }
+.trust .n { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.6rem,3vw,2.1rem); color:var(--coral); line-height:1.1; }
+.trust .l { font-family:'Noto Serif TC',serif; font-weight:500; font-size:.8rem; letter-spacing:.1em; margin-top:.3rem; color:var(--ink); }
+.trust .e { font-family:'JetBrains Mono',monospace; font-size:.5rem; letter-spacing:.16em; color:var(--ink-soft); margin-top:.2rem; }
+@media(max-width:700px){ .trust{grid-template-columns:repeat(2,1fr)} }
+
+/* ---- 見證槽 ---- */
+.voxes { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-top:1.6rem; }
+@media(max-width:760px){ .voxes{grid-template-columns:1fr} }
+.vox { background:var(--paper); padding:1.6rem 1.5rem; }
+.vox .q { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.7rem; color:var(--coral); line-height:1; margin-bottom:.5rem; }
+.vox .slot {
+  font-family:'JetBrains Mono',monospace; font-size:.56rem; letter-spacing:.2em;
+  color:var(--tide); border:1px dashed rgba(54,93,111,.45); padding:.9rem 1rem;
+  line-height:2; margin-bottom:.9rem;
+}
+.vox .who { font-family:'Noto Serif TC',serif; font-size:.8rem; letter-spacing:.1em; color:var(--ink-soft); }
+
+/* ---- 價格 ---- */
+.price-box { border:2px solid var(--coral); padding:1.9rem 2rem; margin-top:1.6rem; text-align:center; }
+.price-box .lab { font-family:'JetBrains Mono',monospace; font-size:.58rem; letter-spacing:.24em; color:var(--coral-text); margin-bottom:.7rem; }
+.price-box .amt { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(2.2rem,5vw,3rem); color:var(--ink); line-height:1.1; }
+.price-box .per { font-family:'Noto Serif TC',serif; font-size:.86rem; letter-spacing:.14em; color:var(--ink-light); margin-top:.45rem; }
+.price-box .note { font-family:'Shippori Mincho',serif; font-size:.8rem; line-height:1.85; color:var(--ink-soft); margin:1rem auto 0; max-width:none; text-align:center; }
+
+/* ---- 摺疊 FAQ ---- */
+.faq { border-top:1px solid var(--rule); margin-top:1.6rem; }
+.faq details { border-bottom:1px solid var(--rule); }
+.faq summary {
+  cursor:pointer; list-style:none; padding:1.05rem 2rem 1.05rem 0; position:relative;
+  font-family:'Noto Serif TC',serif; font-weight:500; font-size:.95rem; letter-spacing:.05em; color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after { content:"＋"; position:absolute; right:.2rem; top:1rem; color:var(--coral); font-size:.95rem; }
+.faq details[open] summary::after { content:"−"; }
+.faq details > p { font-size:.9rem; padding:0 0 1.15rem; margin:0; max-width:64ch; }
+
+.citrus-note { background:var(--citrus); padding:1.3rem 1.5rem; margin-top:2rem; }
+.citrus-note h4 { font-family:'JetBrains Mono',monospace; font-weight:400; font-size:.58rem; letter-spacing:.2em; color:#4A5210; margin-bottom:.55rem; }
+.citrus-note p { color:var(--ink); margin-bottom:0; font-size:.92rem; }
 </style>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -244,7 +307,7 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
         "TouristTrip"
       ],
       "name": "小王子浮潛 · 青之洞窟親子浮潛",
-      "description": "沖繩青之洞窟親子浮潛，5 至 60 歲可參加。岸邊入水全程不搭船，不與陌生人併團，救生衣全程穿著，不會游泳亦可參加。含全套浮潛裝備與運動相機紀錄，全程中文教練帶領。",
+      "description": "沖繩青之洞窟親子浮潛，5 至 60 歲可參加，大人與小孩同價 ¥7,500 不加價。岸邊入水全程不搭船，不與陌生人併團。由具合法工作身份的專業潛水長帶隊，非短期打工人力。救生衣自岸上講解時穿著至上岸，不會游泳亦可參加。含全套浮潛裝備與運動相機紀錄，全程中文。",
       "url": "https://princedive.jp/snorkel.html",
       "image": "https://princedive.jp/assets/logo.png",
       "brand": {
@@ -268,6 +331,17 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
         "@type": "PeopleAudience",
         "suggestedMinAge": 5,
         "suggestedMaxAge": 60
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "7500",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "url": "https://princedive.jp/snorkel.html",
+        "seller": {
+          "@id": "https://princedive.jp/#business"
+        },
+        "description": "每人 ¥7,500，大人與小孩同價，兩人即可成行，不併團"
       }
     },
     {
@@ -323,10 +397,10 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
         },
         {
           "@type": "Question",
-          "name": "救生衣是全程穿著嗎？",
+          "name": "浮潛時救生衣什麼時候穿？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "從上車到回程全程穿著，不是下水才穿。孩子在水裡是浮著的狀態，完全放鬆也不會下沉。"
+            "text": "在岸上講解時就穿好，直到上岸才脫，不是走到水邊才穿。孩子在水裡是浮著的狀態，完全放鬆也不會下沉。"
           }
         },
         {
@@ -344,12 +418,67 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
             "@type": "Answer",
             "text": "可改期或全額退款，不適用一般取消政策。小雨照常下水，真正影響的是浪不是雨。"
           }
+        },
+        {
+          "@type": "Question",
+          "name": "孩子第一次浮潛會害怕嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "大部分孩子前十分鐘不願意把臉放進水裡，這很常見。潛水長會陪他待在踩得到底的地方，由孩子自己決定何時嘗試，不催促。多數孩子成功一次之後就會想一直待在水裡。若孩子始終不願下水，潛水長會全程陪同在淺灘活動。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "近視可以浮潛嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。我們免費提供近視度數面鏡，預約時告知度數即可。亦可配戴隱形眼鏡。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "長輩或祖父母可以參加浮潛嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，浮潛不需要體力，救生衣使人浮於水面，活動量比走路少。若有心血管疾病、正服用相關藥物或近期手術，請預約時告知，我們會誠實評估。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "沖繩浮潛需要提前多久預約？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "暑假與連假建議提前一個月以上。青之洞窟是沖繩最熱門的海域，旺季時段有限。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "不下水的家人可以一起去嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。真栄田岬岸上有觀景區與休息空間，不下水者不計入人數、不收費。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "沖繩親子浮潛小孩要加價嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不加價。大人與小孩同為每人 ¥7,500，沒有兒童價、沒有年齡加價。帶小孩的額外成本由我們承擔。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "帶隊的是什麼資格的人員？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "具備潛水長（Divemaster）資格、有合法工作身份的正職人員，經過系統培訓並持續複訓，不使用短期打工度假人力。"
+          }
         }
       ]
     }
   ]
-}
-</script>
+}</script>
 </head>
 <body>
 
@@ -381,13 +510,17 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
         <div class="brandname">小 王 子 浮 潛</div>
         <h1>Five Years Old,<br><em>and the Sea</em></h1>
         <div class="divider"></div>
-        <p class="hero-lead"><strong>5 歲就可以下水。</strong>不會游泳也沒關係，救生衣全程穿著。從岸邊走下去，<span class="mark">不搭船</span>，也不跟陌生人併團。</p>
+        <p class="hero-lead"><strong>5 歲就可以下水。</strong>不會游泳也沒關係，救生衣從岸上就穿好。從岸邊走下去，<span class="mark">不搭船</span>，也不跟陌生人併團——潛水長那天只帶你們一家。</p>
         <a href="#book" class="btn">預 約 詢 問</a>
-        <div class="btn-sub">全 程 中 文 · 兩 人 成 行 · 不 併 團</div>
+        <div class="btn-sub">¥7,500 / 人 · 大 小 同 價 · 兩 人 成 行 · 不 併 團</div>
       </div>
-      <figure class="photo tall">
-        <div class="tag">HERO PHOTO</div>
-        <div class="desc">小孩剛從水裡抬起頭，面鏡還戴著，頭髮貼在額頭上，正在笑。<br>不擺拍，不看鏡頭。</div>
+      <figure class="hero-photo">
+        <img src="assets/snorkel-hero.jpg"
+             srcset="assets/snorkel-hero-900.jpg 900w, assets/snorkel-hero.jpg 1536w"
+             sizes="(max-width: 820px) 100vw, 46vw"
+             width="1536" height="1024"
+             alt="沖繩青之洞窟親子浮潛：孩子戴著面鏡與呼吸管、穿著救生衣，剛從水面抬起頭大笑"
+             fetchpriority="high" decoding="async">
       </figure>
     </div>
   </div>
@@ -424,8 +557,8 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
       </div>
       <div class="q">
         <div class="qn">03 · 裝 備</div>
-        <h3>救生衣是全程穿嗎？</h3>
-        <p><strong>從上車到回程，全程穿著。</strong>不是下水才穿。孩子在水裡是浮著的狀態，就算完全放鬆也不會下沉。</p>
+        <h3>救生衣什麼時候穿？</h3>
+        <p><strong>岸上講解時就穿好，一直到上岸才脫。</strong>不是走到水邊才穿。孩子在水裡是浮著的狀態，就算完全放鬆也不會下沉。</p>
       </div>
       <div class="q">
         <div class="qn">04 · 暈 船</div>
@@ -446,6 +579,32 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
   </div>
 </section>
 
+
+<section style="border-top:1px solid var(--rule)">
+  <div class="narrow story">
+    <div class="mono">▸ 第 一 次 下 水 · THE FIRST TIME</div>
+    <h2>Most Kids Say <em>No</em> First</h2>
+    <div class="cn">大 部 分 的 孩 子 · 一 開 始 都 不 肯</div>
+
+    <p class="beat first">「前十分鐘，他不會把臉放進水裡。」</p>
+    <p>這是最常發生的事，也是我們從來不擔心的事。孩子站在及腰的水裡，救生衣穿好了，面鏡也戴上了，然後就停在那裡——水太亮、海太大、面鏡壓著鼻子的感覺很怪。</p>
+    <p><strong>我們不會催。</strong>潛水長會陪他待在踩得到底的地方，先玩水、先吐泡泡、先看看腳邊有沒有小魚。什麼時候要試，由他自己決定。</p>
+
+    <p class="beat">「然後他聽見自己的呼吸聲。」</p>
+    <p>第一次成功把臉放進水裡的時候，大部分孩子會愣一下。不是因為看到什麼，是因為<strong>聽見了自己的呼吸</strong>——透過呼吸管，那個聲音又近又大，像整個世界只剩下這一件事。</p>
+    <p>然後他才會注意到底下的東西：白砂、珊瑚、一群不怕人的小魚。</p>
+
+    <p class="beat">「接下來，換你在岸上等他了。」</p>
+    <p>這是最常發生的第二件事。從「不肯下水」到「還想再看一次」，中間通常不到二十分鐘。</p>
+    <p>所以我們不趕。<strong>不併團的真正意義在這裡</strong>——沒有其他家庭在旁邊等你的孩子準備好，潛水長也不必看著錶把大家趕上岸。你的孩子花多久，就是多久。</p>
+
+    <div class="citrus-note">
+      <h4>◆ 如 果 他 真 的 不 願 意 呢</h4>
+      <p>也有這種孩子，我們遇過。那天就變成在淺灘玩水、看寄居蟹、撿貝殼——潛水長會陪完全程，不會讓你覺得白來一趟。<strong>我們不會把孩子推下水。</strong></p>
+    </div>
+  </div>
+</section>
+
 <svg class="waterline" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true" style="color:var(--shallow)">
   <path d="M0,15 C150,3 250,25 400,15 C550,4 650,24 800,14 C950,4 1050,23 1200,13 L1200,26 L0,26 Z" fill="currentColor"/>
 </svg>
@@ -462,19 +621,48 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
       <div class="them">
         <h4>一 般 併 團</h4>
         <div class="big">你和五個陌生人</div>
-        <p>教練要同時記住六個不認識的人。孩子稍微飄遠，他得先判斷那是誰家的小孩、誰是一起的。人數湊滿才出發，你可能要等。</p>
+        <p>潛水長要同時記住六個不認識的人。孩子稍微飄遠，他得先判斷那是誰家的小孩、誰是一起的。人數湊滿才出發，你可能要等。</p>
       </div>
       <div class="us">
         <h4>小 王 子 浮 潛</h4>
         <div class="big">只有你們一家</div>
-        <p>報名幾個人就是幾個人，不會再塞人進來。教練認得你們每一位，知道誰跟誰是一起的、誰是第一次下水。兩個人也走。</p>
+        <p>報名幾個人就是幾個人，不會再塞人進來。潛水長認得你們每一位，知道誰跟誰是一起的、誰是第一次下水。兩個人也走。</p>
       </div>
     </div>
 
     <div class="citrus">
       <h4>◆ 說 清 楚</h4>
-      <p>不併團不代表一對一。人多的時候教練帶的人也多，但<strong>那些人全部是你自己帶來的家人朋友</strong>——這跟被安排跟陌生人同組，是兩件完全不同的事。</p>
+      <p>不併團不代表一對一。人多的時候潛水長帶的人也多，但<strong>那些人全部是你自己帶來的家人朋友</strong>——這跟被安排跟陌生人同組，是兩件完全不同的事。</p>
     </div>
+  </div>
+</section>
+
+<svg class="waterline flip" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true" style="color:var(--shallow)">
+  <path d="M0,15 C150,3 250,25 400,15 C550,4 650,24 800,14 C950,4 1050,23 1200,13 L1200,26 L0,26 Z" fill="currentColor"/>
+</svg>
+
+
+<section class="deep">
+  <div class="narrow">
+    <div class="mono">▸ 我 們 是 誰 · WHO WE ARE</div>
+    <h2>You're Handing Us <em>Your Child</em></h2>
+    <div class="cn">你 把 孩 子 交 給 我 們</div>
+
+    <p class="lead">所以你有權知道，那天站在你孩子旁邊的是誰。</p>
+    <p>是<strong>潛水長（Divemaster）</strong>——潛水產業的專業資格，不是上完一堂課就能拿的證。他們經過我們自己的培訓，並且持續接受複訓。</p>
+
+    <div class="trust">
+      <div><div class="n">DM</div><div class="l">專 業 潛 水 長</div><div class="e">DIVEMASTER</div></div>
+      <div><div class="n">0</div><div class="l">打 工 度 假 短 期 人 力</div><div class="e">NO BACKPACKERS</div></div>
+      <div><div class="n">100%</div><div class="l">合 法 工 作 身 份</div><div class="e">LEGALLY EMPLOYED</div></div>
+      <div><div class="n">2020</div><div class="l">立 業 沖 繩</div><div class="e">SINCE</div></div>
+    </div>
+
+    <p style="margin-top:1.8rem">這件事在沖繩需要說清楚。海邊的旺季人力，很大一部分是短期打工的旅居者——待一個夏天，明年換人。<strong>我們沒有一位。</strong></p>
+    <p>我們的潛水長是有合法工作身份的正職人員，經過系統培訓、持續複訓，把這件事當職業做。<strong>你孩子第一次下水的那個人，明年還會在這裡。</strong></p>
+    <p>小王子浮潛是<strong>王子潛水</strong>的親子品牌，同一套安全標準、同一家公司——V.Iグループ株式会社，二〇二〇年立業於沖繩。全程投保潛店意外險，國語、粵語、英語直接溝通，不透過翻譯。</p>
+
+    <p style="font-size:.88rem;color:var(--tide)">想看我們另一半的樣子：<a href="index.html" style="color:var(--coral-deep)">王子潛水 →</a></p>
   </div>
 </section>
 
@@ -548,10 +736,10 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
       <div>
         <div class="flow">
           <div><div class="t">集 合</div><div class="w">真栄田岬會合<small>停車場旁集合，先確認裝備尺寸</small></div></div>
-          <div><div class="t">換 裝</div><div class="w">更衣・穿救生衣<small>更衣室與置物櫃就在旁邊</small></div></div>
-          <div><div class="t">說 明</div><div class="w">陸上教學<small>面鏡怎麼戴、呼吸管怎麼用、手勢怎麼比</small></div></div>
+          <div><div class="t">換 裝</div><div class="w">更衣・著防寒衣<small>更衣室與置物櫃就在旁邊</small></div></div>
+          <div><div class="t">說 明</div><div class="w">陸上教學・穿救生衣<small>面鏡怎麼戴、呼吸管怎麼用、手勢怎麼比</small></div></div>
           <div><div class="t">入 水</div><div class="w">從岸邊走下去<small>站得到底的深度開始，適應了再往前</small></div></div>
-          <div><div class="t">浮 潛</div><div class="w">青之洞窟<small>教練全程帶著，運動相機同時記錄</small></div></div>
+          <div><div class="t">浮 潛</div><div class="w">青之洞窟<small>潛水長全程帶著，運動相機同時記錄</small></div></div>
           <div><div class="t">結 束</div><div class="w">上岸・沖洗・解散<small>照片與影片當日傳給你</small></div></div>
         </div>
       </div>
@@ -570,13 +758,20 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
     <div class="cn">含 括 對 照</div>
     <p><strong>大人與小孩同價。</strong>兩人即可成行，不設最低人數，不併團。</p>
 
+    <div class="price-box">
+      <div class="lab">▸ 費 用 · PER PERSON</div>
+      <div class="amt">¥7,500</div>
+      <div class="per">每 人 · 大 人 小 孩 同 價</div>
+      <p class="note">兩人即可成行 · 不併團 · 含全套裝備與運動相機紀錄</p>
+    </div>
+
     <div class="inc">
       <div class="y">
         <h4>◆ 已 含</h4>
         <ul>
           <li>全套浮潛裝備（面鏡、呼吸管、蛙鞋、救生衣）</li>
           <li>防寒衣</li>
-          <li>中文教練全程帶領</li>
+          <li>專業潛水長全程帶領（中文）</li>
           <li>運動相機照片與影片紀錄</li>
           <li>更衣室與淋浴使用</li>
           <li>保險</li>
@@ -604,13 +799,112 @@ footer{background:var(--ink);color:rgba(248,243,230,.7);padding:2.6rem 0}
   </div>
 </section>
 
+
+
+<svg class="waterline" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true" style="color:var(--shallow)">
+  <path d="M0,15 C150,3 250,25 400,15 C550,4 650,24 800,14 C950,4 1050,23 1200,13 L1200,26 L0,26 Z" fill="currentColor"/>
+</svg>
+
+<section class="deep">
+  <div class="narrow">
+    <div class="mono">▸ 為 什 麼 小 孩 不 加 價 · SAME PRICE</div>
+    <h2>Same Sea, <em>Same Price</em></h2>
+    <div class="cn">同 一 片 海 · 同 一 個 價 格</div>
+
+    <p class="lead">多數店家帶小孩要加價。我們不加。</p>
+    <p>理由不難理解——小孩需要更多注意力、更慢的節奏、更多耐心。<strong>那確實是成本。</strong>所以業界的做法是把這筆成本加在帳單上，由父母承擔。</p>
+
+    <p class="beat" style="border-left-color:var(--tide)">小孩和父母是一個家庭。<br>他們應該享受同一片海、同等的快樂、同等的價格。</p>
+
+    <p><strong>帶小孩的難處，由我們來承擔。</strong>那是我們的工作，不是你的額外費用。</p>
+    <p>所以這裡沒有兒童價、沒有加價、沒有「未滿幾歲另計」。五歲的孩子和四十歲的爸爸，同樣是 ¥7,500。</p>
+  </div>
+</section>
+
+<svg class="waterline flip" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true" style="color:var(--shallow)">
+  <path d="M0,15 C150,3 250,25 400,15 C550,4 650,24 800,14 C950,4 1050,23 1200,13 L1200,26 L0,26 Z" fill="currentColor"/>
+</svg>
+
+<section style="border-top:1px solid var(--rule)">
+  <div class="narrow">
+    <div class="mono">▸ 帶 過 的 家 庭 · FAMILIES WE'VE TAKEN</div>
+    <h2>In Their <em>Words</em></h2>
+    <div class="cn">他 們 說 的</div>
+    <p>我們不寫自己的形容詞，讓帶過的家庭說。</p>
+
+    <div class="voxes">
+      <div class="vox">
+        <div class="q">"</div>
+        <div class="slot">見 證 槽 位 01<br>建議選：孩子一開始害怕、後來玩到不想走的家庭</div>
+        <div class="who">— 城市 · 孩子年齡 · 月份</div>
+      </div>
+      <div class="vox">
+        <div class="q">"</div>
+        <div class="slot">見 證 槽 位 02<br>建議選：不會游泳的大人，或祖父母同行的家庭</div>
+        <div class="who">— 城市 · 孩子年齡 · 月份</div>
+      </div>
+      <div class="vox">
+        <div class="q">"</div>
+        <div class="slot">見 證 槽 位 03<br>建議選：比較過併團、選擇包團的家庭</div>
+        <div class="who">— 城市 · 孩子年齡 · 月份</div>
+      </div>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--ink-soft);margin-top:1.1rem">※ 此區為待補槽位。請提供真實客人回饋後替換，不使用杜撰內容。</p>
+  </div>
+</section>
+
+
+<section style="border-top:1px solid var(--rule)">
+  <div class="narrow">
+    <div class="mono">▸ 還 有 人 問 過 · MORE QUESTIONS</div>
+    <h2>Everything <em>Else</em></h2>
+    <div class="cn">其 他 你 可 能 想 知 道 的</div>
+
+    <div class="faq">
+      <details>
+        <summary>要帶什麼？泳衣一定要嗎？</summary>
+        <p>泳衣穿在裡面，外面我們提供防寒衣。帶毛巾、換洗衣物、防曬。<strong>防曬請盡量選對珊瑚友善的款式</strong>——真栄田岬的珊瑚是活的，一般防曬乳的成分對它有影響。</p>
+      </details>
+      <details>
+        <summary>近視怎麼辦？可以戴隱形眼鏡嗎？</summary>
+        <p>我們<strong>免費提供近視度數面鏡</strong>，預約時告訴我們度數即可。隱形眼鏡也可以戴，但下水前後要注意進水，度數面鏡通常更輕鬆。</p>
+      </details>
+      <details>
+        <summary>祖父母也想一起下水可以嗎？</summary>
+        <p>可以。浮潛不需要體力，救生衣讓你浮著，實際的活動量比走路少。<strong>但有心血管疾病、正在服用相關藥物、或近期動過手術，請預約時先告訴我們</strong>，我們會誠實評估，必要時建議只在岸上陪同。</p>
+      </details>
+      <details>
+        <summary>孩子中途想上岸怎麼辦？</summary>
+        <p>隨時可以。因為不併團，沒有其他人在等——潛水長會陪他上岸，休息夠了想再下水也沒問題。這是包團最實際的價值。</p>
+      </details>
+      <details>
+        <summary>需要提前多久預約？</summary>
+        <p>暑假與連假建議提前一個月以上。<strong>青之洞窟是沖繩最熱門的一片海</strong>，旺季時段有限，越晚訂能選的時間越少。</p>
+      </details>
+      <details>
+        <summary>照片什麼時候給？要另外付錢嗎？</summary>
+        <p>運動相機的照片與影片<strong>包含在費用內，不另外收費</strong>。當天結束後傳給你。</p>
+      </details>
+      <details>
+        <summary>什麼季節最好？</summary>
+        <p>4 到 11 月最舒服，水溫與能見度都好。冬天也能下水，防寒衣會換厚的，人少反而安靜。<strong>6 到 9 月偶有颱風</strong>，那幾天海況不行我們會提前通知。</p>
+      </details>
+      <details>
+        <summary>可以帶不下水的家人一起去嗎？</summary>
+        <p>可以。真栄田岬岸上有觀景區與休息空間，不下水的家人可以在旁邊等、拍照。<strong>不下水者不計入人數，不收費。</strong></p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta" id="book">
   <div class="narrow">
     <div class="mono" style="color:var(--shallow)">▸ 預 約 · BOOK</div>
     <h2>Tell Us Who's <em>Coming</em></h2>
     <div class="cn">告 訴 我 們 有 誰 要 來</div>
     <div class="divider"></div>
-    <p>告訴我們幾個人、最小的幾歲、哪幾天在沖繩。我們會回覆可安排的時段與報價。</p>
+    <p>告訴我們幾個人、最小的幾歲、哪幾天在沖繩。我們會回覆可安排的時段與報價。<br>不確定孩子敢不敢下水也沒關係——先問，我們照實說。</p>
     <a href="inquire.html" class="btn">預 約 詢 問</a>
     <div class="btn-sub">通 常 24 小 時 內 回 覆 · 線 上 即 時 預 約 系 統 準 備 中</div>
   </div>
