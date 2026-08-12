@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-C -->
+<!-- BUILD v2026.08.12-F -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ38GYS93B"></script>
 <script>
@@ -1166,10 +1166,12 @@ a.ceremony-card {
 
 .ceremony-card p {
   color: var(--ink-light);
-  font-size: 0.95rem;
-  line-height: 1.9;
+  font-size: 1.06rem;
+  line-height: 1.95;
+  letter-spacing: 0.01em;
   margin-bottom: 2rem;
 }
+.ceremony-card p strong { color: var(--ink); font-weight: 700; }
 
 .ceremony-card-footer {
   display: flex;
@@ -1746,18 +1748,59 @@ p { text-wrap: pretty; }
   .nav-cta,.nav-cta-snorkel{padding:.42rem .7rem !important}
 }
 
+.ceremony-card:hover 
+/* ---- SEO：中文併入 h1，視覺不變 ---- */
+h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
+
+
+/* ---- 典禮卡片：編號 + 英文名同列，中文名下方接產品名 ---- */
+.ceremony-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.25);
+}
+.ceremony-head .ceremony-num { margin-bottom: 0; flex: none; }
+.ceremony-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.ceremony-card:hover @media (max-width: 640px) {
+  .ceremony-en { font-size: 0.95rem; }
+  }
+
+/* ---- 典禮卡片：中文名 + 產品名同寬 ---- */
+.ceremony-title-block {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 8.6rem;
+  margin-bottom: 1.6rem;
+}
+.ceremony-title-block h3 { margin-bottom: 0.35rem; }
 .ceremony-product {
   font-family: 'Noto Serif TC', serif;
   font-weight: 500;
-  font-size: 0.86rem;
-  letter-spacing: 0.16em;
+  font-size: 0.98rem;
+  letter-spacing: 0;
   color: var(--gold-deep);
-  margin-top: 0.45rem;
+  width: 100%;
+  text-align: justify;
+  text-align-last: justify;
+  -moz-text-align-last: justify;
 }
 .ceremony-card:hover .ceremony-product { color: var(--gold); }
-
-/* ---- SEO：中文併入 h1，視覺不變 ---- */
-h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
+@media (max-width: 640px) {
+  .ceremony-en { font-size: 0.95rem; }
+  .ceremony-product { font-size: 0.92rem; }
+  .ceremony-title-block { min-width: 7.6rem; }
+}
 </style>
 
 <script type="application/ld+json">
@@ -2126,11 +2169,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
   
   <div class="ceremonies-grid">
     <a class="ceremony-card" href="azure.html" style="text-decoration:none;color:inherit;display:block;">
-      <div class="ceremony-num">I.</div>
-      <h3>青 之 典 禮</h3>
-      <div class="ceremony-product">（體驗潛水）</div>
-      <div class="en">The Azure Ceremony</div>
-      <p>為初次認識海洋的你設計。無需潛水經驗，由專屬教練陪伴，在恩納村青之洞窟完成人生第一次呼吸——半日兩潛，第二潛走進那道被陽光染藍的洞窟。</p>
+      <div class="ceremony-head"><span class="ceremony-num">I.</span><span class="ceremony-en">The Azure Ceremony</span></div>
+      <div class="ceremony-title-block">
+        <h3>青 之 典 禮</h3>
+        <div class="ceremony-product">（體驗潛水）</div>
+      </div>
+      <p>沖繩<strong>青之洞窟體驗潛水</strong>，為初次認識海洋的你設計。<strong>無需潛水執照、不會游泳也能參加</strong>，由專屬教練陪伴完成人生第一次呼吸——半日兩潛，第二潛走進那道被陽光染藍的洞窟。</p>
       <div class="ceremony-card-footer">
         <div>
           <span class="ceremony-price-label">FROM</span>
@@ -2141,11 +2185,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
     </a>
     
     <a class="ceremony-card" href="coronation.html" style="text-decoration:none;color:inherit;display:block;">
-      <div class="ceremony-num">II.</div>
-      <h3>加 冕 之 途</h3>
-      <div class="ceremony-product">（OW 開放水域考照）</div>
-      <div class="en">The Coronation</div>
-      <p>PADI Open Water 開放水域認證。三日課程，取得國際潛水執照——這不是速成班，是被莊嚴對待的加冕過程。</p>
+      <div class="ceremony-head"><span class="ceremony-num">II.</span><span class="ceremony-en">The Coronation</span></div>
+      <div class="ceremony-title-block">
+        <h3>加 冕 之 途</h3>
+        <div class="ceremony-product">（OW 考照）</div>
+      </div>
+      <p><strong>PADI 開放水域潛水員（OW）考照</strong>，三日課程取得終身有效的國際潛水執照。泳池半日＋開放水域四潛，<strong>含 eLearning 教材費</strong>——這不是速成班，是被莊嚴對待的加冕過程。</p>
       <div class="ceremony-card-footer">
         <div>
           <span class="ceremony-price-label">FROM</span>
@@ -2156,11 +2201,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
     </a>
     
     <a class="ceremony-card" href="throne.html" style="text-decoration:none;color:inherit;display:block;">
-      <div class="ceremony-num">III.</div>
-      <h3>王 座 之 深</h3>
-      <div class="ceremony-product">（AOW 進階考照）</div>
-      <div class="en">The Throne Below</div>
-      <p>為已具備 OW 執照的潛者設計。PADI 進階開放水域二日五潛（岸潛三＋船潛二），第二日下探 30 米——王座在深處，只等你去坐。</p>
+      <div class="ceremony-head"><span class="ceremony-num">III.</span><span class="ceremony-en">The Throne Below</span></div>
+      <div class="ceremony-title-block">
+        <h3>王 座 之 深</h3>
+        <div class="ceremony-product">（AOW 考照）</div>
+      </div>
+      <p><strong>PADI 進階開放水域（AOW）考照</strong>，為已具備 OW 執照的潛者設計。二日五潛（岸潛三＋船潛二），<strong>第二日下探 30 米</strong>，必修深潛與水下導航——王座在深處，只等你去坐。</p>
       <div class="ceremony-card-footer">
         <div>
           <span class="ceremony-price-label">FROM</span>
@@ -2171,11 +2217,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
     </a>
     
     <a class="ceremony-card" href="chosen.html" style="text-decoration:none;color:inherit;display:block;">
-      <div class="ceremony-num">IV.</div>
-      <h3>擇 海 之 典</h3>
-      <div class="ceremony-product">（Fun Dive）</div>
-      <div class="en">The Chosen Sea</div>
-      <p>為已具備 OW 或 AOW 執照的潛水員設計。單日三潛・全船潛，由你選擇要面對哪一片海——慶良間、萬座、或瀨底島，三海同價。</p>
+      <div class="ceremony-head"><span class="ceremony-num">IV.</span><span class="ceremony-en">The Chosen Sea</span></div>
+      <div class="ceremony-title-block">
+        <h3>擇 海 之 典</h3>
+        <div class="ceremony-product">（Fun Dive）</div>
+      </div>
+      <p><strong>單日 Fun Dive</strong>，為已具備 OW 或 AOW 執照的潛水員設計。<strong>單日三潛・全船潛</strong>，由你選擇要面對哪一片海——<strong>慶良間、萬座、瀨底島三海同價</strong>，一天只屬於一片海。</p>
       <div class="ceremony-card-footer">
         <div>
           <span class="ceremony-price-label">FROM</span>
@@ -2186,11 +2233,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
     </a>
     
     <a class="ceremony-card" href="archipelago.html" style="text-decoration:none;color:inherit;display:block;">
-      <div class="ceremony-num">V.</div>
-      <h3>群 島 之 謁</h3>
-      <div class="ceremony-product">（四日潛旅）</div>
-      <div class="en">The Archipelago Audience</div>
-      <p>四天三夜、11 潛的完整策展——慶良間、萬座、瀨底島，把沖繩最值得下潛的海一次走完。我們最極致的典禮。</p>
+      <div class="ceremony-head"><span class="ceremony-num">V.</span><span class="ceremony-en">The Archipelago Audience</span></div>
+      <div class="ceremony-title-block">
+        <h3>群 島 之 謁</h3>
+        <div class="ceremony-product">（四日潛旅）</div>
+      </div>
+      <p><strong>四天三夜、11 潛</strong>的完整潛旅策展。首日砂邊 Check Dive，其後<strong>慶良間、萬座、瀨底島</strong>各三支船潛，把沖繩最值得下潛的海一次走完。我們最極致的典禮。</p>
       <div class="ceremony-card-footer">
         <div>
           <span class="ceremony-price-label">FROM</span>
@@ -2201,11 +2249,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
     </a>
     
     <a class="ceremony-card" href="royalpair.html" style="text-decoration:none;color:inherit;display:block;">
-      <div class="ceremony-num">VI.</div>
-      <h3>雙 人 之 海</h3>
-      <div class="ceremony-product">（水下攝影）</div>
-      <div class="en">The Royal Pair</div>
-      <p>為情侶、蜜月、週年紀念設計的完全客製典禮。每一個細節都圍繞你們兩人的故事。</p>
+      <div class="ceremony-head"><span class="ceremony-num">VI.</span><span class="ceremony-en">The Royal Pair</span></div>
+      <div class="ceremony-title-block">
+        <h3>雙 人 之 海</h3>
+        <div class="ceremony-product">（水下攝影）</div>
+      </div>
+      <p>客製化<strong>水下攝影</strong>——水下寫真、水中求婚、婚紗拍攝。由駐店獲獎水下人像攝影師掌鏡，為情侶、蜜月、週年紀念設計，每一個細節都圍繞你們兩人的故事。</p>
       <div class="ceremony-card-footer">
         <div>
           <span class="ceremony-price-label">FROM</span>
