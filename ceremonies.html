@@ -935,6 +935,28 @@ p { text-wrap: pretty; }
 .cta-inner p,
 .hero-inner > p,
 .c-hero-inner > p { text-wrap: balance; }
+
+/* ---- 導覽列：浮潛分流連結 ---- */
+.nav-snorkel { color:#8F3623 !important; position:relative; padding-left:1.05rem !important; }
+.nav-snorkel::before { content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); width:6px; height:6px; background:#C8553D; }
+.nav-snorkel:hover { border-bottom-color:#C8553D !important; }
+.nav-snorkel .nav-link-en { color:rgba(143,54,35,.72); }
+@media (max-width:900px){ .nav-snorkel{padding-left:.7rem !important} .nav-snorkel::before{width:5px;height:5px} }
+
+.index-product {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  color: var(--gold-deep);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-top: 0.35rem;
+  white-space: nowrap;
+}
+.index-item:hover .index-product { color: var(--gold); }
+@media (max-width: 900px) {
+  .index-product { font-size: 0.55rem; letter-spacing: 0.06em; margin-top: 0.25rem; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1082,6 +1104,7 @@ p { text-wrap: pretty; }
     <a href="ceremonies.html" class="nav-link active">典禮<span class="nav-link-en">Ceremonies</span></a>
     <a href="waters.html" class="nav-link">海域<span class="nav-link-en">Our Waters</span></a>
     <a href="moments.html" class="nav-link">映像<span class="nav-link-en">Moments</span></a>
+    <a href="snorkel.html" class="nav-link nav-snorkel">浮潛<span class="nav-link-en">Snorkel</span></a>
     <a href="inquire.html" class="nav-link nav-cta">預約<span class="nav-link-en">Inquire</span></a>
   </div>
 </nav>
@@ -1101,26 +1124,32 @@ p { text-wrap: pretty; }
     <a href="#ceremony-i" class="index-item">
       <span class="index-num">I.</span>
       <span class="index-name">青之典禮</span>
+      <span class="index-product">體驗潛水</span>
     </a>
     <a href="#ceremony-ii" class="index-item">
       <span class="index-num">II.</span>
       <span class="index-name">加冕之途</span>
+      <span class="index-product">OW 考證</span>
     </a>
     <a href="#ceremony-iii" class="index-item">
       <span class="index-num">III.</span>
       <span class="index-name">王座之深</span>
+      <span class="index-product">AOW 考證</span>
     </a>
     <a href="#ceremony-iv" class="index-item">
       <span class="index-num">IV.</span>
       <span class="index-name">擇海之典</span>
+      <span class="index-product">Fun Dive</span>
     </a>
     <a href="#ceremony-v" class="index-item">
       <span class="index-num">V.</span>
       <span class="index-name">群島之謁</span>
+      <span class="index-product">四日潛旅</span>
     </a>
     <a href="#ceremony-vi" class="index-item">
       <span class="index-num">VI.</span>
       <span class="index-name">雙人之海</span>
+      <span class="index-product">水下攝影</span>
     </a>
   </div>
 </div>

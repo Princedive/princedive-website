@@ -1619,6 +1619,120 @@ p { text-wrap: pretty; }
 .cta-inner p,
 .hero-inner > p,
 .c-hero-inner > p { text-wrap: balance; }
+
+/* ============ 小王子浮潛 · 分流區塊 ============ */
+.snorkel-section {
+  padding: 6rem 3rem;
+  background: var(--paper);
+  border-top: 1px solid rgba(184, 154, 94, 0.25);
+}
+.snorkel-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: #C6DEE7;
+  border-left: 5px solid #C8553D;
+  padding: 3.4rem 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+.snorkel-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8F3623;
+  margin-bottom: 1.2rem;
+}
+.snorkel-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  line-height: 1.12;
+  color: var(--ink);
+}
+.snorkel-h em { font-style: italic; color: #A8412C; }
+.snorkel-cn {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.45em;
+  color: var(--ink);
+  margin: 0.9rem 0 1.1rem;
+}
+.snorkel-p {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  color: #33454F;
+  max-width: 42ch;
+  margin-bottom: 1.5rem;
+}
+.snorkel-p strong { color: var(--ink); font-weight: 700; }
+.snorkel-facts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.8rem; }
+.snorkel-facts span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  border: 1px solid rgba(54, 93, 111, 0.45);
+  padding: 0.38rem 0.8rem;
+  color: #365D6F;
+}
+.snorkel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 2.4rem;
+  background: #A8412C;
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.snorkel-btn:hover { background: #8F3623; }
+.snorkel-mark { width: 132px; height: 132px; flex: none; }
+
+@media (max-width: 900px) {
+  .snorkel-section { padding: 3.5rem 1.5rem; }
+  .snorkel-inner {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    padding: 2.2rem 1.6rem;
+  }
+  .snorkel-mark { width: 88px; height: 88px; }
+  .snorkel-cn { letter-spacing: 0.3em; }
+  .snorkel-btn { width: 100%; justify-content: center; }
+}
+
+/* ---- 導覽列：浮潛分流連結 ---- */
+.nav-snorkel {
+  color: #8F3623 !important;
+  position: relative;
+  padding-left: 1.05rem !important;
+}
+.nav-snorkel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #C8553D;
+}
+.nav-snorkel:hover { border-bottom-color: #C8553D !important; }
+.nav-snorkel .nav-link-en { color: rgba(143, 54, 35, 0.72); }
+@media (max-width: 900px) {
+  .nav-snorkel { padding-left: 0.7rem !important; }
+  .nav-snorkel::before { width: 5px; height: 5px; }
+}
 </style>
 
 <script type="application/ld+json">
@@ -1753,6 +1867,7 @@ p { text-wrap: pretty; }
     <a href="ceremonies.html" class="nav-link">典禮<span class="nav-link-en">Ceremonies</span></a>
     <a href="waters.html" class="nav-link">海域<span class="nav-link-en">Our Waters</span></a>
     <a href="moments.html" class="nav-link">映像<span class="nav-link-en">Moments</span></a>
+    <a href="snorkel.html" class="nav-link nav-snorkel">浮潛<span class="nav-link-en">Snorkel</span></a>
     <a href="inquire.html" class="nav-link nav-cta">預約<span class="nav-link-en">Inquire</span></a>
   </div>
 </nav>
@@ -2070,6 +2185,31 @@ p { text-wrap: pretty; }
     </a>
     
 </div>
+</section>
+
+
+<!-- 小王子浮潛 · 分流區塊 -->
+<section class="snorkel-section">
+  <div class="snorkel-inner">
+    <div>
+      <div class="snorkel-mono">▸ 帶 小 孩 來 的 話 · FOR FAMILIES</div>
+      <div class="snorkel-h">Too Young to <em>Dive?</em></div>
+      <div class="snorkel-cn">小 王 子 浮 潛</div>
+      <p class="snorkel-p">六場典禮有年齡門檻。更小的孩子，我們留了另一條路——<strong>青之洞窟浮潛，5 歲就能下水</strong>。不會游泳也可以，救生衣全程穿著，從岸邊走下去，不搭船。</p>
+      <div class="snorkel-facts">
+        <span>5 歲 起</span>
+        <span>不 搭 船</span>
+        <span>不 併 團</span>
+        <span>兩 人 成 行</span>
+      </div>
+      <a href="snorkel.html" class="snorkel-btn">看 浮 潛 行 程 <span>→</span></a>
+    </div>
+    <svg class="snorkel-mark" viewBox="0 0 44 44" aria-label="小王子浮潛">
+      <path d="M9,21 L13,12 L18,18 L22,9 L26,18 L31,12 L35,21 Z" fill="none" stroke="#C8553D" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M4,25 C10,21 14,29 20,25 C26,21 30,29 40,24" fill="none" stroke="#5B8DA8" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M7,32 C13,28 17,36 23,32 C29,28 33,36 41,31" fill="none" stroke="#5B8DA8" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
+    </svg>
+  </div>
 </section>
 
 <!-- JOURNEY 旅程 -->

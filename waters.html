@@ -1304,6 +1304,59 @@ p { text-wrap: pretty; }
 .cta-inner p,
 .hero-inner > p,
 .c-hero-inner > p { text-wrap: balance; }
+
+/* ---- 導覽列：浮潛分流連結 ---- */
+.nav-snorkel { color:#8F3623 !important; position:relative; padding-left:1.05rem !important; }
+.nav-snorkel::before { content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); width:6px; height:6px; background:#C8553D; }
+.nav-snorkel:hover { border-bottom-color:#C8553D !important; }
+.nav-snorkel .nav-link-en { color:rgba(143,54,35,.72); }
+@media (max-width:900px){ .nav-snorkel{padding-left:.7rem !important} .nav-snorkel::before{width:5px;height:5px} }
+
+/* ============ 潛點 → 典禮 CTA ============ */
+.w-goto { margin-top: 1.6rem; }
+.w-goto-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.28em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+.w-goto-chips { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.w-goto-chip {
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(184, 154, 94, 0.5);
+  padding: 0.6rem 1rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.w-goto-chip:hover { background: rgba(184, 154, 94, 0.09); border-color: var(--gold); }
+.w-goto-chip .gn {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+}
+.w-goto-chip .gp {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-deep);
+  margin-top: 0.28rem;
+}
+.w-goto-note {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.74rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  margin-top: 0.85rem;
+}
+@media (max-width: 700px) {
+  .w-goto-chip { padding: 0.5rem 0.8rem; }
+  .w-goto-chip .gn { font-size: 0.78rem; letter-spacing: 0.1em; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1386,6 +1439,7 @@ p { text-wrap: pretty; }
     <a href="ceremonies.html" class="nav-link">典禮<span class="nav-link-en">Ceremonies</span></a>
     <a href="waters.html" class="nav-link active">海域<span class="nav-link-en">Our Waters</span></a>
     <a href="moments.html" class="nav-link">映像<span class="nav-link-en">Moments</span></a>
+    <a href="snorkel.html" class="nav-link nav-snorkel">浮潛<span class="nav-link-en">Snorkel</span></a>
     <a href="inquire.html" class="nav-link nav-cta">預約<span class="nav-link-en">Inquire</span></a>
   </div>
 </nav>
@@ -1441,6 +1495,14 @@ p { text-wrap: pretty; }
         <div class="w-spec-item"><div class="w-spec-label">CAVE</div><div class="w-spec-value">≈50m<span class="cn">洞窟深度</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">LEVEL</div><div class="w-spec-value">All Levels<span class="cn">所有人</span></div></div>
       </div>
+      <div class="w-goto">
+        <div class="w-goto-label">▸ 可 前 往 的 典 禮 · DIVE IT WITH</div>
+        <div class="w-goto-chips">
+          <a href="azure.html" class="w-goto-chip"><span class="gn">青之典禮</span><span class="gp">體驗潛水</span></a>
+          <a href="coronation.html" class="w-goto-chip"><span class="gn">加冕之途</span><span class="gp">OW 考證</span></a>
+        </div>
+        <p class="w-goto-note">青之洞是唯一無需執照即可前往的洞窟地形。帶更小的孩子，請看<a href="snorkel.html" style="color:var(--gold-deep)">小王子浮潛</a>。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1459,6 +1521,14 @@ p { text-wrap: pretty; }
         <div class="w-spec-item"><div class="w-spec-label">DEPTH</div><div class="w-spec-value">5–20m<span class="cn">水深</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">VISIBILITY</div><div class="w-spec-value">≈15m<span class="cn">能見度</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">LEVEL</div><div class="w-spec-value">All Levels<span class="cn">所有人</span></div></div>
+      </div>
+      <div class="w-goto">
+        <div class="w-goto-label">▸ 可 前 往 的 典 禮 · DIVE IT WITH</div>
+        <div class="w-goto-chips">
+          <a href="coronation.html" class="w-goto-chip"><span class="gn">加冕之途</span><span class="gp">OW 考證</span></a>
+          <a href="throne.html" class="w-goto-chip"><span class="gn">王座之深</span><span class="gp">AOW 考證</span></a>
+        </div>
+        <p class="w-goto-note">砂邊是我們的第一課。所有長程典禮的第一日都從這裡開始，群島之謁的 Check Dive 也在這裡——先認識你的呼吸節奏，再決定接下來去哪。</p>
       </div>
     </div>
   </div>
@@ -1479,6 +1549,14 @@ p { text-wrap: pretty; }
         <div class="w-spec-item"><div class="w-spec-label">FEATURE</div><div class="w-spec-value">Pillars<span class="cn">水下橋墩柱列</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">LEVEL</div><div class="w-spec-value">All Levels<span class="cn">所有人</span></div></div>
       </div>
+      <div class="w-goto">
+        <div class="w-goto-label">▸ 可 前 往 的 典 禮 · DIVE IT WITH</div>
+        <div class="w-goto-chips">
+          <a href="coronation.html" class="w-goto-chip"><span class="gn">加冕之途</span><span class="gp">OW 考證</span></a>
+          <a href="throne.html" class="w-goto-chip"><span class="gn">王座之深</span><span class="gp">AOW 考證</span></a>
+        </div>
+        <p class="w-goto-note">水下橋墩柱列是 AOW 水下導航的天然教材——有參照物、有方向感。深潛與導航兩支必修多在這裡進行。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1497,6 +1575,14 @@ p { text-wrap: pretty; }
         <div class="w-spec-item"><div class="w-spec-label">VISIBILITY</div><div class="w-spec-value">20–30m<span class="cn">能見度</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">CORAL</div><div class="w-spec-value">≈250<span class="cn">珊瑚種數</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">LEVEL</div><div class="w-spec-value">OW+<span class="cn">需 OW 執照</span></div></div>
+      </div>
+      <div class="w-goto">
+        <div class="w-goto-label">▸ 可 前 往 的 典 禮 · DIVE IT WITH</div>
+        <div class="w-goto-chips">
+          <a href="chosen.html" class="w-goto-chip"><span class="gn">擇海之典</span><span class="gp">Fun Dive</span></a>
+          <a href="archipelago.html" class="w-goto-chip"><span class="gn">群島之謁</span><span class="gp">四日潛旅</span></a>
+        </div>
+        <p class="w-goto-note">需 OW 執照。擇海之典三海同價，慶良間為其一。</p>
       </div>
     </div>
   </div>
@@ -1517,6 +1603,15 @@ p { text-wrap: pretty; }
         <div class="w-spec-item"><div class="w-spec-label">TERRAIN</div><div class="w-spec-value">Vertical<span class="cn">豎穴・斷崖</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">LEVEL</div><div class="w-spec-value">AOW+<span class="cn">需 AOW 執照</span></div></div>
       </div>
+      <div class="w-goto">
+        <div class="w-goto-label">▸ 可 前 往 的 典 禮 · DIVE IT WITH</div>
+        <div class="w-goto-chips">
+          <a href="chosen.html" class="w-goto-chip"><span class="gn">擇海之典</span><span class="gp">Fun Dive</span></a>
+          <a href="throne.html" class="w-goto-chip"><span class="gn">王座之深</span><span class="gp">AOW 考證</span></a>
+          <a href="archipelago.html" class="w-goto-chip"><span class="gn">群島之謁</span><span class="gp">四日潛旅</span></a>
+        </div>
+        <p class="w-goto-note">需 AOW 執照。這是六片海裡唯一有深度門檻的一片。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1535,6 +1630,14 @@ p { text-wrap: pretty; }
         <div class="w-spec-item"><div class="w-spec-label">DEPTH</div><div class="w-spec-value">5–18m<span class="cn">水深</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">SEASON</div><div class="w-spec-value">Winter<span class="cn">冬季為主</span></div></div>
         <div class="w-spec-item"><div class="w-spec-label">LEVEL</div><div class="w-spec-value">OW+<span class="cn">需 OW 執照</span></div></div>
+      </div>
+      <div class="w-goto">
+        <div class="w-goto-label">▸ 可 前 往 的 典 禮 · DIVE IT WITH</div>
+        <div class="w-goto-chips">
+          <a href="chosen.html" class="w-goto-chip"><span class="gn">擇海之典</span><span class="gp">Fun Dive</span></a>
+          <a href="archipelago.html" class="w-goto-chip"><span class="gn">群島之謁</span><span class="gp">四日潛旅</span></a>
+        </div>
+        <p class="w-goto-note">需 OW 執照。主要為冬季海域。</p>
       </div>
     </div>
   </div>
