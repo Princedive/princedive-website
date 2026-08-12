@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小王子浮潛｜沖繩青之洞窟親子浮潛・5 歲可參加・不搭船不併團</title>
-<meta name="description" content="沖繩青之洞窟親子浮潛 ¥7,500，大人小孩同價不加價。5 歲起可參加，岸邊入水不搭船，不與陌生人併團。專業潛水長帶隊，非短期打工人力。含全套裝備與運動相機紀錄，全程中文。">
+<meta name="description" content="沖繩青之洞窟親子浮潛 ¥7,500，大人小孩同價不加價。5 歲起可參加，每日四個時段，岸邊入水不搭船，不與陌生人併團。專業潛水長帶隊，非短期打工人力。含全套裝備與運動相機紀錄，全程中文。">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://princedive.jp/snorkel.html">
 
@@ -41,7 +41,7 @@
         "TouristTrip"
       ],
       "name": "小王子浮潛 · 青之洞窟親子浮潛",
-      "description": "沖繩青之洞窟親子浮潛，5 至 60 歲可參加，大人與小孩同價 ¥7,500 不加價。岸邊入水全程不搭船，不與陌生人併團。由具合法工作身份的專業潛水長帶隊，非短期打工人力。救生衣自岸上講解時穿著至上岸，不會游泳亦可參加。含全套浮潛裝備與運動相機紀錄，全程中文。",
+      "description": "沖繩青之洞窟親子浮潛，5 至 60 歲可參加，大人與小孩同價 ¥7,500 不加價。每日四個時段（08:00／10:00／13:00／15:00），每段兩小時。岸邊入水全程不搭船，不與陌生人併團。由具合法工作身份的專業潛水長帶隊。救生衣自岸上講解時穿著，不會游泳亦可參加。含全套裝備與運動相機紀錄，全程中文。",
       "url": "https://princedive.jp/snorkel.html",
       "image": "https://princedive.jp/assets/logo.png",
       "brand": {
@@ -207,6 +207,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "具備潛水長（Divemaster）資格、有合法工作身份的正職人員，經過系統培訓並持續複訓，不使用短期打工度假人力。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "青之洞窟浮潛有哪些時段？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "每天四個時段，每段兩小時：第一節 08:00–10:00、第二節 10:00–12:00、第三節 13:00–15:00、第四節 15:00–17:00。四個時段流程完全相同。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "哪一個時段的青之洞窟最藍？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "只要有太陽，四個時段都看得到。決定顏色的是當天的天氣而非時間，陰天時任何時段都無法還原那個藍。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "青之洞窟浮潛可以看到什麼？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "成群的熱帶小魚、躲在海葵裡的小丑魚、珊瑚、砂地上的海星，岸邊石縫還有寄居蟹。海龜要看運氣，不保證遇到。"
           }
         }
       ]
@@ -449,11 +473,12 @@ p:last-child{margin-bottom:0}
 @media(max-width:760px){.trust{grid-template-columns:repeat(2,1fr)}}
 
 /* ============ 會看到什麼 ============ */
-.see{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:.6rem;text-align:center}
+.see{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem 2rem;margin-top:.6rem;text-align:center}
 .see .creature{width:130px;height:110px;margin-bottom:.8rem}
 .see h3{margin-bottom:.5rem}
 .see p{font-size:1rem;line-height:1.9;color:var(--ink-light);max-width:20em;margin:0 auto}
-@media(max-width:760px){.see{grid-template-columns:1fr;gap:2.6rem}}
+@media(max-width:860px){.see{grid-template-columns:repeat(2,1fr);gap:2.2rem 1.4rem}}
+@media(max-width:520px){.see{grid-template-columns:1fr;gap:2.4rem}}
 
 /* ============ 流程 ============ */
 .flow{max-width:600px;margin:.6rem auto 0}
@@ -578,6 +603,20 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
 .booking-slot-note code{
   font-family:'JetBrains Mono',monospace;font-size:.86rem;
   background:rgba(255,255,255,.14);padding:.1rem .4rem;
+}
+
+/* ---- 四個時段 ---- */
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:760px;margin:0 auto 2.4rem}
+.slot{background:var(--white);border-top:3px solid var(--coral);padding:1.3rem .8rem;text-align:center}
+.slot-n{font-family:'Noto Serif TC',serif;font-weight:700;font-size:.95rem;letter-spacing:.16em;color:var(--coral-text)}
+.slot-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.75rem;color:var(--ink);line-height:1.2;margin-top:.35rem}
+.slot-t span{font-size:1.05rem;color:var(--ink-soft);letter-spacing:.02em}
+@media(max-width:700px){.slots{grid-template-columns:repeat(2,1fr)}}
+
+/* ---- 平移時間 ---- */
+.flow-w .times{
+  display:block;font-family:'JetBrains Mono',monospace;font-size:.76rem;
+  letter-spacing:.1em;color:var(--coral-text);margin-top:.5rem;
 }
 </style>
 </head>
@@ -710,7 +749,6 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
     <a href="#price" class="nav-link opt">費用<span class="nav-en-sub">Price</span></a>
     <a href="index.html" class="nav-link nav-dive-link opt">王子潛水<span class="nav-en-sub">Prince Dive</span></a>
     <a href="#book" class="nav-link btn-snorkel">浮潛預約<span class="nav-en-sub">Snorkel</span></a>
-    <a href="inquire.html" class="nav-link btn-dive">潛水預約<span class="nav-en-sub">Dive</span></a>
   </div>
 </nav>
 
@@ -767,8 +805,8 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
     </div>
 
     <div class="note-citrus" style="max-width:760px;margin-left:auto;margin-right:auto">
-      <h4>最 藍 的 時 段</h4>
-      <p>上午光線的角度最好，藍色最飽和。<strong>這也是我們把行程排在早上的原因</strong>——不是為了趕，是為了那個顏色。</p>
+      <h4>哪 一 個 時 段 最 藍</h4>
+      <p>只要有太陽，<strong>四個時段都看得到</strong>。決定顏色的是當天的天氣，不是幾點鐘——陰天再怎麼挑時間也還原不了那個藍。<br>所以請照你們當天的行程挑時段，不用配合海。</p>
     </div>
 
     <div class="sec-head" style="margin:4rem 0 2.2rem">
@@ -781,19 +819,34 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
 
     <div class="see">
       <figure>
-        <svg class="creature" viewBox="0 0 120 100" aria-label="小丑魚"><use href="#c-clownfish"/></svg>
-        <h3>小 丑 魚</h3>
-        <p>牠不怕人。會停下來看你，然後才慢慢游開。</p>
+        <svg class="creature" viewBox="0 0 120 100" aria-label="熱帶魚群"><use href="#c-fish"/></svg>
+        <h3>成 群 的 小 魚</h3>
+        <p>一整片，靠得很近。孩子伸手牠們會散開，然後又聚回來。</p>
       </figure>
       <figure>
-        <svg class="creature" viewBox="0 0 120 100" aria-label="海龜"><use href="#c-turtle"/></svg>
-        <h3>海 龜</h3>
-        <p>要浮上來換氣的時候，牠跟你一樣得抬頭。</p>
+        <svg class="creature" viewBox="0 0 120 100" aria-label="小丑魚"><use href="#c-clownfish"/></svg>
+        <h3>小 丑 魚</h3>
+        <p>躲在海葵裡，不怕人。會停下來看你，然後才慢慢游開。</p>
       </figure>
       <figure>
         <svg class="creature" viewBox="0 0 120 100" aria-label="珊瑚"><use href="#c-coral"/></svg>
         <h3>珊 瑚</h3>
         <p>不要踩，也不要摸。它是活的，長一公分要好幾年。</p>
+      </figure>
+      <figure>
+        <svg class="creature" viewBox="0 0 120 100" aria-label="海星"><use href="#c-starfish"/></svg>
+        <h3>海 星</h3>
+        <p>在砂地上不太動。可以看，可以拍，但請讓牠留在水裡。</p>
+      </figure>
+      <figure>
+        <svg class="creature" viewBox="0 0 120 100" aria-label="寄居蟹"><use href="#c-crab"/></svg>
+        <h3>寄 居 蟹</h3>
+        <p>不在水裡，在岸邊的石頭縫。等裝備的時候找找看，很好找。</p>
+      </figure>
+      <figure>
+        <svg class="creature" viewBox="0 0 120 100" aria-label="海龜"><use href="#c-turtle"/></svg>
+        <h3>海 龜</h3>
+        <p>看運氣。牠要浮上來換氣的時候，跟你一樣得抬頭。</p>
       </figure>
     </div>
   </div>
@@ -937,20 +990,62 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
   <div class="wrap">
     <div class="sec-head">
       <svg class="creature sec-icon" viewBox="0 0 120 100" aria-hidden="true"><use href="#c-shell"/></svg>
-      <div class="mono">▸ 這 一 天 · THE DAY</div>
-      <h2>From the Shore, <em>Step by Step</em></h2>
-      <div class="cn">從 岸 邊 走 下 去</div>
+      <div class="mono">▸ 時 段 與 流 程 · THE DAY</div>
+      <h2>Pick Your <em>Two Hours</em></h2>
+      <div class="cn">選 一 個 兩 小 時</div>
       <div class="rule"></div>
     </div>
 
-    <div class="flow">
-      <div class="flow-item"><div class="flow-t">集 合</div><div class="flow-w">真栄田岬會合<small>停車場旁集合，先確認裝備尺寸</small></div></div>
-      <div class="flow-item"><div class="flow-t">換 裝</div><div class="flow-w">更衣・著防寒衣<small>更衣室與置物櫃就在旁邊</small></div></div>
-      <div class="flow-item"><div class="flow-t">說 明</div><div class="flow-w">陸上教學・穿救生衣<small>面鏡怎麼戴、呼吸管怎麼用、手勢怎麼比</small></div></div>
-      <div class="flow-item"><div class="flow-t">入 水</div><div class="flow-w">從岸邊走下去<small>站得到底的深度開始，適應了再往前</small></div></div>
-      <div class="flow-item"><div class="flow-t">浮 潛</div><div class="flow-w">青之洞窟<small>潛水長全程帶著，運動相機同時記錄</small></div></div>
-      <div class="flow-item"><div class="flow-t">結 束</div><div class="flow-w">上岸・沖洗・解散<small>照片與影片當日傳給你</small></div></div>
+    <p class="txt" style="margin-bottom:1.8rem">每天四個時段，每段兩小時，流程完全相同。<br><strong>照你們當天的行程挑就好。</strong></p>
+
+    <div class="slots">
+      <div class="slot"><div class="slot-n">第 一 節</div><div class="slot-t">08:00<span>–10:00</span></div></div>
+      <div class="slot"><div class="slot-n">第 二 節</div><div class="slot-t">10:00<span>–12:00</span></div></div>
+      <div class="slot"><div class="slot-n">第 三 節</div><div class="slot-t">13:00<span>–15:00</span></div></div>
+      <div class="slot"><div class="slot-n">第 四 節</div><div class="slot-t">15:00<span>–17:00</span></div></div>
     </div>
+
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-t">開 始</div>
+        <div class="flow-w">集合・換裝・陸上簡介
+          <small>確認裝備尺寸，穿上防寒衣與救生衣。面鏡怎麼戴、呼吸管怎麼呼吸、手勢怎麼比，在岸上先講一遍。</small>
+          <span class="times">08:00 · 10:00 · 13:00 · 15:00</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-t">＋30 分</div>
+        <div class="flow-w">入水・與魚群相遇
+          <small>從岸邊走下去，站得到底的深度開始。適應了再往前——第一群魚通常就在這裡等著。</small>
+          <span class="times">08:30 · 10:30 · 13:30 · 15:30</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-t">＋1 小時</div>
+        <div class="flow-w">抵達青之洞窟
+          <small>游進洞裡，回頭看向洞口——整片水是發光的藍。運動相機在這裡不會停。</small>
+          <span class="times">09:00 · 11:00 · 14:00 · 16:00</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-t">＋1.5 小時</div>
+        <div class="flow-w">折返
+          <small>沿原路慢慢游回來。不趕——回程常常是孩子玩得最放鬆的一段。</small>
+          <span class="times">09:30 · 11:30 · 14:30 · 16:30</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-t">＋2 小時</div>
+        <div class="flow-w">上岸・卸裝備・解散
+          <small>裝備交還給我們，在真栄田岬原地解散。照片與影片當日傳給你。</small>
+          <span class="times">10:00 · 12:00 · 15:00 · 17:00</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="txt" style="margin-top:1.8rem;font-size:.98rem;color:var(--ink-soft)">
+      實際入水與折返時間依當日海況與各人的狀況調整。<strong>因為不併團，沒有其他家庭在等你們。</strong>
+    </p>
   </div>
 </section>
 
@@ -1171,11 +1266,11 @@ footer{background:var(--ink);color:rgba(248,243,230,.72);padding:3rem 0 2.4rem}
       <svg class="creature" viewBox="0 0 120 100" aria-hidden="true"><use href="#c-turtle"/></svg>
       <svg class="creature" viewBox="0 0 120 100" aria-hidden="true"><use href="#c-starfish"/></svg>
     </div>
-    <div class="mono" style="color:var(--shallow)">▸ 選 日 期 · PICK A DATE</div>
-    <h2>Choose Your <em>Morning</em></h2>
-    <div class="cn">挑 一 個 早 上</div>
+    <div class="mono" style="color:var(--shallow)">▸ 選 時 段 · PICK A SESSION</div>
+    <h2>Ready When <em>You Are</em></h2>
+    <div class="cn">你 們 說 好 · 就 出 發</div>
     <div class="rule"></div>
-    <p style="margin-top:1.8rem">選好日期與時段，當場確認，不用等回信。<br><strong>¥7,500 每人 · 大人小孩同價 · 兩人成行 · 不併團</strong></p>
+    <p style="margin-top:1.8rem">四個時段挑一個，選好當場確認，不用等回信。<br><strong>¥7,500 每人 · 大人小孩同價 · 兩人成行 · 不併團</strong></p>
 
     <!-- ▼▼▼ 自動預約系統嵌入位置：把預約平台提供的 embed 程式碼貼在這個 div 裡 ▼▼▼ -->
     <div id="booking-widget" class="booking-slot">
