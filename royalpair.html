@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-H -->
+<!-- BUILD v2026.08.13-A -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ38GYS93B"></script>
 <script>
@@ -1512,6 +1512,74 @@ p { text-wrap: pretty; }
 @media (max-width:900px){
   .nav-cta,.nav-cta-snorkel{padding:.42rem .7rem !important}
 }
+
+/* ---- 其他典禮導覽（頁尾前）---- */
+.other-ceremonies {
+  padding: 5rem 3rem 6rem;
+  background: var(--paper);
+  border-top: 1px solid rgba(184, 154, 94, 0.2);
+}
+.other-ceremonies-head { text-align: center; margin-bottom: 2.4rem; }
+.other-ceremonies-head .mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold-deep); margin-bottom: 0.9rem;
+}
+.other-ceremonies-head h2 {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--ink); line-height: 1.15;
+}
+.other-ceremonies-head h2 em { color: var(--gold); }
+.other-ceremonies-head .cn {
+  font-family: 'Noto Serif TC', serif; font-size: 0.92rem;
+  letter-spacing: 0.24em; color: var(--ink-light); margin-top: 0.7rem;
+}
+.oc-index {
+  max-width: 1000px; margin: 0 auto;
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(184, 154, 94, 0.2);
+  border-bottom: 1px solid rgba(184, 154, 94, 0.2);
+}
+.oc-inner { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center; }
+.oc-item {
+  text-align: center; padding: 0.9rem 0.5rem; text-decoration: none;
+  border-right: 1px solid rgba(184, 154, 94, 0.15); transition: all 0.3s ease;
+}
+.oc-item:last-child { border-right: none; }
+.oc-item:hover { background: rgba(184, 154, 94, 0.06); }
+.oc-num {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  color: var(--gold); font-size: 1rem; display: block; margin-bottom: 0.3rem;
+}
+.oc-name {
+  font-family: 'Noto Serif TC', serif; color: var(--ink);
+  font-size: 0.85rem; letter-spacing: 0.18em; display: block; transition: color 0.3s ease;
+}
+.oc-item:hover .oc-name { color: var(--gold-deep); }
+.oc-product {
+  font-family: 'Noto Serif TC', serif; font-weight: 500;
+  color: var(--gold-deep); font-size: 0.74rem; letter-spacing: 0.06em;
+  display: block; margin-top: 0.35rem; white-space: nowrap;
+}
+.oc-all {
+  text-align: center; margin-top: 2rem;
+}
+.oc-all a {
+  font-family: 'Noto Serif TC', serif; font-size: 0.95rem; letter-spacing: 0.16em;
+  color: var(--gold-deep); text-decoration: none;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.5); padding-bottom: 0.2rem;
+}
+.oc-all a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+@media (max-width: 900px) {
+  .other-ceremonies { padding: 3.2rem 1.5rem 4rem; }
+  .oc-inner { grid-template-columns: repeat(3, 1fr); gap: 0.3rem; }
+  .oc-item { border-right: none; }
+  .oc-name { font-size: 0.8rem; letter-spacing: 0.1em; }
+  .oc-product { font-size: 0.66rem; }
+}
+@media (max-width: 480px) {
+  .oc-inner { grid-template-columns: repeat(2, 1fr); }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1884,6 +1952,46 @@ p { text-wrap: pretty; }
   </div>
 </section>
 
+
+
+<!-- 其他典禮 -->
+<section class="other-ceremonies">
+  <div class="other-ceremonies-head">
+    <div class="mono">▸ 其 他 典 禮 · OTHER CEREMONIES</div>
+    <h2>Five More <em>Ways</em></h2>
+    <div class="cn">還 有 五 種 下 海 的 方 式</div>
+  </div>
+  <div class="oc-index">
+    <div class="oc-inner">
+      <a href="azure.html" class="oc-item">
+        <span class="oc-num">I.</span>
+        <span class="oc-name">青之典禮</span>
+        <span class="oc-product">（體驗潛水）</span>
+      </a>
+      <a href="coronation.html" class="oc-item">
+        <span class="oc-num">II.</span>
+        <span class="oc-name">加冕之途</span>
+        <span class="oc-product">（OW 考照）</span>
+      </a>
+      <a href="throne.html" class="oc-item">
+        <span class="oc-num">III.</span>
+        <span class="oc-name">王座之深</span>
+        <span class="oc-product">（AOW 考照）</span>
+      </a>
+      <a href="chosen.html" class="oc-item">
+        <span class="oc-num">IV.</span>
+        <span class="oc-name">擇海之典</span>
+        <span class="oc-product">（Fun Dive）</span>
+      </a>
+      <a href="archipelago.html" class="oc-item">
+        <span class="oc-num">V.</span>
+        <span class="oc-name">群島之謁</span>
+        <span class="oc-product">（四日潛旅）</span>
+      </a>
+    </div>
+  </div>
+  <div class="oc-all"><a href="ceremonies.html">看六大典禮總覽 →</a></div>
+</section>
 
 <!-- FOOTER -->
 <footer>
