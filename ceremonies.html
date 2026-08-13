@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-H -->
+<!-- BUILD v2026.08.13-A -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ38GYS93B"></script>
 <script>
@@ -343,7 +343,7 @@ body::before {
 
 .ceremony-content .narrative {
   color: var(--ink-light);
-  font-size: 1rem;
+  font-size: 1.08rem;
   line-height: 2.0;
   margin-bottom: 2rem;
   font-family: 'Noto Serif TC', serif;
@@ -972,6 +972,59 @@ p { text-wrap: pretty; }
 
 /* ---- SEO：中文併入 h1，視覺不變 ---- */
 h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
+
+/* ---- 典禮區塊：沿用首頁卡片格式 ---- */
+.ceremony-head-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(184, 154, 94, 0.25);
+}
+.ceremony-head-row .ceremony-num-big {
+  font-size: 2.4rem;
+  margin-bottom: 0;
+  flex: none;
+}
+.ceremony-head-row .en-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  line-height: 1.3;
+}
+.ceremony-title-block {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 11rem;
+  margin-bottom: 1.8rem;
+}
+.ceremony-title-block h2 { margin-bottom: 0.4rem !important; }
+.ceremony-title-block .ceremony-product {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: 0;
+  color: var(--gold-deep);
+  width: 100%;
+  text-align: justify;
+  text-align-last: justify;
+  -moz-text-align-last: justify;
+}
+@media (max-width: 700px) {
+  .ceremony-head-row { gap: 0.9rem; margin-bottom: 1.1rem; padding-bottom: 0.9rem; }
+  .ceremony-head-row .ceremony-num-big { font-size: 1.9rem; }
+  .ceremony-head-row .en-name { font-size: 1.05rem; }
+  .ceremony-title-block { min-width: 9rem; }
+  .ceremony-title-block .ceremony-product { font-size: 1rem; }
+}
+.ceremony-content .narrative strong { color: var(--ink); font-weight: 700; }
 </style>
 <script type="application/ld+json">
 {
@@ -1173,11 +1226,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
 <section class="ceremony-block" id="ceremony-i">
   <div class="ceremony-inner">
     <div class="ceremony-content">
-      <div class="ceremony-eyebrow">▸ CEREMONY ONE</div>
-      <div class="ceremony-num-big">I.</div>
-      <h2>青 之 典 禮</h2>
-      <div class="en-name">The Azure Ceremony</div>
-      <p class="narrative">為初次見海的你設計。無需潛水經驗、無需任何準備——只需帶上好奇心。由專屬教練陪伴，在恩納村青之洞窟完成人生第一次呼吸：第一潛認識呼吸與浮力，第二潛走進那道被陽光染藍的洞窟。半日、兩潛、一場加冕。這是最溫柔的典禮：給那些還未踏入海的人，一個被鄭重接待的初見。</p>
+      <div class="ceremony-head-row"><span class="ceremony-num-big">I.</span><span class="en-name">The Azure Ceremony</span></div>
+          <div class="ceremony-title-block">
+            <h2>青 之 典 禮</h2>
+            <div class="ceremony-product">（體驗潛水）</div>
+          </div>
+      <p class="narrative">沖繩<strong>青之洞窟體驗潛水</strong>，為初次見海的你設計。<strong>無需潛水執照、不會游泳也能參加</strong>——只需帶上好奇心。由專屬教練陪伴，在恩納村青之洞窟完成人生第一次呼吸：第一潛認識呼吸與浮力，第二潛走進那道被陽光染藍的洞窟。半日、兩潛、一場加冕。這是最溫柔的典禮：給那些還未踏入海的人，一個被鄭重接待的初見。</p>
       
       <div class="ceremony-meta">
         <div class="meta-item">
@@ -1215,11 +1269,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
       </div>
     </div>
     <div class="ceremony-content">
-      <div class="ceremony-eyebrow">▸ CEREMONY TWO</div>
-      <div class="ceremony-num-big">II.</div>
-      <h2>加 冕 之 途</h2>
-      <div class="en-name">The Coronation</div>
-      <p class="narrative">PADI Open Water 開放水域認證，取得國際潛水執照。這不是速成班——三日課程，包含泳池訓練、開放水域下潛、理論知識與考核。1:2 教練配比，中文教材，結業後你獲得的不只是一張證照，而是進入海洋世界的正式資格。這是被莊嚴對待的加冕過程。</p>
+      <div class="ceremony-head-row"><span class="ceremony-num-big">II.</span><span class="en-name">The Coronation</span></div>
+          <div class="ceremony-title-block">
+            <h2>加 冕 之 途</h2>
+            <div class="ceremony-product">（OW 考照）</div>
+          </div>
+      <p class="narrative"><strong>PADI 開放水域潛水員（OW）考照</strong>，取得終身有效的國際潛水執照。這不是速成班——三日課程，包含泳池訓練、開放水域下潛、理論知識與考核。1:2 教練配比，中文教材，結業後你獲得的不只是一張證照，而是進入海洋世界的正式資格。這是被莊嚴對待的加冕過程。</p>
       
       <div class="ceremony-meta">
         <div class="meta-item">
@@ -1245,11 +1300,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
 <section class="ceremony-block" id="ceremony-iii">
   <div class="ceremony-inner">
     <div class="ceremony-content">
-      <div class="ceremony-eyebrow">▸ CEREMONY THREE</div>
-      <div class="ceremony-num-big">III.</div>
-      <h2>王 座 之 深</h2>
-      <div class="en-name">The Throne Below</div>
-      <p class="narrative">為已具備 OW 執照、想更深入的潛水員設計。PADI Advanced Open Water 進階認證，二日課程，包含五個 Adventure Dive:深潛、水下導航、以及三個選修專項(夜潛、放流潛、水中攝影等)。深潛至 30 米，王座在深處，只等你去坐。</p>
+      <div class="ceremony-head-row"><span class="ceremony-num-big">III.</span><span class="en-name">The Throne Below</span></div>
+          <div class="ceremony-title-block">
+            <h2>王 座 之 深</h2>
+            <div class="ceremony-product">（AOW 考照）</div>
+          </div>
+      <p class="narrative"><strong>PADI 進階開放水域（AOW）考照</strong>，為已具備 OW 執照、想更深入的潛水員設計。PADI Advanced Open Water 進階認證，二日課程，包含五個 Adventure Dive:深潛、水下導航、以及三個選修專項(夜潛、放流潛、水中攝影等)。深潛至 30 米，王座在深處，只等你去坐。</p>
       
       <div class="ceremony-meta">
         <div class="meta-item">
@@ -1287,11 +1343,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
       </div>
     </div>
     <div class="ceremony-content">
-      <div class="ceremony-eyebrow">▸ CEREMONY FOUR</div>
-      <div class="ceremony-num-big">IV.</div>
-      <h2>擇 海 之 典</h2>
-      <div class="en-name">The Chosen Sea</div>
-      <p class="narrative">為已具備 OW 或 AOW 執照的潛水員設計。單日三潛・全船潛，由你選擇要面對哪一片海——慶良間、萬座、或瀨底島，三海同價。不是套裝、不是流水線——你選你的海，我們陪你潛入。適合旅程中只有一天想潛的老手，也適合想反覆潛同一片海的深度愛好者。</p>
+      <div class="ceremony-head-row"><span class="ceremony-num-big">IV.</span><span class="en-name">The Chosen Sea</span></div>
+          <div class="ceremony-title-block">
+            <h2>擇 海 之 典</h2>
+            <div class="ceremony-product">（Fun Dive）</div>
+          </div>
+      <p class="narrative"><strong>單日 Fun Dive</strong>，為已具備 OW 或 AOW 執照的潛水員設計。<strong>單日三潛・全船潛</strong>，由你選擇要面對哪一片海——慶良間、萬座、或瀨底島，三海同價。不是套裝、不是流水線——你選你的海，我們陪你潛入。適合旅程中只有一天想潛的老手，也適合想反覆潛同一片海的深度愛好者。</p>
       
       <div class="ceremony-meta">
         <div class="meta-item">
@@ -1317,11 +1374,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
 <section class="ceremony-block" id="ceremony-v">
   <div class="ceremony-inner">
     <div class="ceremony-content">
-      <div class="ceremony-eyebrow">▸ CEREMONY FIVE</div>
-      <div class="ceremony-num-big">V.</div>
-      <h2>群 島 之 謁</h2>
-      <div class="en-name">The Archipelago Audience</div>
-      <p class="narrative">四日、三海——第一日砂邊 Check Dive、第二日慶良間、第三日萬座、第四日瀨底島。11 潛、全程接送、實體攝影相冊、Prince Dive 手工陶瓷海洋生物紀念物件。這是我們最深入的典禮：向沖繩群島的正式謁見，適合有 AOW 執照、想在有限假期中系統性體驗沖繩多樣海域的旅人。</p>
+      <div class="ceremony-head-row"><span class="ceremony-num-big">V.</span><span class="en-name">The Archipelago Audience</span></div>
+          <div class="ceremony-title-block">
+            <h2>群 島 之 謁</h2>
+            <div class="ceremony-product">（四日潛旅）</div>
+          </div>
+      <p class="narrative"><strong>四天三夜、11 潛的完整潛旅</strong>——第一日砂邊 Check Dive、第二日<strong>慶良間</strong>、第三日<strong>萬座</strong>、第四日<strong>瀨底島</strong>。11 潛、全程接送、實體攝影相冊、Prince Dive 手工陶瓷海洋生物紀念物件。這是我們最深入的典禮：向沖繩群島的正式謁見，適合有 AOW 執照、想在有限假期中系統性體驗沖繩多樣海域的旅人。</p>
       
       <div class="ceremony-meta">
         <div class="meta-item">
@@ -1359,11 +1417,12 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
       </div>
     </div>
     <div class="ceremony-content">
-      <div class="ceremony-eyebrow">▸ CEREMONY SIX</div>
-      <div class="ceremony-num-big">VI.</div>
-      <h2>雙 人 之 海</h2>
-      <div class="en-name">The Royal Pair</div>
-      <p class="narrative">為情侶、蜜月、週年紀念設計的完全客製典禮。每一個細節都圍繞你們兩人的故事——從潛點的選擇、水下攝影的鏡頭語言、到儀式性的驚喜安排。可以是水下求婚、可以是週年紀念潛、可以是任何屬於你們的儀式。定價依需求而定，請與我們對話。</p>
+      <div class="ceremony-head-row"><span class="ceremony-num-big">VI.</span><span class="en-name">The Royal Pair</span></div>
+          <div class="ceremony-title-block">
+            <h2>雙 人 之 海</h2>
+            <div class="ceremony-product">（水下攝影）</div>
+          </div>
+      <p class="narrative">客製化<strong>水下攝影</strong>——水下寫真、水中求婚、婚紗拍攝。為情侶、蜜月、週年紀念設計的完全客製典禮。每一個細節都圍繞你們兩人的故事——從潛點的選擇、水下攝影的鏡頭語言、到儀式性的驚喜安排。可以是水下求婚、可以是週年紀念潛、可以是任何屬於你們的儀式。定價依需求而定，請與我們對話。</p>
       
       <div class="ceremony-meta">
         <div class="meta-item">
