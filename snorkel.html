@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-H -->
+<!-- BUILD v2026.08.13-D -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小王子浮潛｜沖繩青之洞窟親子浮潛・5 歲可參加・不搭船不併團</title>
@@ -645,6 +645,96 @@ h1 .h1-cn{
   font-size:clamp(1rem,2.6vw,1.3rem);letter-spacing:.2em;padding-left:.2em;
   color:var(--ink);margin-top:1rem;
 }
+
+/* ============ 預約日曆（bkc- 前綴避免與時段區塊衝突）============ */
+.bkc{background:var(--paper);color:var(--ink);margin-top:2.4rem;text-align:left;border-top:5px solid var(--coral)}
+.bkc-soon{background:var(--citrus);color:var(--ink);padding:1rem 1.3rem;text-align:center;
+  font-family:'Noto Serif TC',serif;font-size:1rem;line-height:1.8;letter-spacing:.04em}
+.bkc-soon b{font-weight:700}
+.bkc-steps{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--rule);background:var(--paper-deep)}
+.bkc-step{padding:1rem .8rem;text-align:center;font-family:'Noto Serif TC',serif;
+  font-size:.92rem;letter-spacing:.1em;color:var(--ink-soft);position:relative}
+.bkc-step.on{background:var(--paper);color:var(--coral-text);font-weight:700}
+.bkc-step.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--coral)}
+.bkc-step i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:.72rem;display:block;color:var(--ink-soft);margin-bottom:.15rem}
+.bkc-step.on i{color:var(--coral)}
+.bkc-body{padding:2rem 1.9rem 2.2rem}
+.bkc-h{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.1rem;letter-spacing:.1em;margin-bottom:.4rem;color:var(--ink)}
+.bkc-sub{font-size:.95rem;color:var(--ink-soft);margin-bottom:1.4rem;line-height:1.8}
+.bkc-off{opacity:.4;pointer-events:none}
+
+.bkc-calhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem}
+.bkc-m{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--ink)}
+.bkc-m span{font-family:'Noto Serif TC',serif;font-style:normal;font-size:.95rem;letter-spacing:.1em;color:var(--ink-soft);margin-left:.6rem}
+.bkc-nav{display:flex;gap:.4rem}
+.bkc-nav button{width:38px;height:38px;border:1px solid var(--rule);background:var(--white);cursor:pointer;font-size:1rem;color:var(--ink);line-height:1}
+.bkc-nav button:hover{border-color:var(--coral);color:var(--coral-text)}
+.bkc-nav button:disabled{opacity:.3;cursor:not-allowed}
+
+.bkc-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.bkc-dow{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-align:center;color:var(--ink-soft);padding:.4rem 0 .6rem}
+.bkc-dow.sun{color:var(--coral-text)}
+.bkc-d{aspect-ratio:1;border:1px solid var(--rule);background:var(--white);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .2s ease}
+.bkc-d .n{font-family:'JetBrains Mono',monospace;font-size:.92rem;color:var(--ink)}
+.bkc-d .dot{width:5px;height:5px;background:var(--coral);margin-top:.28rem}
+.bkc-d:hover{background:var(--coral-pale);border-color:var(--coral)}
+.bkc-d.sel{background:var(--coral-deep);border-color:var(--coral-deep)}
+.bkc-d.sel .n{color:var(--paper)}
+.bkc-d.sel .dot{background:var(--citrus)}
+.bkc-d.blank{background:transparent;border-color:transparent;cursor:default}
+.bkc-d.full{background:var(--paper-deep);cursor:not-allowed;opacity:.55}
+.bkc-d.full .n{color:var(--ink-soft);text-decoration:line-through}
+.bkc-d.past{opacity:.28;cursor:not-allowed}
+.bkc-legend{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1rem;font-size:.86rem;color:var(--ink-soft)}
+.bkc-legend i{display:inline-block;width:11px;height:11px;margin-right:.4rem;vertical-align:-1px;border:1px solid var(--rule)}
+.bkc-lg1{background:var(--white)}
+.bkc-lg2{background:var(--paper-deep)}
+.bkc-lg3{background:var(--coral-deep);border-color:var(--coral-deep)}
+
+.bkc-slots{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.bkc-slot{border:1px solid var(--rule);background:var(--white);padding:1.1rem 1.2rem;cursor:pointer;
+  transition:all .2s ease;display:flex;align-items:baseline;justify-content:space-between;gap:.8rem}
+.bkc-slot:hover{border-color:var(--coral);background:var(--coral-pale)}
+.bkc-slot.sel{border-color:var(--coral-deep);background:var(--coral-deep)}
+.bkc-slot.sel .bkc-sl,.bkc-slot.sel .bkc-st{color:var(--paper)}
+.bkc-slot.sel .bkc-sl small{color:var(--shallow)}
+.bkc-slot.out{opacity:.42;cursor:not-allowed;background:var(--paper-deep)}
+.bkc-sl{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.02rem;letter-spacing:.1em;color:var(--ink)}
+.bkc-sl small{display:block;font-family:'Noto Sans TC',sans-serif;font-weight:400;font-size:.86rem;letter-spacing:0;color:var(--ink-soft);margin-top:.2rem}
+.bkc-st{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--ink);white-space:nowrap}
+@media(max-width:640px){.bkc-slots{grid-template-columns:1fr}}
+
+.bkc-ppl{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem}
+.bkc-pp{border:1px solid var(--rule);background:var(--white);padding:1rem .4rem;text-align:center;cursor:pointer;transition:all .2s ease}
+.bkc-pp:hover{border-color:var(--coral);background:var(--coral-pale)}
+.bkc-pp.sel{border-color:var(--coral-deep);background:var(--coral-deep)}
+.bkc-pp.sel .bkc-pn,.bkc-pp.sel .bkc-py{color:var(--paper)}
+.bkc-pp.sel .bkc-pl{color:var(--shallow)}
+.bkc-pn{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7rem;color:var(--ink);line-height:1}
+.bkc-pl{font-family:'Noto Serif TC',serif;font-size:.8rem;color:var(--ink-soft);margin-top:.1rem}
+.bkc-py{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--coral-text);margin-top:.4rem}
+@media(max-width:560px){.bkc-ppl{grid-template-columns:repeat(3,1fr)}}
+
+.bkc-sum{background:var(--white);border:1px solid var(--rule);margin-top:1.8rem;padding:1.4rem 1.5rem}
+.bkc-row{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;border-bottom:1px dashed var(--rule);font-size:.98rem}
+.bkc-row:last-of-type{border-bottom:none}
+.bkc-row span{color:var(--ink-soft);font-family:'Noto Serif TC',serif;letter-spacing:.1em}
+.bkc-row b{font-family:'Noto Serif TC',serif;font-weight:700;color:var(--ink)}
+.bkc-total{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--coral);margin-top:.8rem;padding-top:1rem}
+.bkc-total span{font-family:'Noto Serif TC',serif;font-weight:700;letter-spacing:.12em;color:var(--ink)}
+.bkc-total b{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.2rem;color:var(--ink);line-height:1}
+
+.bkc-warn{background:var(--citrus);padding:1.1rem 1.3rem;margin-top:1.4rem;font-size:.96rem;line-height:1.85;color:var(--ink)}
+.bkc-warn b{font-weight:700}
+.bkc-go{display:block;width:100%;margin-top:1.4rem;border:none;cursor:pointer;background:var(--coral-deep);color:var(--paper);
+  padding:1.15rem;font-family:'Noto Serif TC',serif;font-weight:500;font-size:1.12rem;letter-spacing:.24em;padding-left:1.36em;
+  transition:background .25s ease,color .25s ease}
+.bkc-go:hover{background:var(--citrus);color:var(--ink)}
+.bkc-go:disabled{background:rgba(34,48,58,.18);color:var(--ink-soft);cursor:not-allowed}
+.bkc-go:disabled:hover{background:rgba(34,48,58,.18);color:var(--ink-soft)}
+.bkc-note{text-align:center;font-size:.9rem;color:var(--ink-soft);margin-top:.9rem;line-height:1.8}
+@media(max-width:560px){.bkc-body{padding:1.5rem 1.2rem 1.8rem}.bkc-step{font-size:.82rem}}
 </style>
 </head>
 <body>
@@ -1302,12 +1392,60 @@ h1 .h1-cn{
     <div class="rule"></div>
     <p style="margin-top:1.8rem">四個時段挑一個，選好當場確認，不用等回信。<br><strong>¥7,500 每人 · 大人小孩同價 · 兩人成行 · 不併團</strong></p>
 
-    <!-- ▼▼▼ 自動預約系統嵌入位置：把預約平台提供的 embed 程式碼貼在這個 div 裡 ▼▼▼ -->
-    <div id="booking-widget" class="booking-slot">
-      <div class="booking-slot-label">預 約 日 曆 · BOOKING CALENDAR</div>
-      <p class="booking-slot-note">自動預約系統嵌入區。<br>選定平台後，將其提供的 embed 程式碼貼進 <code>&lt;div id="booking-widget"&gt;</code> 內即可。</p>
+    <!-- ▼▼▼ 預約日曆 ▼▼▼ -->
+    <div class="bkc" id="booking-widget">
+      <div class="bkc-soon" id="bkcSoon"><b>預約系統測試中</b>　可以試著操作，但目前還不會真的送出預約。正式開放前我們會先公告。</div>
+      <div class="bkc-steps">
+        <div class="bkc-step on" id="bkcS1"><i>01</i>選日期</div>
+        <div class="bkc-step" id="bkcS2"><i>02</i>選時段</div>
+        <div class="bkc-step" id="bkcS3"><i>03</i>人數</div>
+      </div>
+      <div class="bkc-body">
+        <div class="bkc-h">選 一 個 日 期</div>
+        <div class="bkc-sub">有紅點的日子還有名額。當日海況不佳時，我們會前一天 18:00 前通知。</div>
+        <div class="bkc-calhead">
+          <div class="bkc-m" id="bkcM"></div>
+          <div class="bkc-nav">
+            <button type="button" id="bkcPrev" aria-label="上個月">&#8249;</button>
+            <button type="button" id="bkcNext" aria-label="下個月">&#8250;</button>
+          </div>
+        </div>
+        <div class="bkc-grid" id="bkcGrid"></div>
+        <div class="bkc-legend">
+          <span><i class="bkc-lg1"></i>有名額</span>
+          <span><i class="bkc-lg2"></i>已額滿</span>
+          <span><i class="bkc-lg3"></i>已選擇</span>
+        </div>
+
+        <div id="bkcSecSlot" class="bkc-off">
+          <div class="bkc-h" style="margin-top:2.4rem" id="bkcSlotH">選 一 個 時 段</div>
+          <div class="bkc-sub">每段兩小時，流程完全相同。四個時段都看得到那片藍。</div>
+          <div class="bkc-slots" id="bkcSlots"></div>
+        </div>
+
+        <div id="bkcSecPpl" class="bkc-off">
+          <div class="bkc-h" style="margin-top:2.4rem">幾 個 人 下 水</div>
+          <div class="bkc-sub">大人小孩同價，每人 ¥7,500。不下水的家人不計入、不收費。</div>
+          <div class="bkc-ppl" id="bkcPpl"></div>
+        </div>
+
+        <div class="bkc-sum">
+          <div class="bkc-row"><span>日 期</span><b id="bkcD">—</b></div>
+          <div class="bkc-row"><span>時 段</span><b id="bkcS">—</b></div>
+          <div class="bkc-row"><span>人 數</span><b id="bkcP">—</b></div>
+          <div class="bkc-row"><span>集 合</span><b>真栄田岬</b></div>
+          <div class="bkc-total"><span>合 計</span><b id="bkcT">—</b></div>
+        </div>
+
+        <div class="bkc-warn">
+          <b>預約成立＝這個時段為你保留。</b>能否實際入水依當日海況決定，我們會在前一日 18:00 前通知。因天候取消可改期或全額退款。
+        </div>
+
+        <button class="bkc-go" type="button" id="bkcGo" disabled>前 往 付 款</button>
+        <div class="bkc-note" id="bkcNote">付款由 Stripe 處理，我們不會接觸你的卡號。<br>支援信用卡、Apple Pay、Google Pay。</div>
+      </div>
     </div>
-    <!-- ▲▲▲ 嵌入位置結束 ▲▲▲ -->
+    <!-- ▲▲▲ 預約日曆結束 ▲▲▲ -->
   </div>
 </section>
 
@@ -1399,6 +1537,169 @@ h1 .h1-cn{
       position:    a.closest('nav') ? 'nav' : (a.closest('footer') ? 'footer' : 'body')
     });
   }, true);
+})();
+</script>
+<script>
+/* ============ 預約日曆 ============
+   BOOKING_LIVE = false 時只能操作、不會真的送出。
+   系統串接完成後改成 true，並刪掉 #bkcSoon 那一行提示。
+   ============================================ */
+(function(){
+  var BOOKING_LIVE = false;
+
+  var grid = document.getElementById('bkcGrid');
+  if (!grid) return;
+
+  var PRICE = 7500;
+  var SESSIONS = [
+    {n:'第 一 節', t:'08:00', r:'08:00 – 10:00'},
+    {n:'第 二 節', t:'10:00', r:'10:00 – 12:00'},
+    {n:'第 三 節', t:'13:00', r:'13:00 – 15:00'},
+    {n:'第 四 節', t:'15:00', r:'15:00 – 17:00'}
+  ];
+  var DOW = ['日','一','二','三','四','五','六'];
+  var MON = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  var today = new Date(); today.setHours(0,0,0,0);
+  var view = new Date(today.getFullYear(), today.getMonth(), 1);
+  var maxView = new Date(today.getFullYear(), today.getMonth()+3, 1);
+  var sel = {date:null, slot:null, ppl:null};
+
+  function seed(d){
+    var k = d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate();
+    var x = Math.sin(k) * 10000;
+    return x - Math.floor(x);
+  }
+  function dayFull(d){ return seed(d) < 0.15; }
+  function slotLeft(d,i){
+    return Math.floor(seed(new Date(d.getFullYear(), d.getMonth(), d.getDate()+i*7)) * 11);
+  }
+  function el(tag, cls, html){
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html !== undefined) e.innerHTML = html;
+    return e;
+  }
+  function bind(node, fn){
+    node.setAttribute('role','button');
+    node.setAttribute('tabindex','0');
+    node.addEventListener('click', fn);
+    node.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); fn(); }
+    });
+  }
+
+  function renderCal(){
+    document.getElementById('bkcM').innerHTML =
+      MON[view.getMonth()] + '<span>' + view.getFullYear() + ' 年 ' + (view.getMonth()+1) + ' 月</span>';
+    document.getElementById('bkcPrev').disabled =
+      (view.getFullYear() === today.getFullYear() && view.getMonth() === today.getMonth());
+    document.getElementById('bkcNext').disabled = (view >= maxView);
+
+    grid.innerHTML = '';
+    ['SUN','MON','TUE','WED','THU','FRI','SAT'].forEach(function(w,i){
+      grid.appendChild(el('div','bkc-dow' + (i===0?' sun':''), w));
+    });
+    var first = new Date(view.getFullYear(), view.getMonth(), 1);
+    var days = new Date(view.getFullYear(), view.getMonth()+1, 0).getDate();
+    for (var i=0; i<first.getDay(); i++) grid.appendChild(el('div','bkc-d blank',''));
+
+    for (var d=1; d<=days; d++){
+      var dt = new Date(view.getFullYear(), view.getMonth(), d);
+      var past = dt < today;
+      var full = !past && dayFull(dt);
+      var cls = 'bkc-d' + (past ? ' past' : (full ? ' full' : ''));
+      if (sel.date && dt.getTime() === sel.date.getTime()) cls += ' sel';
+      var cell = el('div', cls,
+        '<span class="n">' + d + '</span>' + (!past && !full ? '<span class="dot"></span>' : ''));
+      if (!past && !full){
+        (function(dd){
+          bind(cell, function(){ sel.date = dd; sel.slot = null; renderCal(); renderSlots(); update(); });
+        })(dt);
+      }
+      grid.appendChild(cell);
+    }
+  }
+
+  function renderSlots(){
+    var wrap = document.getElementById('bkcSecSlot');
+    var box = document.getElementById('bkcSlots');
+    box.innerHTML = '';
+    if (!sel.date){ wrap.classList.add('bkc-off'); return; }
+    wrap.classList.remove('bkc-off');
+    document.getElementById('bkcSlotH').textContent =
+      (sel.date.getMonth()+1) + ' 月 ' + sel.date.getDate() + ' 日 · 選 一 個 時 段';
+
+    SESSIONS.forEach(function(s2, i){
+      var left = slotLeft(sel.date, i);
+      var out = left === 0;
+      var node = el('div', 'bkc-slot' + (out?' out':'') + (sel.slot===i?' sel':''),
+        '<div class="bkc-sl">' + s2.n + '<small>' + (out ? '已額滿' : '剩 ' + left + ' 組') +
+        '</small></div><div class="bkc-st">' + s2.t + '</div>');
+      if (!out) (function(idx){ bind(node, function(){ sel.slot = idx; renderSlots(); update(); }); })(i);
+      box.appendChild(node);
+    });
+  }
+
+  function renderPpl(){
+    var wrap = document.getElementById('bkcSecPpl');
+    var box = document.getElementById('bkcPpl');
+    box.innerHTML = '';
+    if (sel.slot === null){ wrap.classList.add('bkc-off'); return; }
+    wrap.classList.remove('bkc-off');
+    for (var n=2; n<=6; n++){
+      var node = el('div', 'bkc-pp' + (sel.ppl===n?' sel':''),
+        '<div class="bkc-pn">' + n + '</div><div class="bkc-pl">人</div>' +
+        '<div class="bkc-py">¥' + (n*PRICE).toLocaleString() + '</div>');
+      (function(num){ bind(node, function(){ sel.ppl = num; renderPpl(); update(); }); })(n);
+      box.appendChild(node);
+    }
+  }
+
+  function update(){
+    renderPpl();
+    document.getElementById('bkcS2').className = 'bkc-step' + (sel.date ? ' on' : '');
+    document.getElementById('bkcS3').className = 'bkc-step' + (sel.slot !== null ? ' on' : '');
+    document.getElementById('bkcD').textContent = sel.date
+      ? sel.date.getFullYear() + ' 年 ' + (sel.date.getMonth()+1) + ' 月 ' + sel.date.getDate() + ' 日（' + DOW[sel.date.getDay()] + '）'
+      : '—';
+    document.getElementById('bkcS').textContent = sel.slot !== null
+      ? SESSIONS[sel.slot].n.replace(/ /g,'') + ' · ' + SESSIONS[sel.slot].r : '—';
+    document.getElementById('bkcP').textContent = sel.ppl ? sel.ppl + ' 人 × ¥7,500' : '—';
+    document.getElementById('bkcT').textContent = sel.ppl ? '¥' + (sel.ppl*PRICE).toLocaleString() : '—';
+
+    var ready = !!(sel.date && sel.slot !== null && sel.ppl);
+    var go = document.getElementById('bkcGo');
+    go.disabled = !ready;
+    go.textContent = BOOKING_LIVE ? '前 往 付 款' : '預 約 系 統 準 備 中';
+    if (typeof gtag === 'function' && ready) {
+      gtag('event', 'booking_selection_complete', {
+        session: SESSIONS[sel.slot].t,
+        people: sel.ppl,
+        value: sel.ppl * PRICE,
+        currency: 'JPY'
+      });
+    }
+  }
+
+  document.getElementById('bkcPrev').addEventListener('click', function(){
+    view = new Date(view.getFullYear(), view.getMonth()-1, 1); renderCal();
+  });
+  document.getElementById('bkcNext').addEventListener('click', function(){
+    view = new Date(view.getFullYear(), view.getMonth()+1, 1); renderCal();
+  });
+  document.getElementById('bkcGo').addEventListener('click', function(){
+    if (this.disabled) return;
+    if (!BOOKING_LIVE){
+      document.getElementById('bkcNote').innerHTML =
+        '<strong style="color:var(--coral-text)">預約系統還在準備中，這一步目前不會送出。</strong><br>' +
+        '想先確認日期，請寫信到 inquiry@princedive.jp。';
+      return;
+    }
+    /* 系統上線後，這裡改成導向付款流程 */
+  });
+
+  renderCal(); renderSlots(); update();
 })();
 </script>
 </body>
