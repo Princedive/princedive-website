@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.12-H -->
+<!-- BUILD v2026.08.13-C -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ38GYS93B"></script>
 <script>
@@ -1358,9 +1358,38 @@ p { text-wrap: pretty; }
 
 /* ---- SEO：中文併入 h1，視覺不變 ---- */
 h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
+
+/* ---- 季前培訓卡片 ---- */
+.a-card-wide { grid-column: 1 / -1; }
+.a-prep {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(184, 154, 94, 0.28);
+  border: 1px solid rgba(184, 154, 94, 0.28);
+  margin: 1.8rem 0 1.4rem;
+}
+.a-prep-item { background: var(--paper); padding: 1.4rem 1.2rem; }
+.a-prep-n {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.5rem;
+}
+.a-prep-t {
+  font-family: 'Noto Serif TC', serif; font-weight: 700;
+  font-size: 1rem; letter-spacing: 0.08em; color: var(--ink); margin-bottom: 0.5rem;
+}
+.a-prep-item p {
+  font-size: 0.92rem !important; line-height: 1.85 !important;
+  color: var(--ink-soft) !important; margin: 0 !important;
+}
+.a-prep-note {
+  border-top: 1px solid rgba(184, 154, 94, 0.28);
+  padding-top: 1.2rem; margin-top: 0 !important;
+}
+@media (max-width: 900px) { .a-prep { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .a-prep { grid-template-columns: 1fr; } }
 </style>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -1369,7 +1398,9 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
       "url": "https://princedive.jp/about.html",
       "name": "關於我們｜王子潛水 Prince Dive Okinawa",
       "inLanguage": "zh-Hant",
-      "isPartOf": { "@id": "https://princedive.jp/#website" }
+      "isPartOf": {
+        "@id": "https://princedive.jp/#website"
+      }
     },
     {
       "@type": "WebSite",
@@ -1382,33 +1413,86 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
       "@type": "LocalBusiness",
       "@id": "https://princedive.jp/#business",
       "name": "王子潛水 Prince Dive Okinawa",
-      "alternateName": ["Prince Dive", "\u30d7\u30ea\u30f3\u30b9\u30c0\u30a4\u30d3\u30f3\u30b0"],
+      "alternateName": [
+        "Prince Dive",
+        "プリンスダイビング"
+      ],
       "description": "沖繩私人策展式中文潛水店，2020 年成立。核心教練全員 PADI MSDT，師生比固定 1:2，全程私人包團。",
       "foundingDate": "2020",
       "areaServed": "Okinawa, Japan",
-      "knowsLanguage": ["zh-Hant", "zh-Hans", "yue", "en"],
+      "knowsLanguage": [
+        "zh-Hant",
+        "zh-Hans",
+        "yue",
+        "en"
+      ],
       "url": "https://princedive.jp/",
       "slogan": "海是一場儀式"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://princedive.jp/" },
-        { "@type": "ListItem", "position": 2, "name": "哲學 Philosophy", "item": "https://princedive.jp/about.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://princedive.jp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "哲學 Philosophy",
+          "item": "https://princedive.jp/about.html"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "王子潛水的教練配比是多少？", "acceptedAnswer": { "@type": "Answer", "text": "固定 1:2，一位教練最多帶兩位客人，絕不超過。同組客人超過兩位時加派一位潛水長隨行。" } },
-        { "@type": "Question", "name": "會和其他客人併團嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。所有行程一律私人包團，有幾位教練一天就只接幾組客人，不併團、不壓縮時間。" } },
-        { "@type": "Question", "name": "教練會說中文嗎？", "acceptedAnswer": { "@type": "Answer", "text": "會。團隊有來自香港、台灣等地的中文教練，能以國語、粵語、英語直接教學。核心教練五位全員持有 PADI MSDT 資格，每位累積潛數超過三千支。" } },
-        { "@type": "Question", "name": "在沖繩潛水該用什麼防曬？", "acceptedAnswer": { "@type": "Answer", "text": "避開含 oxybenzone 與 octinoxate 的化學防曬，這兩種成分微量即會傷害珊瑚。建議使用氧化鋅或二氧化鈦的礦物性防曬，或直接穿著防曬衣物。" } }
+        {
+          "@type": "Question",
+          "name": "王子潛水的教練配比是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "固定 1:2，一位教練最多帶兩位客人，絕不超過。同組客人超過兩位時加派一位潛水長隨行。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "會和其他客人併團嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不會。所有行程一律私人包團，有幾位教練一天就只接幾組客人，不併團、不壓縮時間。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "教練會說中文嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "會。團隊有來自香港、台灣等地的中文教練，能以國語、粵語、英語直接教學。核心教練五位全員持有 PADI MSDT 資格，每位累積潛數超過三千支。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "在沖繩潛水該用什麼防曬？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "避開含 oxybenzone 與 octinoxate 的化學防曬，這兩種成分微量即會傷害珊瑚。建議使用氧化鋅或二氧化鈦的礦物性防曬，或直接穿著防曬衣物。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "王子潛水的帶團人員是季節性人力嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不是。潛水由核心 PADI MSDT 教練團隊帶領；浮潛由具合法工作身份的專業潛水長帶隊。我們每年在沖繩潛水旺季開始前兩個月展開潛水長團隊的招募與培訓，包含海域實地熟悉、緊急應變複訓與帶團實習，通過內部評核才能獨立帶客人，不使用短期打工度假人力。"
+          }
+        }
       ]
     }
   ]
-}
-</script>
+}</script>
 </head>
 <body>
 
@@ -1516,6 +1600,7 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
       <div class="en">Craftsmanship</div>
       <p>核心教練團隊五人，每一位帶客人下水的教練都是 PADI MSDT，累積潛數皆超過三千支，在沖繩扎根多年，熟悉每一片海域在不同季節、不同風向下的樣子。</p>
       <p>師生比固定 1:2，絕不超過。同組客人若超過兩位，我們加派一位潛水長隨行——這不是彈性條款，是寫死的規則。安全規格我們選擇業界最高的那一檔，因為那是唯一不能妥協的東西。</p>
+      <p><strong>教練負責潛水，潛水長負責浮潛</strong>——兩支團隊，各自專職。<a href="snorkel.html" style="color:var(--gold-deep);border-bottom:1px solid rgba(184,154,94,.5)">小王子浮潛</a>由具合法工作身份的專業潛水長帶隊，不使用短期打工人力。</p>
       <div class="a-vow-facts">
         <span class="a-fact">PADI MSDT · 全教練</span>
         <span class="a-fact">3,000+ 潛數 · PER GUIDE</span>
@@ -1625,6 +1710,40 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
       <p>我們每年培訓對潛水真正有熱情的新教練，讓團隊持續有新的血液。這不只是人力規劃——一個只靠老手撐著的團隊，最終會走回我們當初離開的那種疲乏。</p>
       <p>能站上第一線帶客人的，仍然只有 MSDT 等級的教練。新人在被信任之前，會先花很長的時間在水裡。</p>
     </article>
+
+    <article class="a-card a-card-wide">
+      <div class="mono">▸ 季 前 兩 個 月 · TWO MONTHS BEFORE</div>
+      <h3>旺 季 開 始 前，我 們 先 開 始</h3>
+      <div class="en">Ready Before the Season</div>
+      <p><strong>每年沖繩潛水旺季來臨前兩個月，我們就開始招募與培訓潛水長團隊。</strong>不是等到客人上門才找人，也不是缺人的那一週臨時補位。</p>
+      <p>沖繩海邊的旺季人力，很大一部分是短期打工的旅居者——旺季來了才招，訓練幾天就上工，季末就換人。那樣的排班表填得滿，但站在你孩子旁邊的那個人，可能上週才第一次來這片海。</p>
+      <p>我們不這樣做。<strong>兩個月的前置時間，是為了讓每一位帶客人下水的成員，在第一組客人到之前就已經準備到最好的狀態。</strong></p>
+
+      <div class="a-prep">
+        <div class="a-prep-item">
+          <div class="a-prep-n">01</div>
+          <div class="a-prep-t">招募與篩選</div>
+          <p>只找有合法工作身份、願意把這件事當職業做的人。短期打工不在名單上。</p>
+        </div>
+        <div class="a-prep-item">
+          <div class="a-prep-n">02</div>
+          <div class="a-prep-t">海域實地熟悉</div>
+          <p>青之洞窟不同季節、不同風向下的樣子不一樣。入水點、流向、退路，要在帶客人之前先走過很多遍。</p>
+        </div>
+        <div class="a-prep-item">
+          <div class="a-prep-n">03</div>
+          <div class="a-prep-t">緊急應變複訓</div>
+          <p>每年重來一次，不管做了幾年。真正需要用到的那一天，靠的是肌肉記憶，不是記得。</p>
+        </div>
+        <div class="a-prep-item">
+          <div class="a-prep-n">04</div>
+          <div class="a-prep-t">帶團實習</div>
+          <p>由資深成員帶著跑完整流程，通過內部評核才能獨立帶客人。</p>
+        </div>
+      </div>
+
+      <p class="a-prep-note">所以旺季第一天，我們的團隊不是「剛到位」，是<strong>已經準備好兩個月了</strong>。</p>
+    </article>
   </div>
 </section>
 
@@ -1646,8 +1765,13 @@ h1 > .cn, h1 > .hero-cn { display: block; font-style: normal; }
   </div>
 
   <div class="w-faq-item">
+    <button class="w-faq-q" type="button">帶浮潛的人員是什麼資格？季節性人力嗎？</button>
+    <div class="w-faq-a"><p>浮潛由專業潛水長（Divemaster）帶隊，全部是具備合法工作身份的正職人員。<strong>我們每年在沖繩潛水旺季開始前兩個月，就展開潛水長團隊的招募與培訓</strong>——海域熟悉、緊急應變複訓、資深成員帶團實習，通過內部評核才能獨立帶客人。我們不使用短期打工度假人力。</p></div>
+  </div>
+
+  <div class="w-faq-item">
     <button class="w-faq-q" type="button">教練會說中文嗎？</button>
-    <div class="w-faq-a"><p>會。團隊裡有來自香港、台灣等地的中文教練，能以國語、粵語、英語直接教學，不需要透過翻譯。核心教練團隊共五位，全員持有 PADI MSDT 名仕潛水教練資格，每位累積潛數超過三千支。</p></div>
+    <div class="w-faq-a"><p>會。團隊裡有來自香港、台灣等地的中文教練，能以國語、粵語、英語直接教學，不需要透過翻譯。核心教練團隊共五位，全員持有 PADI MSDT 名仕潛水教練資格，每位累積潛數超過三千支。浮潛則由專業潛水長帶隊，同樣全程中文。</p></div>
   </div>
 
   <div class="w-faq-item">
