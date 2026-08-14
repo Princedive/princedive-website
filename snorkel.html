@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.13-E -->
+<!-- BUILD v2026.08.13-F -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小王子浮潛｜沖繩青之洞窟親子浮潛・5 歲可參加・不搭船不併團</title>
@@ -693,6 +693,51 @@ h1 .h1-cn{
   .fab-opt{font-size:.9rem;padding:.56rem .9rem}
 }
 @media print{.fab-wrap{display:none}}
+
+/* ============ 影像區塊 ============ */
+.ph{margin:2.2rem 0 0;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);line-height:0;position:relative}
+.ph img,.ph video{width:100%;height:auto;display:block}
+.ph-cap{
+  line-height:1.8;font-family:'Shippori Mincho','Noto Serif TC',serif;
+  font-size:.92rem;color:var(--ink-soft);text-align:center;padding:.9rem 1rem 0;
+}
+.deep .ph-cap{color:var(--tide)}
+.tide .ph-cap{color:rgba(248,243,230,.62)}
+.tide .ph,.deep .ph{border-color:var(--tide)}
+.tide .ph{border-color:rgba(205,228,236,.5)}
+
+/* 待補影像的佔位 */
+.ph-slot{
+  aspect-ratio:16/9;background:var(--shallow);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:1.6rem;line-height:1.8;
+}
+.tide .ph-slot{background:rgba(205,228,236,.14)}
+.ph-slot .tag{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.24em;
+  color:var(--tide);margin-bottom:.7rem;
+}
+.tide .ph-slot .tag{color:var(--shallow)}
+.ph-slot .desc{
+  font-family:'Noto Serif TC',serif;font-weight:500;font-size:1rem;line-height:1.85;
+  color:var(--ink);max-width:32em;
+}
+.tide .ph-slot .desc{color:rgba(248,243,230,.9)}
+.ph-slot::after{content:"";position:absolute;inset:9px;border:1px dashed rgba(47,85,103,.4);pointer-events:none}
+.tide .ph-slot::after{border-color:rgba(205,228,236,.35)}
+
+/* 影片 */
+.ph-video{position:relative;background:var(--tide)}
+.ph-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:66px;height:66px;border:2px solid var(--paper);background:rgba(34,48,58,.45);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:background .25s ease;
+}
+.ph-play:hover{background:var(--coral-deep)}
+.ph-play::after{content:"";border-left:16px solid var(--paper);border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px}
+.ph-video.playing .ph-play{display:none}
+@media(max-width:560px){.ph-slot{padding:1.1rem}.ph-slot .desc{font-size:.92rem}}
 </style>
 </head>
 <body>
@@ -884,6 +929,19 @@ h1 .h1-cn{
       <p>原因不是水本身。<strong>陽光從洞口斜射進來，穿過海水的時候，紅光和黃光先被吸收掉</strong>，只剩下藍光能走到底。海底是白色的砂，把這些藍光反射回來——</p>
       <p><strong>你看到的不是海的顏色，是光走過一段路之後，剩下的那個顏色。</strong></p>
       <p style="font-size:.98rem;color:var(--ink-soft)">這件事可以在下水前講給孩子聽。多數人回程的路上還記得。</p>
+    </div>
+
+    <figure class="ph ph-video" id="caveVideo">
+      <video id="caveVid" muted loop playsinline preload="none"
+             poster="assets/cave-poster.jpg"
+             aria-label="青之洞窟內回頭看向洞口，整片水發著藍光">
+        <source src="assets/cave-loop.mp4" type="video/mp4">
+      </video>
+      <button class="ph-play" type="button" id="caveBtn" aria-label="播放影片"></button>
+    </figure>
+    <p class="ph-cap">洞內回頭看向洞口的那一刻。運動相機實拍，未調色。</p>
+
+    <div class="col txt" style="margin-top:2rem">
       <p style="margin-top:1.4rem"><a href="blue-cave.html" style="color:var(--coral-text);font-weight:700;text-decoration:none;border-bottom:2px solid var(--coral);padding-bottom:.15rem">四季的青之洞窟長什麼樣 →</a></p>
     </div>
 
@@ -980,7 +1038,15 @@ h1 .h1-cn{
         </div>
       </div>
 
-      <div class="note-citrus">
+      <figure class="ph">
+        <div class="ph-slot">
+          <div class="tag">PHOTO · 站 得 到 底 的 地 方</div>
+          <div class="desc">孩子站在及腰的水裡，救生衣穿好、面鏡戴著，潛水長蹲在旁邊跟他說話。<br>不要擺拍，要拍猶豫的那一刻。</div>
+        </div>
+      </figure>
+      <p class="ph-cap">前十分鐘，通常是這個樣子。</p>
+
+      <div class="note-citrus" style="margin-top:2.4rem">
         <h4>如 果 他 真 的 不 願 意 呢</h4>
         <p>也有這種孩子，我們遇過。那天就變成在淺灘玩水、看寄居蟹、撿貝殼——潛水長會陪完全程，不會讓你覺得白來一趟。<strong>我們不會把孩子推下水。</strong></p>
       </div>
@@ -1051,6 +1117,14 @@ h1 .h1-cn{
       <div><div class="n">100%</div><div class="l">合 法 工 作 身 份</div></div>
       <div><div class="n">2020</div><div class="l">立 業 沖 繩</div></div>
     </div>
+
+    <figure class="ph" style="margin-top:2.4rem">
+      <div class="ph-slot">
+        <div class="tag">PHOTO · 帶 你 孩 子 下 水 的 人</div>
+        <div class="desc">潛水長團隊在真栄田岬岸邊的合照，穿著實際的裝備，不要西裝、不要棚拍。<br>看得到臉，比看得到證書重要。</div>
+      </div>
+    </figure>
+    <p class="ph-cap">今年的潛水長團隊。</p>
 
     <div class="col txt" style="margin-top:2.4rem">
       <p>這件事在沖繩需要說清楚。海邊的旺季人力，很大一部分是短期打工的旅居者——待一個夏天，明年換人。<strong>我們沒有一位。</strong></p>
@@ -1125,6 +1199,14 @@ h1 .h1-cn{
         </div>
       </div>
     </div>
+
+    <figure class="ph" style="max-width:760px;margin-left:auto;margin-right:auto">
+      <div class="ph-slot">
+        <div class="tag">PHOTO · 從 岸 邊 走 下 去</div>
+        <div class="desc">一家人穿好救生衣，沿著岩岸的階梯慢慢走下水。<br>看得到腳踩得到底——這張照片本身就在回答「安不安全」。</div>
+      </div>
+    </figure>
+    <p class="ph-cap">入水點就在真栄田岬的階梯下。</p>
 
     <p class="txt" style="margin-top:1.8rem;font-size:.98rem;color:var(--ink-soft)">
       實際入水與折返時間依當日海況與各人的狀況調整。<strong>因為不併團，沒有其他家庭在等你們。</strong>
@@ -1505,6 +1587,37 @@ h1 .h1-cn{
       }
     });
   });
+})();
+</script>
+<script>
+/* ---- 青之洞窟影片：可播放 / 尊重減量偏好 ---- */
+(function(){
+  var wrap = document.getElementById('caveVideo');
+  var vid  = document.getElementById('caveVid');
+  var btn  = document.getElementById('caveBtn');
+  if (!wrap || !vid || !btn) return;
+
+  function play(){
+    vid.play().then(function(){
+      wrap.classList.add('playing');
+      if (typeof gtag === 'function') gtag('event', 'cave_video_play');
+    }).catch(function(){});
+  }
+  btn.addEventListener('click', play);
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
+  var wide = window.innerWidth >= 900;
+
+  /* 寬螢幕、未開省流量、未要求減少動態時，捲到畫面內自動播放 */
+  if (!reduce && !saveData && wide && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ vid.preload = 'auto'; play(); io.disconnect(); }
+      });
+    }, {threshold: 0.4});
+    io.observe(wrap);
+  }
 })();
 </script>
 </body>
