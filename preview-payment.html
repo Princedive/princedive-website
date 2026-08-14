@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>［原型］選擇付款方式 · 小王子浮潛</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F3E6;--paper-deep:#F1E9D8;--white:#FFFDF8;
+  --ink:#22303A;--ink-light:#41525F;--ink-soft:#5E7080;
+  --coral:#C8553D;--coral-deep:#A8412C;--coral-text:#8F3623;--coral-pale:#F6E7E0;
+  --ryukyu:#5B8DA8;--shallow:#CDE4EC;--tide:#2F5567;--citrus:#C7D63F;
+  --rule:rgba(34,48,58,.13);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--tide);color:var(--paper);
+  font-family:'Noto Sans TC',sans-serif;font-size:1.06rem;line-height:1.9;
+  letter-spacing:.02em;-webkit-font-smoothing:antialiased;padding:3rem 1.2rem;
+}
+:focus-visible{outline:3px solid var(--citrus);outline-offset:3px}
+.wrap{max-width:720px;margin:0 auto;text-align:center}
+.mono{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--shallow);margin-bottom:1rem}
+h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  font-size:clamp(2rem,4.6vw,2.9rem);line-height:1.12;color:var(--paper)}
+h2 em{color:var(--shallow)}
+.cn{font-family:'Noto Serif TC',serif;font-weight:500;font-size:1.02rem;
+  letter-spacing:.26em;padding-left:.26em;color:rgba(248,243,230,.85);margin-top:.7rem}
+.rule{width:54px;height:2px;background:var(--shallow);margin:1.5rem auto 0}
+
+.bk{background:var(--paper);color:var(--ink);margin-top:2.4rem;text-align:left;border-top:5px solid var(--coral)}
+.bk-steps{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule);background:var(--paper-deep)}
+.bk-step{padding:.9rem .5rem;text-align:center;font-family:'Noto Serif TC',serif;
+  font-size:.86rem;letter-spacing:.06em;color:var(--ink-soft);position:relative}
+.bk-step.done{color:var(--ink)}
+.bk-step.on{background:var(--paper);color:var(--coral-text);font-weight:700}
+.bk-step.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--coral)}
+.bk-step i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:.68rem;display:block;color:var(--ink-soft);margin-bottom:.12rem}
+.bk-step.on i{color:var(--coral)}
+.bk-body{padding:2rem 1.9rem 2.2rem}
+.bk-h{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.12rem;letter-spacing:.1em;margin-bottom:.4rem}
+.bk-sub{font-size:.95rem;color:var(--ink-soft);margin-bottom:1.4rem}
+
+/* 摘要（已鎖定） */
+.sum{background:var(--paper-deep);border:1px solid var(--rule);padding:1.2rem 1.4rem;margin-bottom:1.8rem}
+.sum-row{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;font-size:.96rem}
+.sum-row span{color:var(--ink-soft);font-family:'Noto Serif TC',serif;letter-spacing:.1em}
+.sum-row b{font-family:'Noto Serif TC',serif;font-weight:700;color:var(--ink)}
+.sum-total{display:flex;justify-content:space-between;align-items:baseline;
+  border-top:2px solid var(--coral);margin-top:.7rem;padding-top:.9rem}
+.sum-total span{font-family:'Noto Serif TC',serif;font-weight:700;letter-spacing:.12em}
+.sum-total b{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2rem;color:var(--ink);line-height:1}
+.sum-edit{text-align:right;margin-top:.6rem}
+.sum-edit a{font-family:'Noto Serif TC',serif;font-size:.9rem;color:var(--coral-text);
+  text-decoration:none;border-bottom:1px solid rgba(200,85,61,.4)}
+
+/* 付款選項 */
+.pm{display:grid;gap:.9rem}
+.pmo{border:1px solid var(--rule);background:var(--white);cursor:pointer;transition:all .2s ease}
+.pmo:hover{border-color:var(--coral)}
+.pmo.sel{border:2px solid var(--coral-deep)}
+.pmo-head{display:flex;align-items:flex-start;gap:.9rem;padding:1.2rem 1.3rem}
+.pmo-radio{width:20px;height:20px;border:1px solid var(--ink-soft);flex:none;margin-top:.28rem;
+  display:flex;align-items:center;justify-content:center}
+.pmo.sel .pmo-radio{border-color:var(--coral-deep);background:var(--coral-deep)}
+.pmo.sel .pmo-radio::after{content:"";width:8px;height:8px;background:var(--paper)}
+.pmo-main{flex:1}
+.pmo-t{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.05rem;letter-spacing:.08em;color:var(--ink)}
+.pmo-d{font-size:.92rem;line-height:1.8;color:var(--ink-soft);margin-top:.25rem}
+.pmo-amt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--ink);white-space:nowrap;flex:none}
+.pmo-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.6rem;
+  letter-spacing:.14em;padding:.2rem .5rem;margin-left:.5rem;vertical-align:2px}
+.tag-now{background:var(--citrus);color:#3E4610}
+.tag-hold{background:var(--shallow);color:var(--tide)}
+
+/* 展開細節 */
+.pmo-body{display:none;border-top:1px dashed var(--rule);padding:1.2rem 1.3rem 1.4rem;background:var(--paper)}
+.pmo.sel .pmo-body{display:block}
+.acct{background:var(--shallow);padding:1rem 1.1rem;margin-top:.8rem}
+.acct-row{display:flex;justify-content:space-between;gap:1rem;padding:.3rem 0;font-size:.94rem}
+.acct-row span{font-family:'Noto Serif TC',serif;color:var(--tide);letter-spacing:.08em}
+.acct-row b{font-family:'JetBrains Mono',monospace;color:var(--ink);font-weight:400}
+.fx{font-size:.88rem;line-height:1.8;color:var(--ink-soft);margin-top:.7rem}
+
+.warn{background:var(--citrus);padding:1.1rem 1.3rem;margin-top:1.6rem;font-size:.96rem;line-height:1.85;color:var(--ink)}
+.warn b{font-weight:700}
+
+.agree{display:flex;gap:.7rem;align-items:flex-start;margin-top:1.4rem;font-size:.94rem;line-height:1.8;color:var(--ink-light)}
+.agree input{margin-top:.42rem;flex:none;width:17px;height:17px;accent-color:var(--coral-deep)}
+.agree a{color:var(--coral-text)}
+
+.pay{display:block;width:100%;margin-top:1.4rem;border:none;cursor:pointer;
+  background:var(--coral-deep);color:var(--paper);padding:1.15rem;
+  font-family:'Noto Serif TC',serif;font-weight:500;font-size:1.12rem;
+  letter-spacing:.24em;padding-left:1.36em;transition:background .25s ease,color .25s ease}
+.pay:hover{background:var(--citrus);color:var(--ink)}
+.pay-note{text-align:center;font-size:.9rem;color:var(--ink-soft);margin-top:.9rem;line-height:1.8}
+.note{margin-top:2rem;font-size:.88rem;color:rgba(248,243,230,.55);text-align:center;line-height:1.9}
+@media(max-width:560px){
+  .bk-body{padding:1.5rem 1.2rem 1.8rem}
+  .bk-step{font-size:.76rem}
+  .pmo-head{flex-wrap:wrap}
+  .pmo-amt{width:100%;text-align:right}
+}
+</style><style>
+.proto{background:#C7D63F;color:#22303A;text-align:center;padding:.7rem 1rem;
+  font-family:'Noto Sans TC',sans-serif;font-size:.92rem;letter-spacing:.04em;
+  position:sticky;top:0;z-index:50}
+.proto b{font-weight:700}
+.pay:disabled{background:rgba(34,48,58,.18);color:#5E7080;cursor:not-allowed}
+.pay:disabled:hover{background:rgba(34,48,58,.18);color:#5E7080}
+.done-box{background:var(--white);border:2px solid var(--coral);padding:2rem 1.8rem;margin-top:1.4rem;text-align:center;display:none}
+.done-box h3{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.15rem;letter-spacing:.1em;color:var(--coral-text);margin-bottom:.7rem}
+.done-box p{font-size:.96rem;line-height:1.9;color:var(--ink-light);margin:0}
+</style>
+</head>
+<body>
+<div class="proto"><b>設計原型</b>　可切換付款方式，但不會真的收款。</div>
+
+<div class="wrap">
+  <div class="mono">▸ 最 後 一 步 · PAYMENT</div>
+  <h2>How Would You <em>Like to Pay</em></h2>
+  <div class="cn">選 擇 付 款 方 式</div>
+  <div class="rule"></div>
+
+  <div class="bk">
+    <div class="bk-steps">
+      <div class="bk-step done"><i>01</i>日期</div>
+      <div class="bk-step done"><i>02</i>時段</div>
+      <div class="bk-step done"><i>03</i>人數</div>
+      <div class="bk-step on"><i>04</i>付款</div>
+    </div>
+
+    <div class="bk-body">
+
+      <div class="sum">
+        <div class="sum-row"><span>日 期</span><b id="sDate">—</b></div>
+        <div class="sum-row"><span>時 段</span><b id="sSlot">—</b></div>
+        <div class="sum-row"><span>人 數</span><b id="sPpl">—</b></div>
+        <div class="sum-total"><span>合 計</span><b id="sTotal">—</b></div>
+        <div class="sum-edit"><a href="preview-booking.html">&#8592; 修改預約內容</a></div>
+      </div>
+
+      <div class="bk-h">選 一 種 付 款 方 式</div>
+      <div class="bk-sub">三種都可以。差別在於什麼時候確認。</div>
+
+      <div class="pm" id="pm">
+
+        <div class="pmo sel" data-m="stripe" role="button" tabindex="0">
+          <div class="pmo-head">
+            <div class="pmo-radio"></div>
+            <div class="pmo-main">
+              <div class="pmo-t">信用卡 · Apple Pay · Google Pay<span class="pmo-tag tag-now">當 場 確 認</span></div>
+              <div class="pmo-d">付款完成的那一刻，預約就成立了，不用等我們回信。</div>
+            </div>
+            <div class="pmo-amt" data-amt="jpy">—</div>
+          </div>
+          <div class="pmo-body">
+            <div style="font-size:.94rem;line-height:1.85;color:var(--ink-light)">
+              由 <strong>Stripe</strong> 處理，我們不會接觸你的卡號。<br>
+              支援 Visa、Mastercard、JCB、American Express，以及 Apple Pay 與 Google Pay。
+            </div>
+          </div>
+        </div>
+
+        <div class="pmo" data-m="tw" role="button" tabindex="0">
+          <div class="pmo-head">
+            <div class="pmo-radio"></div>
+            <div class="pmo-main">
+              <div class="pmo-t">台灣銀行轉帳<span class="pmo-tag tag-hold">保 留 48 小 時</span></div>
+              <div class="pmo-d">時段先為你保留，我們每天對帳，確認後寄出正式確認信。</div>
+            </div>
+            <div class="pmo-amt" data-amt="twd">—</div>
+          </div>
+          <div class="pmo-body">
+            <div class="acct">
+              <div class="acct-row"><span>銀 行</span><b>—— 銀行 ——分行</b></div>
+              <div class="acct-row"><span>帳 號</span><b>0000-000-000000</b></div>
+              <div class="acct-row"><span>戶 名</span><b>——————</b></div>
+              <div class="acct-row"><span>備 註</span><b>預約編號（送出後產生）</b></div>
+            </div>
+            <p class="fx">固定匯率換算，已含跨境匯款成本，<strong>不隨匯率波動</strong>——訂的時候看到多少，就是多少。<br>
+              匯款時請在備註欄填入預約編號，那是我們對帳唯一的依據。不需要傳收據。</p>
+          </div>
+        </div>
+
+        <div class="pmo" data-m="hk" role="button" tabindex="0">
+          <div class="pmo-head">
+            <div class="pmo-radio"></div>
+            <div class="pmo-main">
+              <div class="pmo-t">香港轉數快 FPS<span class="pmo-tag tag-hold">保 留 48 小 時</span></div>
+              <div class="pmo-d">時段先為你保留，我們每天對帳，確認後寄出正式確認信。</div>
+            </div>
+            <div class="pmo-amt" data-amt="hkd">—</div>
+          </div>
+          <div class="pmo-body">
+            <div class="acct">
+              <div class="acct-row"><span>FPS ID</span><b>———————</b></div>
+              <div class="acct-row"><span>收 款 人</span><b>——————</b></div>
+              <div class="acct-row"><span>備 註</span><b>預約編號（送出後產生）</b></div>
+            </div>
+            <p class="fx">固定匯率換算，已含跨境匯款成本，<strong>不隨匯率波動</strong>。<br>
+              轉帳時請在備註欄填入預約編號。不需要傳收據。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="warn">
+        <b>預約成立＝這個時段為你保留。</b>能否實際入水依當日海況決定，我們會在前一日 18:00 前通知。因天候取消可改期或全額退款，不適用一般取消政策。
+      </div>
+
+      <label class="agree">
+        <input type="checkbox" id="agree">
+        <span>我已閱讀並同意<a href="#">取消政策</a>與<a href="#">預約條款</a>，並確認所有參加者年齡在 5 至 60 歲之間。</span>
+      </label>
+
+      <button class="pay" type="button" id="pay" disabled>前 往 付 款</button>
+      <div class="pay-note" id="payNote">請先勾選同意條款。</div>
+
+      <div class="done-box" id="done">
+        <h3>原 型 到 此 為 止</h3>
+        <p id="doneTxt"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var PRICE = 7500;
+  var RATE = { twd: 4.57, hkd: 18.55 };   /* 示意固定匯率，待實際數字替換 */
+  var SESSIONS = [
+    {n:'第一節', r:'08:00 – 10:00'},
+    {n:'第二節', r:'10:00 – 12:00'},
+    {n:'第三節', r:'13:00 – 15:00'},
+    {n:'第四節', r:'15:00 – 17:00'}
+  ];
+  var DOW = ['日','一','二','三','四','五','六'];
+
+  function qs(k){
+    var m = new RegExp('[?&]' + k + '=([^&]*)').exec(location.search);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  var dRaw = qs('d'), sIdx = parseInt(qs('s'), 10), ppl = parseInt(qs('p'), 10);
+  if (!dRaw || isNaN(sIdx) || isNaN(ppl)) { ppl = 4; sIdx = 1; }
+  var dt = dRaw ? new Date(dRaw.split('-')[0], dRaw.split('-')[1]-1, dRaw.split('-')[2]) : new Date();
+  var total = ppl * PRICE;
+
+  document.getElementById('sDate').textContent =
+    dt.getFullYear() + ' 年 ' + (dt.getMonth()+1) + ' 月 ' + dt.getDate() + ' 日（' + DOW[dt.getDay()] + '）';
+  document.getElementById('sSlot').textContent = SESSIONS[sIdx].n + ' · ' + SESSIONS[sIdx].r;
+  document.getElementById('sPpl').textContent = ppl + ' 人 × ¥7,500';
+  document.getElementById('sTotal').textContent = '¥' + total.toLocaleString();
+
+  function roundUp(v, step){ return Math.ceil(v / step) * step; }
+  document.querySelector('[data-amt="jpy"]').textContent = '¥' + total.toLocaleString();
+  document.querySelector('[data-amt="twd"]').textContent = 'NT$' + roundUp(total / RATE.twd, 100).toLocaleString();
+  document.querySelector('[data-amt="hkd"]').textContent = 'HK$' + roundUp(total / RATE.hkd, 10).toLocaleString();
+
+  var method = 'stripe';
+  document.querySelectorAll('.pmo').forEach(function(el){
+    function pick(){
+      document.querySelectorAll('.pmo').forEach(function(o){ o.classList.remove('sel'); });
+      el.classList.add('sel');
+      method = el.getAttribute('data-m');
+      sync();
+    }
+    el.addEventListener('click', pick);
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); }});
+  });
+
+  var agree = document.getElementById('agree');
+  var btn = document.getElementById('pay');
+  var note = document.getElementById('payNote');
+
+  function sync(){
+    btn.disabled = !agree.checked;
+    if (!agree.checked){ note.textContent = '請先勾選同意條款。'; return; }
+    if (method === 'stripe'){
+      btn.textContent = '前 往 付 款';
+      note.textContent = '下一步將前往 Stripe 安全付款頁面。';
+    } else {
+      btn.textContent = '送 出 預 約';
+      note.textContent = '送出後會收到匯款資訊與預約編號，時段為你保留 48 小時。';
+    }
+  }
+  agree.addEventListener('change', sync);
+
+  btn.addEventListener('click', function(){
+    var t = method === 'stripe'
+      ? '正式版會在這一步跳轉到 Stripe 付款頁。付款成功後自動寄出「預約已確認」信。'
+      : '正式版會在這一步建立預約、鎖住名額 48 小時，並寄出「時段已為你保留」信，內含匯款資訊與預約編號。';
+    document.getElementById('doneTxt').textContent = t;
+    document.getElementById('done').style.display = 'block';
+    document.getElementById('done').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  sync();
+})();
+</script>
+</body>
+</html>
