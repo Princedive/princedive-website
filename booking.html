@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<!-- BUILD v2026.08.13-E -->
+<!-- BUILD v2026.08.13-G -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>線上預約｜沖繩青之洞窟親子浮潛 · 小王子浮潛</title>
@@ -530,6 +530,39 @@ h1 .h1-cn{
 .bkc-go:disabled:hover{background:rgba(34,48,58,.18);color:var(--ink-soft)}
 .bkc-note{text-align:center;font-size:.9rem;color:var(--ink-soft);margin-top:.9rem;line-height:1.8}
 @media(max-width:560px){.bkc-body{padding:1.5rem 1.2rem 1.8rem}.bkc-step{font-size:.82rem}}
+
+/* ---- 健康自我檢查 ---- */
+.hq{display:grid;gap:.8rem}
+.hq-item{border:1px solid var(--rule);background:var(--white);padding:1.15rem 1.25rem}
+.hq-item.answered{border-color:rgba(184,154,94,.4)}
+.hq-item.flagged{border-color:var(--coral-deep);background:var(--coral-pale)}
+.hq-t{font-family:'Noto Serif TC',serif;font-size:1rem;line-height:1.85;color:var(--ink);margin-bottom:.85rem}
+.hq-t strong{font-weight:700;color:var(--coral-text)}
+.hq-btns{display:flex;gap:.6rem;flex-wrap:wrap}
+.hq-b{
+  border:1px solid var(--rule);background:var(--paper);color:var(--ink);cursor:pointer;
+  padding:.55rem 1.2rem;font-family:'Noto Serif TC',serif;font-size:.95rem;letter-spacing:.08em;
+  transition:all .2s ease;
+}
+.hq-b:hover{border-color:var(--coral)}
+.hq-b.on{background:var(--tide);border-color:var(--tide);color:var(--paper)}
+.hq-b.alert.on{background:var(--coral-deep);border-color:var(--coral-deep);color:var(--paper)}
+.hq-flag{display:none;background:var(--citrus);padding:1.5rem 1.6rem;margin-top:1.2rem}
+.hq-flag.show{display:block}
+.hq-flag-t{font-family:'Noto Serif TC',serif;font-weight:700;font-size:1.1rem;letter-spacing:.08em;color:#3E4610;margin-bottom:.7rem}
+.hq-flag p{font-size:.98rem;line-height:1.9;color:var(--ink);margin-bottom:.7rem}
+.hq-flag p:last-of-type{margin-bottom:1.1rem}
+.hq-links{display:flex;gap:.7rem;flex-wrap:wrap}
+.hq-links a{
+  background:var(--ink);color:var(--paper);text-decoration:none;
+  padding:.65rem 1.3rem;font-family:'Noto Serif TC',serif;font-size:.95rem;letter-spacing:.1em;
+}
+.hq-links a:hover{background:var(--coral-deep)}
+.hq-note{
+  font-family:'Shippori Mincho','Noto Serif TC',serif;font-size:.92rem;line-height:1.9;
+  color:var(--ink-soft);margin-top:1.1rem;padding-top:1.1rem;border-top:1px dashed var(--rule);
+}
+@media(max-width:560px){.hq-btns{flex-direction:column}.hq-b{width:100%}}
 </style><style>
 /* ============ 預約流程 ============ */
 body{background:var(--tide)}
@@ -548,7 +581,7 @@ body{background:var(--tide)}
 .bkc-soon{background:var(--citrus);color:var(--ink);padding:1rem 1.3rem;text-align:center;
   font-family:'Noto Serif TC',serif;font-size:1rem;line-height:1.8;letter-spacing:.04em}
 .bkc-soon b{font-weight:700}
-.bkc-steps{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule);background:var(--paper-deep)}
+.bkc-steps{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--rule);background:var(--paper-deep)}
 .bkc-step{padding:.95rem .5rem;text-align:center;font-family:'Noto Serif TC',serif;
   font-size:.88rem;letter-spacing:.06em;color:var(--ink-soft);position:relative}
 .bkc-step.on{background:var(--paper);color:var(--coral-text);font-weight:700}
@@ -807,7 +840,8 @@ body{background:var(--tide)}
       <div class="bkc-step on" id="bkcS1"><i>01</i>日期</div>
       <div class="bkc-step" id="bkcS2"><i>02</i>時段</div>
       <div class="bkc-step" id="bkcS3"><i>03</i>人數</div>
-      <div class="bkc-step" id="bkcS4"><i>04</i>付款</div>
+      <div class="bkc-step" id="bkcS4"><i>04</i>健康</div>
+      <div class="bkc-step" id="bkcS5"><i>05</i>付款</div>
     </div>
     <div class="bkc-body">
 
@@ -845,6 +879,52 @@ body{background:var(--tide)}
         <div class="bkc-row"><span>人 數</span><b id="bkcP">—</b></div>
         <div class="bkc-row"><span>集 合</span><b>真栄田岬</b></div>
         <div class="bkc-total"><span>合 計</span><b id="bkcT">—</b></div>
+      </div>
+
+      <div id="bkcSecHealth" class="bkc-off">
+        <div class="bkc-h" style="margin-top:2.4rem">三 個 問 題 · 30 秒</div>
+        <div class="bkc-sub">為了確認每一位參加者都能安全下水。<strong>以下任何一項有「是」，先別付款——我們想先跟你談談。</strong></div>
+
+        <div class="hq" id="hq">
+          <div class="hq-item" data-q="age">
+            <div class="hq-t">全部參加者的年齡都在 <strong>5 至 60 歲</strong>之間</div>
+            <div class="hq-btns">
+              <button type="button" class="hq-b" data-v="ok">是</button>
+              <button type="button" class="hq-b alert" data-v="ng">有人不在範圍</button>
+            </div>
+          </div>
+
+          <div class="hq-item" data-q="med">
+            <div class="hq-t">有人患有<strong>心血管疾病、癲癇、氣喘、糖尿病</strong>，或正在服用相關藥物</div>
+            <div class="hq-btns">
+              <button type="button" class="hq-b" data-v="ok">都沒有</button>
+              <button type="button" class="hq-b alert" data-v="ng">有</button>
+            </div>
+          </div>
+
+          <div class="hq-item" data-q="cond">
+            <div class="hq-t">有人<strong>懷孕、近期動過手術，或目前身體不適</strong></div>
+            <div class="hq-btns">
+              <button type="button" class="hq-b" data-v="ok">都沒有</button>
+              <button type="button" class="hq-b alert" data-v="ng">有</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hq-flag" id="hqFlag">
+          <div class="hq-flag-t">先跟我們談一下，再決定要不要訂</div>
+          <p>這不一定代表不能參加——<strong>多數情況只要事先知道就能安排</strong>，例如放慢節奏、加派人員陪同，或建議只在岸上同行。</p>
+          <p>但我們需要先了解狀況，才能誠實告訴你適不適合。<strong>不要先付款。</strong></p>
+          <div class="hq-links">
+            <a href="https://line.me/R/ti/p/@princedive" target="_blank" rel="noopener">LINE 聯絡我們</a>
+            <a href="https://wa.me/81000000000" target="_blank" rel="noopener">WhatsApp 聯絡我們</a>
+          </div>
+        </div>
+
+        <div class="hq-note" id="hqNote">
+          出發前我們會另外寄一份<strong>免責與健康聲明書</strong>給你，每位參加者各簽一份，未成年由監護人代簽。<br>
+          當天不需要再填表，我們核對名單就好。
+        </div>
       </div>
 
       <div id="bkcSecPay" class="bkc-off">
@@ -916,7 +996,7 @@ body{background:var(--tide)}
 
       <label class="agree">
         <input type="checkbox" id="bkcAgree">
-        <span>我已閱讀並同意<a href="snorkel.html#price">取消政策</a>，並確認所有參加者年齡在 5 至 60 歲之間。</span>
+        <span>我已閱讀並同意<a href="snorkel.html#price">取消政策</a>，且上述健康問題的回答屬實。<br>我了解出發前需簽署免責與健康聲明書。</span>
       </label>
 
       <button class="bkc-go" type="button" id="bkcGo" disabled>前 往 付 款</button>
@@ -1040,6 +1120,7 @@ body{background:var(--tide)}
   var view = new Date(today.getFullYear(), today.getMonth(), 1);
   var maxView = new Date(today.getFullYear(), today.getMonth()+3, 1);
   var sel = {date:null, slot:null, ppl:null, pay:'stripe'};
+  var flagRecorded = false;
 
   function seed(d){
     var k = d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate();
@@ -1122,12 +1203,31 @@ body{background:var(--tide)}
   var agree = document.getElementById('bkcAgree');
   agree.addEventListener('change', update);
 
+  /* ---- 健康自我檢查 ---- */
+  var health = { age:null, med:null, cond:null };
+  document.querySelectorAll('.hq-item').forEach(function(item){
+    var key = item.getAttribute('data-q');
+    item.querySelectorAll('.hq-b').forEach(function(b){
+      b.addEventListener('click', function(){
+        item.querySelectorAll('.hq-b').forEach(function(o){ o.classList.remove('on'); });
+        b.classList.add('on');
+        health[key] = b.getAttribute('data-v');
+        item.classList.add('answered');
+        item.classList.toggle('flagged', health[key] === 'ng');
+        update();
+      });
+    });
+  });
+  function healthDone(){ return health.age && health.med && health.cond; }
+  function healthFlagged(){
+    return health.age === 'ng' || health.med === 'ng' || health.cond === 'ng';
+  }
+
   function update(){
     renderPpl();
     var total = sel.ppl ? sel.ppl*PRICE : 0;
     document.getElementById('bkcS2').className='bkc-step'+(sel.date?' on':'');
     document.getElementById('bkcS3').className='bkc-step'+(sel.slot!==null?' on':'');
-    document.getElementById('bkcS4').className='bkc-step'+(sel.ppl?' on':'');
     document.getElementById('bkcD').textContent = sel.date
       ? sel.date.getFullYear()+' 年 '+(sel.date.getMonth()+1)+' 月 '+sel.date.getDate()+' 日（'+DOW[sel.date.getDay()]+'）' : '—';
     document.getElementById('bkcS').textContent = sel.slot!==null
@@ -1135,8 +1235,19 @@ body{background:var(--tide)}
     document.getElementById('bkcP').textContent = sel.ppl ? sel.ppl+' 人 × ¥7,500' : '—';
     document.getElementById('bkcT').textContent = sel.ppl ? '¥'+total.toLocaleString() : '—';
 
+    var healthSec = document.getElementById('bkcSecHealth');
+    healthSec.classList.toggle('bkc-off', !sel.ppl);
+    document.getElementById('bkcS4').className = 'bkc-step' + (sel.ppl ? ' on' : '');
+
+    var flagged = healthFlagged();
+    document.getElementById('hqFlag').classList.toggle('show', flagged);
+    if (flagged && !flagRecorded){
+      flagRecorded = true;
+      if (typeof gtag === 'function') gtag('event', 'health_flag_shown');
+    }
+
     var paySec = document.getElementById('bkcSecPay');
-    if (sel.ppl){
+    if (sel.ppl && healthDone() && !flagged){
       paySec.classList.remove('bkc-off');
       document.querySelector('[data-amt="jpy"]').textContent = '¥'+total.toLocaleString();
       document.querySelector('[data-amt="twd"]').textContent = 'NT$'+roundUp(total/RATE.twd,100).toLocaleString();
@@ -1145,7 +1256,9 @@ body{background:var(--tide)}
       paySec.classList.add('bkc-off');
     }
 
-    var ready = !!(sel.date && sel.slot!==null && sel.ppl && agree.checked);
+    document.getElementById('bkcS5').className = 'bkc-step' +
+      ((sel.ppl && healthDone() && !flagged) ? ' on' : '');
+    var ready = !!(sel.date && sel.slot!==null && sel.ppl && healthDone() && !flagged && agree.checked);
     var go = document.getElementById('bkcGo'), note = document.getElementById('bkcNote');
     go.disabled = !ready;
     if (!BOOKING_LIVE){
@@ -1154,6 +1267,8 @@ body{background:var(--tide)}
       go.textContent = sel.pay==='stripe' ? '前 往 付 款' : '送 出 預 約';
     }
     if (!sel.ppl) note.textContent = '請先完成上面的選擇。';
+    else if (!healthDone()) note.textContent = '請先回答上面三個健康問題。';
+    else if (flagged) note.textContent = '請先與我們聯繫，確認後我們會協助你完成預約。';
     else if (!agree.checked) note.textContent = '請勾選同意取消政策。';
     else note.textContent = sel.pay==='stripe'
       ? '下一步將前往 Stripe 安全付款頁面。'
